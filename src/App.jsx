@@ -205,12 +205,12 @@ function App() {
                   );
                 }}
               >
-                Livello {level}
+               {level}
               </button>
             ))}
           </div>
           <div className="category-buttons">
-            {["Druid", "Cleric", "Sorcerer", "Wizard", "Paladin", "Ranger", "Warlock"].map((cls) => (
+            {["Druido", "Chierico", "Stregone", "Mago", "Paladino", "Ranger", "Warlock"].map((cls) => (
               <button
                 key={cls}
                 className={`button-secondary ${
@@ -229,7 +229,7 @@ function App() {
             ))}
           </div>
           <div className="category-buttons">
-            {["Abjuration", "Conjuration", "Divination", "Enchantment", "Evocation", "Illusion", "Necromancy", "Transmutation"].map((school) => (
+            {["Abiurazione", "Conjuration", "Divinazione", "Ammaliamento", "Evocazione", "Illusione", "Necromanzia", "Trasmutazione"].map((school) => (
               <button
                 key={school}
                 className={`button-secondary ${
