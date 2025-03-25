@@ -9,7 +9,6 @@ import feats from "./feats"; // Importa i talenti
 function Wiki({ setShowWiki }) {
   const [category, setCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedItem, setSelectedItem] = useState(null);
   const [language, setLanguage] = useState("it");
   const [selectedCategories, setSelectedCategories] = useState([]); // Per altri sottofiltri se necessari
   const [selectedLevel, setSelectedLevel] = useState([]); // Filtro per livelli (solo per spells)
@@ -19,6 +18,9 @@ function Wiki({ setShowWiki }) {
 
   // Nuovo stato per il filtro dei talenti (feats)
   const [selectedFeatCategory, setSelectedFeatCategory] = useState([]);
+  
+  // Stato per gestire gli elementi selezionati e le loro descrizioni
+  const [selectedItems, setSelectedItems] = useState([]);
 
   const filterItems = (items) => {
     if (!searchQuery) return items;
@@ -51,7 +53,6 @@ function Wiki({ setShowWiki }) {
 
     // Applica i filtri solo per gli spells
     if (category === "spells") {
-      // Considera solo items con la proprietà "level"
       itemsToDisplay = itemsToDisplay.filter((item) => item.level !== undefined);
       if (selectedLevel.length > 0) {
         itemsToDisplay = itemsToDisplay.filter((item) =>
@@ -113,7 +114,14 @@ function Wiki({ setShowWiki }) {
           en: "No description available",
         };
 
-    setSelectedItem({ ...item, description: descriptionText });
+    setSelectedItems((prevItems) => {
+      // Se l'elemento è già selezionato, rimuovilo dalla lista
+      if (prevItems.some((i) => i.term === item.term)) {
+        return prevItems.filter((i) => i.term !== item.term);
+      }
+      // Aggiungi l'elemento alla lista
+      return [...prevItems, { ...item, description: descriptionText }];
+    });
   };
 
   const toggleLanguage = () => {
@@ -121,7 +129,7 @@ function Wiki({ setShowWiki }) {
   };
 
   const resetView = () => {
-    setSelectedItem(null);
+    setSelectedItems([]);
   };
 
   // Quando cambi categoria, resetta anche i filtri specifici
@@ -293,29 +301,22 @@ function Wiki({ setShowWiki }) {
         </div>
       )}
 
-      {!selectedItem && (
-        <div className="items-list">
-          {getItems().map((item, index) => (
-            <div key={index} className="item" onClick={() => handleItemClick(item)}>
-              <p>{item.term} - {item.translation}</p>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {selectedItem && (
-        <div className="item-description show">
-          <h2>{selectedItem.term} - {selectedItem.translation}</h2>
-          <div
+<div className="items-list">
+  {getItems().map((item, index) => (
+    <div key={index} className="item">
+      <p onClick={() => handleItemClick(item)}>{item.term}</p>
+      {selectedItems.some((i) => i.term === item.term) && (
+        <div className="description">
+          <p
             dangerouslySetInnerHTML={{
-              __html: language === "it" ? selectedItem.description.it : selectedItem.description.en,
+              __html: selectedItems.find((i) => i.term === item.term)?.description[language],
             }}
           />
-          <button onClick={toggleLanguage}>
-            {language === "it" ? "Inglese" : "Italiano"}
-          </button>
         </div>
       )}
+    </div>
+  ))}
+</div>
     </div>
   );
 }
