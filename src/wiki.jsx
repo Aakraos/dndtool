@@ -304,7 +304,7 @@ function Wiki({ setShowWiki }) {
 <div className="items-list">
   {getItems().map((item, index) => (
     <div key={index} className="item">
-      <p onClick={() => handleItemClick(item)}>{item.term}</p>
+      <p onClick={() => handleItemClick(item)}>{item.term} - {item.translation}</p>
       {selectedItems.some((i) => i.term === item.term) && (
         <div className="description">
           <p
