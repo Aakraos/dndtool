@@ -229,7 +229,7 @@ function App() {
             ))}
           </div>
           <div className="category-buttons">
-            {["Abiurazione", "Conjuration", "Divinazione", "Ammaliamento", "Evocazione", "Illusione", "Necromanzia", "Trasmutazione"].map((school) => (
+            {["Abiurazione", "Evocazione", "Divinazione", "Ammaliamento", "Invocazione", "Illusione", "Necromanzia", "Trasmutazione"].map((school) => (
               <button
                 key={school}
                 className={`button-secondary ${
