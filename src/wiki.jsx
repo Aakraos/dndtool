@@ -147,6 +147,7 @@ function Wiki({ setShowWiki }) {
     resetView();
   };
 
+
   return (
     <div className="app-container">
       <button
