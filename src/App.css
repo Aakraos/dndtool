@@ -57,7 +57,7 @@ button {
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
-  min-width: 50px; /* Impedisce ai bottoni di diventare troppo piccoli */
+  min-width: 4vw; /* Impedisce ai bottoni di diventare troppo piccoli */
   max-width: 200px; /* Impedisce ai bottoni di diventare troppo grandi */
   word-wrap: normal;
   white-space: nowrap; /* Impedisce che il testo vada a capo */
@@ -119,7 +119,7 @@ button {
 /* Bottoni Filtri Incantesimi */
 /* Bottoni per il livello */
 .level-button {
-  /* Aggiungi qui il tuo stile personalizzato */
+  padding: 0; 
 }
 
 /* Bottoni per le classi */
@@ -228,6 +228,8 @@ button {
   .school-button {
     font-size: 0.9rem; /* Riduce la dimensione del testo */
     padding: 5px 10px; /* Riduce il padding */
+    margin-right: 0.5;
+    margin-left: 0.5;
   }
 }
 
@@ -244,6 +246,9 @@ button {
   .school-button {
     font-size: 0.8rem; /* Riduce ulteriormente la dimensione del testo */
     padding: 4px 8px; /* Riduce il padding */
+    margin-right: 0;
+    margin-left: 0;
+    font-weight: 250;
   }
 }
 
@@ -260,6 +265,9 @@ button {
   .school-button {
     font-size: 0.7rem; /* Ulteriore riduzione della dimensione del testo */
     padding: 3px 6px; /* Ulteriore riduzione del padding */
+    margin-right: 0;
+    margin-left: 0;
+    font-weight: 175;
   }
 }
 
