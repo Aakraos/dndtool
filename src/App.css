@@ -215,6 +215,20 @@ button {
 }
 
 /* Media Queries per schermi più piccoli */
+@media {
+  .school-button {
+   font-size: ;
+   min-width: 6vw;
+   min-height: 2.5vw;
+  }
+  .level-button {
+    min-width: 6vw;
+  }
+  .items-list {
+    font-size: 1.5rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .app-container, .items-list, .item-description p {
     font-size: 18px; /* Aumenta la dimensione del testo per schermi medio-piccoli */
@@ -269,17 +283,14 @@ button {
     margin-left: 0;
     font-weight: 175;
   }
-}
-
-/* Media Queries per schermi più grandi */
-@media (min-width: 1280px) {
-  .app-container, .items-list, .item-description p {
-    font-size: 20px; /* Aumenta la dimensione del font su schermi grandi */
-  }
-}
-
-@media (min-width: 1600px) {
-  .app-container, .items-list, .item-description p {
-    font-size: 22px; /* Aumenta ancora per schermi ancora più larghi */
+  .school-button {
+    font-size: 0.46rem;
+    min-width: 10vw;
+    min-height: 5vw;
+   }
+   .button-main {
+    font-size: 0.85rem;
+    min-width: 10vw;
+    min-height: 5vw;
   }
 }
