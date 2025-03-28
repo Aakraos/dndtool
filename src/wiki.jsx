@@ -16,12 +16,14 @@ function Wiki({ setShowWiki }) {
   const [selectedSchools, setSelectedSchools] = useState([]);
   const [selectedRitual, setSelectedRitual] = useState(false);
 
-  // Nuovo stato per il filtro dei talenti (feats)
+  // Stato per il filtro dei talenti (feats)
   const [selectedFeatCategory, setSelectedFeatCategory] = useState([]);
   
-  // Stato per gestire gli elementi selezionati e le loro descrizioni
+  // Stato per gestire gli elementi selezionati e le loro descrizioni.
+  // Ogni item sarà un oggetto con { ...item, description, active }.
   const [selectedItems, setSelectedItems] = useState([]);
 
+  // Funzione per filtrare gli item in base alla ricerca
   const filterItems = (items) => {
     if (!searchQuery) return items;
     return items.filter(
@@ -31,6 +33,7 @@ function Wiki({ setShowWiki }) {
     );
   };
 
+  // Funzione per ottenere gli items in base alla categoria e ai filtri
   const getItems = () => {
     let itemsToDisplay = [];
     switch (category) {
@@ -51,7 +54,7 @@ function Wiki({ setShowWiki }) {
         itemsToDisplay = [...rules, ...items, ...spells, ...feats];
     }
 
-    // Applica i filtri solo per gli spells
+    // Applica i filtri specifici per gli spells
     if (category === "spells") {
       itemsToDisplay = itemsToDisplay.filter((item) => item.level !== undefined);
       if (selectedLevel.length > 0) {
@@ -88,6 +91,7 @@ function Wiki({ setShowWiki }) {
     );
   };
 
+  // Funzione per sostituire i placeholder nelle descrizioni
   const replacePlaceholders = (description, spell) => {
     return description
       .replace(/{(castingtime|range|components|duration)}/g, (_, key) => {
@@ -102,7 +106,16 @@ function Wiki({ setShowWiki }) {
       .replace(/{translation}/g, spell.translation || "{translation}");
   };
 
-  const handleItemClick = (item) => {
+  // Funzione per gestire il click/tap su un item
+  const handleItemClick = (item, event) => {
+    // Se l'elemento è già selezionato, lo rimuoviamo (e quindi anche la descrizione)
+    if (selectedItems.some((i) => i.term === item.term)) {
+      setSelectedItems((prevItems) =>
+        prevItems.filter((i) => i.term !== item.term)
+      );
+      return;
+    }
+    // Prepara la descrizione
     const description = descriptions[item.term.toLowerCase()];
     const descriptionText = description
       ? {
@@ -114,14 +127,22 @@ function Wiki({ setShowWiki }) {
           en: "No description available",
         };
 
-    setSelectedItems((prevItems) => {
-      // Se l'elemento è già selezionato, rimuovilo dalla lista
-      if (prevItems.some((i) => i.term === item.term)) {
-        return prevItems.filter((i) => i.term !== item.term);
-      }
-      // Aggiungi l'elemento alla lista
-      return [...prevItems, { ...item, description: descriptionText }];
-    });
+    // Aggiunge l'elemento selezionato con active: true (stile temporaneo)
+    setSelectedItems((prevItems) => [
+      ...prevItems,
+      { ...item, description: descriptionText, active: true },
+    ]);
+
+    // Se il dispositivo è mobile (pointer: coarse), dopo 300ms impostiamo active a false
+    if (window.matchMedia("(pointer: coarse)").matches) {
+      setTimeout(() => {
+        setSelectedItems((prevItems) =>
+          prevItems.map((i) =>
+            i.term === item.term ? { ...i, active: false } : i
+          )
+        );
+      }, 300);
+    }
   };
 
   const toggleLanguage = () => {
@@ -132,7 +153,7 @@ function Wiki({ setShowWiki }) {
     setSelectedItems([]);
   };
 
-  // Quando cambi categoria, resetta anche i filtri specifici
+  // Quando si cambia categoria, resetta anche i filtri specifici
   const resetFiltersOnCategoryChange = (newCategory) => {
     setCategory(newCategory);
     if (newCategory !== "spells") {
@@ -146,7 +167,6 @@ function Wiki({ setShowWiki }) {
     }
     resetView();
   };
-
 
   return (
     <div className="app-container">
@@ -203,83 +223,83 @@ function Wiki({ setShowWiki }) {
       </div>
 
       {category === "spells" && (
-  <>
-    <div className="category-buttons levels">
-      {["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].map((level) => (
-        <button
-          key={level}
-          className={`button-secondary level-button ${
-            selectedLevel.includes(Number(level))
-              ? "selected level-selected"
-              : ""
-          }`}
-          onClick={() => {
-            setSelectedLevel((prev) =>
-              prev.includes(Number(level))
-                ? prev.filter((item) => item !== Number(level))
-                : [...prev, Number(level)]
-            );
-          }}
-        >
-          {level}
-        </button>
-      ))}
-    </div>
-    
-    <div className="category-buttons classes">
-      {["Druid", "Cleric", "Sorcerer", "Wizard", "Paladin", "Ranger", "Warlock"].map((cls) => (
-        <button
-          key={cls}
-          className={`button-secondary class-button ${
-            selectedClasses.includes(cls) ? "selected class-selected" : ""
-          }`}
-          onClick={() => {
-            setSelectedClasses((prev) =>
-              prev.includes(cls)
-                ? prev.filter((item) => item !== cls)
-                : [...prev, cls]
-            );
-          }}
-        >
-          {cls}
-        </button>
-      ))}
-    </div>
+        <>
+          <div className="category-buttons levels">
+            {["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].map((level) => (
+              <button
+                key={level}
+                className={`button-secondary level-button ${
+                  selectedLevel.includes(Number(level))
+                    ? "selected level-selected"
+                    : ""
+                }`}
+                onClick={() => {
+                  setSelectedLevel((prev) =>
+                    prev.includes(Number(level))
+                      ? prev.filter((item) => item !== Number(level))
+                      : [...prev, Number(level)]
+                  );
+                }}
+              >
+                {level}
+              </button>
+            ))}
+          </div>
+          
+          <div className="category-buttons classes">
+            {["Druid", "Cleric", "Sorcerer", "Wizard", "Paladin", "Ranger", "Warlock"].map((cls) => (
+              <button
+                key={cls}
+                className={`button-secondary class-button ${
+                  selectedClasses.includes(cls) ? "selected class-selected" : ""
+                }`}
+                onClick={() => {
+                  setSelectedClasses((prev) =>
+                    prev.includes(cls)
+                      ? prev.filter((item) => item !== cls)
+                      : [...prev, cls]
+                  );
+                }}
+              >
+                {cls}
+              </button>
+            ))}
+          </div>
 
-    <div className="category-buttons schools">
-      {["Abjuration", "Conjuration", "Divination", "Enchantment", "Evocation", "Illusion", "Necromancy", "Transmutation"].map((school) => (
-        <button
-          key={school}
-          className={`button-secondary school-button ${
-            selectedSchools.includes(school)
-              ? "selected school-selected"
-              : ""
-          }`}
-          onClick={() => {
-            setSelectedSchools((prev) =>
-              prev.includes(school)
-                ? prev.filter((item) => item !== school)
-                : [...prev, school]
-            );
-          }}
-        >
-          {school}
-        </button>
-      ))}
-    </div>
+          <div className="category-buttons schools">
+            {["Abjuration", "Conjuration", "Divination", "Enchantment", "Evocation", "Illusion", "Necromancy", "Transmutation"].map((school) => (
+              <button
+                key={school}
+                className={`button-secondary school-button ${
+                  selectedSchools.includes(school)
+                    ? "selected school-selected"
+                    : ""
+                }`}
+                onClick={() => {
+                  setSelectedSchools((prev) =>
+                    prev.includes(school)
+                      ? prev.filter((item) => item !== school)
+                      : [...prev, school]
+                  );
+                }}
+              >
+                {school}
+              </button>
+            ))}
+          </div>
 
-    <div className="category-buttons ritual">
-      <button
-        className={`button-secondary ritual-button ${
-          selectedRitual ? "selected ritual-selected" : ""
-        }`}
-        onClick={() => setSelectedRitual((prev) => !prev)}
-      >
-        Rituale
-      </button>
-    </div>
-  </>
-)}
+          <div className="category-buttons ritual">
+            <button
+              className={`button-secondary ritual-button ${
+                selectedRitual ? "selected ritual-selected" : ""
+              }`}
+              onClick={() => setSelectedRitual((prev) => !prev)}
+            >
+              Rituale
+            </button>
+          </div>
+        </>
+      )}
 
       {category === "feats" && (
         <div className="category-buttons">
@@ -305,22 +325,32 @@ function Wiki({ setShowWiki }) {
         </div>
       )}
 
-<div className="items-list">
-  {getItems().map((item, index) => (
-    <div key={index} className="item">
-      <p onClick={() => handleItemClick(item)}>{item.term} ━ {item.translation}</p>
-      {selectedItems.some((i) => i.term === item.term) && (
-        <div className="description">
-          <p
-            dangerouslySetInnerHTML={{
-              __html: selectedItems.find((i) => i.term === item.term)?.description[language],
-            }}
-          />
-        </div>
-      )}
-    </div>
-  ))}
-</div>
+      <div className="items-list">
+        {getItems().map((item, index) => {
+          const selectedObj = selectedItems.find((i) => i.term === item.term);
+          return (
+            <div
+              key={index}
+              className={`item ${
+                selectedObj ? (selectedObj.active ? "active" : "selected") : ""
+              }`}
+            >
+              <p onClick={(e) => handleItemClick(item, e)}>
+                {item.term} ━ {item.translation}
+              </p>
+              {selectedObj && (
+                <div className="description">
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: selectedObj.description[language],
+                    }}
+                  />
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

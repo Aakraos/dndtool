@@ -173,6 +173,11 @@ button {
   font-size: 16px;
 }
 
+.items-list .item p {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
 .item {
   cursor: pointer;
   transition: transform 0.3s ease, color 0.3s ease;
@@ -184,9 +189,15 @@ button {
   color: #C50000;
 }
 
-.item:active {
-  transform: scale(0.95);
+/* Stile temporaneo al tocco (active) */
+.item.active {
+  transform: scale(1.1);
   color: #C50000;
+}
+/* Stile normale (ma con descrizione visibile) */
+.item.selected {
+  transform: none;
+  color: #ffffff;
 }
 
 /* Ricerca */
@@ -226,6 +237,10 @@ button {
   }
   .items-list {
     font-size: 1.5rem;
+  }
+  .items-list .item p {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 }
 
