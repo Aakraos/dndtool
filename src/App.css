@@ -1,10 +1,11 @@
+/* Corpo e HTML */
 body, html {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   color-scheme: dark;
-  background-color: #242424 !important; /* Cambia il colore di sfondo come preferisci */
+  background-color: #222222 !important; /* Cambia il colore di sfondo come preferisci */
 }
 
 #root {
@@ -16,17 +17,24 @@ body, html {
   color-scheme: dark;
 }
 
+/* Contenitori principali */
+.main-container {
+  width: 100%;
+  height: 100vh;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Allinea il contenuto in alto */
   width: 100%;
   min-height: 100%;
   text-align: center;
   font-size: 16px;
 }
 
+/* Bottoni generali */
 .buttons,
 .category-buttons {
   display: flex;
@@ -35,19 +43,18 @@ body, html {
   white-space: nowrap;
   max-width: 100vw;
   padding-bottom: 2px;
-  width: 100%;
   justify-content: center; /* Centra i bottoni */
 }
 
 button {
-  background-color: #007bff;
+  background-color: #340000;
   color: white !important; /* Assicura che il testo sia sempre bianco */
   padding: 6px 12px;
-  border: none;
+  border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem; /* Dimensione base del testo */
   cursor: pointer;
-  flex-grow: 1;
+  flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
   min-width: 50px; /* Impedisce ai bottoni di diventare troppo piccoli */
@@ -58,82 +65,111 @@ button {
   text-overflow: ellipsis; /* Mostra '...' se il testo è troppo lungo, ma non a capo */
 }
 
+/* Bottoni principali */
 .button-main {
   padding: 6px 12px;
   margin: 3px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #080808;
+  background-color: #340000;
   transition: background-color 0.3s;
   color: white; /* Testo bianco per i bottoni principali */
 }
 
 .button-main.selected {
-  background-color: #ff6347;
+  background-color: #C50000;
   color: #ffffff;
 }
 
 .button-main:hover {
-  background-color: #9538285d;
+  background-color: #890000;
 }
 
+.button-main.selected:hover {
+  background-color: #C50000; /* Impedisce la modifica del colore di sfondo */
+}
+
+
+
+/* Bottoni secondari */
 .button-secondary {
   padding: 6px 12px;
   margin: 3px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #080808;
+  border-radius: 10px;
+  background-color: #2E0034;
   cursor: pointer;
   transition: background-color 0.3s;
   color: white; /* Testo bianco per i bottoni secondari */
 }
 
 .button-secondary.selected {
-  background-color: #007BFF;
+  background-color: #AC00C3;
   color: white;
 }
 
 .button-secondary:hover {
-  background-color: #007bff6f;
+  background-color: #790089;
 }
 
-/* Media Queries per schermi più piccoli */
-@media (max-width: 1024px) {
-  .app-container, .items-list, .item-description p {
-    font-size: 18px; /* Aumenta la dimensione del testo per schermi medio-piccoli */
-  }
-  button {
-    font-size: 0.9rem; /* Riduce leggermente la dimensione del testo */
-    padding: 5px 10px;
-  }
+.button-secondary.selected:hover {
+  background-color: #AC00C3; /* Impedisce la modifica del colore di sfondo */
 }
 
-@media (max-width: 768px) {
-  .app-container, .items-list, .item-description p {
-    font-size: 18px; /* Aumenta un po' la dimensione del testo per schermi più piccoli */
-  }
-  button {
-    font-size: 0.8rem; /* Ulteriore riduzione della dimensione del testo */
-    padding: 4px 8px;
-  }
+/* Bottoni Filtri Incantesimi */
+/* Bottoni per il livello */
+.level-button {
+  /* Aggiungi qui il tuo stile personalizzato */
 }
 
-@media (max-width: 480px) {
-  .app-container, .items-list, .item-description p {
-    font-size: 16px; /* Riduce la dimensione del testo per schermi molto piccoli */
-  }
-  button {
-    font-size: 0.7rem; /* Riduce ulteriormente la dimensione del testo */
-    padding: 3px 6px;
-  }
-  /* Assicura che il testo degli oggetti sia sempre visibile e leggibile */
-  .item {
-    color: white !important; /* Colore chiaro per migliorare la leggibilità su sfondo scuro */
-  }
+/* Bottoni per le classi */
+/* Bottoni per le classi */
+.class-button {
+  /* Aggiungi altre personalizzazioni qui */
 }
 
+/* Bottoni per le scuole di magia */
+.school-button {
+  /* Aggiungi altre personalizzazioni qui */
+}
+/* Bottoni per il rituale */
+.ritual-button {
+  /* Aggiungi qui il tuo stile personalizzato */
+}
+
+
+/* Bottoni specifici */
+.back-button {
+  margin-top: 1.2vw;
+  border-radius: 10px;
+}
+
+.wiki-button {
+  position: absolute;
+  top: 50%; /* Posiziona il bottone al centro della pagina */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra esattamente il bottone */
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  background-color: #E04F00;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Quando la Wiki è aperta, togli la centratura */
+.wiki-open {
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+}
+
+/* Lista degli oggetti e descrizioni */
 .items-list {
-  margin-top: 0;
+  margin-top: 1vw;
   font-size: 16px;
 }
 
@@ -145,14 +181,15 @@ button {
 
 .item:hover {
   transform: scale(1.1);
-  color: #ff6347;
+  color: #C50000;
 }
 
 .item:active {
   transform: scale(0.95);
-  color: #ff4500;
+  color: #C50000;
 }
 
+/* Ricerca */
 .search-bar {
   margin: 10px 0;
   text-align: center;
@@ -167,7 +204,7 @@ button {
 }
 
 .search-bar input:focus {
-  border-color: #ff6347;
+  border-color: #890000;
   outline: none;
 }
 
@@ -175,6 +212,55 @@ button {
   white-space: pre-line;
   font-size: 16px;
   color: #ffffff; /* Colore del testo nella descrizione per visibilità */
+}
+
+/* Media Queries per schermi più piccoli */
+@media (max-width: 1024px) {
+  .app-container, .items-list, .item-description p {
+    font-size: 18px; /* Aumenta la dimensione del testo per schermi medio-piccoli */
+  }
+  button {
+    font-size: 0.9rem; /* Riduce leggermente la dimensione del testo */
+    padding: 5px 10px;
+  }
+  .level-button,
+  .class-button,
+  .school-button {
+    font-size: 0.9rem; /* Riduce la dimensione del testo */
+    padding: 5px 10px; /* Riduce il padding */
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container, .items-list, .item-description p {
+    font-size: 18px; /* Aumenta un po' la dimensione del testo per schermi più piccoli */
+  }
+  button {
+    font-size: 0.8rem; /* Ulteriore riduzione della dimensione del testo */
+    padding: 4px 8px;
+  }
+  .level-button,
+  .class-button,
+  .school-button {
+    font-size: 0.8rem; /* Riduce ulteriormente la dimensione del testo */
+    padding: 4px 8px; /* Riduce il padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container, .items-list, .item-description p {
+    font-size: 16px; /* Riduce la dimensione del testo per schermi molto piccoli */
+  }
+  button {
+    font-size: 0.7rem; /* Riduce ulteriormente la dimensione del testo */
+    padding: 3px 6px;
+  }
+  .level-button,
+  .class-button,
+  .school-button {
+    font-size: 0.7rem; /* Ulteriore riduzione della dimensione del testo */
+    padding: 3px 6px; /* Ulteriore riduzione del padding */
+  }
 }
 
 /* Media Queries per schermi più grandi */

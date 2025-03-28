@@ -203,80 +203,83 @@ function Wiki({ setShowWiki }) {
       </div>
 
       {category === "spells" && (
-        <>
-          <div className="category-buttons">
-            {["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].map((level) => (
-              <button
-                key={level}
-                className={`button-secondary ${
-                  selectedLevel.includes(Number(level))
-                    ? "selected secondary-selected"
-                    : ""
-                }`}
-                onClick={() => {
-                  setSelectedLevel((prev) =>
-                    prev.includes(Number(level))
-                      ? prev.filter((item) => item !== Number(level))
-                      : [...prev, Number(level)]
-                  );
-                }}
-              >
-                {level}
-              </button>
-            ))}
-          </div>
-          <div className="category-buttons">
-            {["Druid", "Cleric", "Sorcerer", "Wizard", "Paladin", "Ranger", "Warlock"].map((cls) => (
-              <button
-                key={cls}
-                className={`button-secondary ${
-                  selectedClasses.includes(cls) ? "selected secondary-selected" : ""
-                }`}
-                onClick={() => {
-                  setSelectedClasses((prev) =>
-                    prev.includes(cls)
-                      ? prev.filter((item) => item !== cls)
-                      : [...prev, cls]
-                  );
-                }}
-              >
-                {cls}
-              </button>
-            ))}
-          </div>
-          <div className="category-buttons">
-            {["Abjuration", "Conjuration", "Divination", "Enchantment", "Evocation", "Illusion", "Necromancy", "Transmutation"].map((school) => (
-              <button
-                key={school}
-                className={`button-secondary ${
-                  selectedSchools.includes(school)
-                    ? "selected secondary-selected"
-                    : ""
-                }`}
-                onClick={() => {
-                  setSelectedSchools((prev) =>
-                    prev.includes(school)
-                      ? prev.filter((item) => item !== school)
-                      : [...prev, school]
-                  );
-                }}
-              >
-                {school}
-              </button>
-            ))}
-          </div>
-          <div className="category-buttons">
-            <button
-              className={`button-secondary ${
-                selectedRitual ? "selected secondary-selected" : ""
-              }`}
-              onClick={() => setSelectedRitual((prev) => !prev)}
-            >
-              Rituale
-            </button>
-          </div>
-        </>
-      )}
+  <>
+    <div className="category-buttons levels">
+      {["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].map((level) => (
+        <button
+          key={level}
+          className={`button-secondary level-button ${
+            selectedLevel.includes(Number(level))
+              ? "selected level-selected"
+              : ""
+          }`}
+          onClick={() => {
+            setSelectedLevel((prev) =>
+              prev.includes(Number(level))
+                ? prev.filter((item) => item !== Number(level))
+                : [...prev, Number(level)]
+            );
+          }}
+        >
+          {level}
+        </button>
+      ))}
+    </div>
+    
+    <div className="category-buttons classes">
+      {["Druid", "Cleric", "Sorcerer", "Wizard", "Paladin", "Ranger", "Warlock"].map((cls) => (
+        <button
+          key={cls}
+          className={`button-secondary class-button ${
+            selectedClasses.includes(cls) ? "selected class-selected" : ""
+          }`}
+          onClick={() => {
+            setSelectedClasses((prev) =>
+              prev.includes(cls)
+                ? prev.filter((item) => item !== cls)
+                : [...prev, cls]
+            );
+          }}
+        >
+          {cls}
+        </button>
+      ))}
+    </div>
+
+    <div className="category-buttons schools">
+      {["Abjuration", "Conjuration", "Divination", "Enchantment", "Evocation", "Illusion", "Necromancy", "Transmutation"].map((school) => (
+        <button
+          key={school}
+          className={`button-secondary school-button ${
+            selectedSchools.includes(school)
+              ? "selected school-selected"
+              : ""
+          }`}
+          onClick={() => {
+            setSelectedSchools((prev) =>
+              prev.includes(school)
+                ? prev.filter((item) => item !== school)
+                : [...prev, school]
+            );
+          }}
+        >
+          {school}
+        </button>
+      ))}
+    </div>
+
+    <div className="category-buttons ritual">
+      <button
+        className={`button-secondary ritual-button ${
+          selectedRitual ? "selected ritual-selected" : ""
+        }`}
+        onClick={() => setSelectedRitual((prev) => !prev)}
+      >
+        Rituale
+      </button>
+    </div>
+  </>
+)}
 
       {category === "feats" && (
         <div className="category-buttons">
@@ -305,7 +308,7 @@ function Wiki({ setShowWiki }) {
 <div className="items-list">
   {getItems().map((item, index) => (
     <div key={index} className="item">
-      <p onClick={() => handleItemClick(item)}>{item.term} - {item.translation}</p>
+      <p onClick={() => handleItemClick(item)}>{item.term} ━ {item.translation}</p>
       {selectedItems.some((i) => i.term === item.term) && (
         <div className="description">
           <p
