@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import descriptions from "./descriptions";
 import spells from "./spells";
@@ -163,6 +163,24 @@ function Wiki({ setShowWiki }) {
   const toggleLanguage = () => {
     setLanguage((prevLanguage) => (prevLanguage === "it" ? "en" : "it"));
   };
+
+   useEffect(() => {
+    setSelectedItems((prevItems) =>
+      prevItems.map((item) => {
+        const description = descriptions[item.term.toLowerCase()];
+        if (!description) return item;
+
+        return {
+          ...item,
+          description: {
+            it: replacePlaceholders(description.it, item),
+            en: replacePlaceholders(description.en, item),
+          },
+        };
+      })
+    );
+  }, [language]); // Esegue l'aggiornamento quando cambia la lingua
+
 
   const resetView = () => {
     setSelectedItems([]);
