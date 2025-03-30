@@ -5,11 +5,12 @@ import spells from "./spells";
 import rules from "./rules";
 import items from "./items";
 import feats from "./feats"; // Importa i talenti
+import { schoolTranslations, classTranslations, rangeTranslations, castingTimeTranslations, durationTranslations } from './spells';
 
 function Wiki({ setShowWiki }) {
   const [category, setCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
-  const [language, setLanguage] = useState("it");
+  const [language, setLanguage] = useState("en");
   const [selectedCategories, setSelectedCategories] = useState([]); // Per altri sottofiltri se necessari
   const [selectedLevel, setSelectedLevel] = useState([]); // Filtro per livelli (solo per spells)
   const [selectedClasses, setSelectedClasses] = useState([]);
@@ -18,7 +19,7 @@ function Wiki({ setShowWiki }) {
 
   // Stato per il filtro dei talenti (feats)
   const [selectedFeatCategory, setSelectedFeatCategory] = useState([]);
-  
+
   // Stato per gestire gli elementi selezionati e le loro descrizioni.
   // Ogni item sarà un oggetto con { ...item, description, active }.
   const [selectedItems, setSelectedItems] = useState([]);
@@ -95,13 +96,27 @@ function Wiki({ setShowWiki }) {
   const replacePlaceholders = (description, spell) => {
     return description
       .replace(/{(castingtime|range|components|duration)}/g, (_, key) => {
-        return spell[key.toLowerCase()] || `{${key}}`;
+        // Recupera il valore corrispondente e restituisce la traduzione o il valore di default
+        const value = spell[key.toLowerCase()] || `{${key}}`;
+        return language === "it"
+          ? (key === "castingtime" ? castingTimeTranslations[value] :
+              key === "range" ? rangeTranslations[value] :
+              key === "components" ? value : // I componenti potrebbero non richiedere una traduzione
+              key === "duration" ? durationTranslations[value] : value)
+          : value;
       })
       .replace(/{level}/g, spell.level ? `${spell.level}` : "{level}")
-      .replace(/{school}/g, spell.school || "{school}")
-      .replace(/{classes}/g, spell.classes ? spell.classes.join(", ") : "{classes}")
+      .replace(/{school}/g, spell.school
+        ? (language === "it" ? schoolTranslations[spell.school] || spell.school : spell.school)
+        : "{school}")
+      .replace(/{classes}/g, spell.classes
+        ? spell.classes
+            .map((cls) => (language === "it" ? classTranslations[cls] || cls : cls)) // Traduci le classi
+            .sort() // Ordina alfabeticamente
+            .join(", ") // Unisci in una stringa
+        : "{classes}")
       .replace(/{source}/g, spell.source || "{source}")
-      .replace(/{ritual}/g, spell.ritual ? "Yes" : "No")
+      .replace(/{ritual}/g, spell.ritual ? "Sì" : "No")
       .replace(/{term}/g, spell.term || "{term}")
       .replace(/{translation}/g, spell.translation || "{translation}");
   };
@@ -245,7 +260,7 @@ function Wiki({ setShowWiki }) {
               </button>
             ))}
           </div>
-          
+
           <div className="category-buttons classes">
             {["Druid", "Cleric", "Sorcerer", "Wizard", "Paladin", "Ranger", "Warlock"].map((cls) => (
               <button
@@ -344,8 +359,15 @@ function Wiki({ setShowWiki }) {
                     dangerouslySetInnerHTML={{
                       __html: selectedObj.description[language],
                     }}
+                    
                   />
+                    <div className="translate-button-container">
+                      <button onClick={toggleLanguage} className="toggle-language">
+                        {language === "it" ? "Inglese" : "Italiano"}
+                      </button>
+                    </div>
                 </div>
+                
               )}
             </div>
           );

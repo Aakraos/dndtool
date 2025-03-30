@@ -36,45 +36,45 @@ const descriptions = {
 
     "aid": {
       it: `
-        <em>Abiurazione di 2° livello (Bardo, Chierico, Druido, Paladino, Ranger)</em><br><br>
-        <strong>Tempo di Lancio:</strong> 1 azione<br>
-        <strong>Gittata:</strong> 9 metri<br>
-        <strong>Componenti:</strong> V, S, M (una sottile striscia di tessuto bianco)<br>
-        <strong>Durata:</strong> 8 ore<br><br>
-        Questo incantesimo rafforza il vigore e la determinazione degli alleati. L'incantatore sceglie fino a tre creature entro gittata. Il massimo dei punti ferita e i punti ferita attuali di ogni bersaglio aumentano di 5 per la durata dell'incantesimo.<br>
-        <strong>Ai Livelli Superiori:</strong> Quando l'incantatore lancia questo incantesimo usando uno slot incantesimo di 3° livello o superiore, i punti ferita di un bersaglio aumentano di altri 5 punti per ogni slot di livello superiore al 2°. <br>
+        <em>{school} di {level}° livello ({classes})</em>
+        <strong>Tempo di Lancio:</strong> {castingtime}
+        <strong>Gittata:</strong> {range}
+        <strong>Componenti:</strong> {components}
+        <strong>Durata:</strong> {duration}<br>
+        Questo incantesimo rafforza il vigore e la determinazione degli alleati. L'incantatore sceglie fino a tre creature entro gittata. Il massimo dei punti ferita e i punti ferita attuali di ogni bersaglio aumentano di 5 per la durata dell'incantesimo.
+        <strong>Ai Livelli Superiori:</strong> Quando l'incantatore lancia questo incantesimo usando uno slot incantesimo di 3° livello o superiore, i punti ferita di un bersaglio aumentano di altri 5 punti per ogni slot di livello superiore al 2°.<br>
         <em>Fonte: D&D 5e</em>
       `,
         en: `
-        <em>Level {level} {school} ({classes})</em><br><br>
-        <strong>Casting Time:</strong> {castingtime}<br>
-        <strong>Range:</strong> {range}<br>
-        <strong>Components:</strong> {components}<br>
-        <strong>Duration:</strong> {duration}<br><br>
-        Choose up to three creatures within range. Each target's hit point maximum and current hit points increase by 5 for the duration.<br>
-        <strong>Using a Higher-Level Spell Slot:</strong> Each target's Hit Points increase by 5 for each spell slot level above 2.<br><br>
+        <em>Level {level} {school} ({classes})</em>
+        <strong>Casting Time:</strong> {castingtime}
+        <strong>Range:</strong> {range}
+        <strong>Components:</strong> {components}
+        <strong>Duration:</strong> {duration}<br>
+        Choose up to three creatures within range. Each target's hit point maximum and current hit points increase by 5 for the duration.
+        <strong>Using a Higher-Level Spell Slot:</strong> Each target's Hit Points increase by 5 for each spell slot level above 2.<br>
         <em>Source: {source}</em>
       `
     },
     "alarm": {
       it: `
-        <em>Abiurazione di 2° livello (Bardo, Chierico, Druido, Paladino, Ranger)</em><br><br>
-        <strong>Tempo di Lancio:</strong> 1 azione<br>
-        <strong>Gittata:</strong> 9 metri<br>
-        <strong>Componenti:</strong> V, S, M (una sottile striscia di tessuto bianco)<br>
-        <strong>Durata:</strong> 8 ore<br><br>
-        Questo incantesimo rafforza il vigore e la determinazione degli alleati. L'incantatore sceglie fino a tre creature entro gittata. Il massimo dei punti ferita e i punti ferita attuali di ogni bersaglio aumentano di 5 per la durata dell'incantesimo.<br>
-        <strong>Ai Livelli Superiori:</strong> Quando l'incantatore lancia questo incantesimo usando uno slot incantesimo di 3° livello o superiore, i punti ferita di un bersaglio aumentano di altri 5 punti per ogni slot di livello superiore al 2°. <br>
+        <em>{school} di {level}° livello ({classes})</em>
+        <strong>Tempo di Lancio:</strong> {castingtime}
+        <strong>Gittata:</strong> {range}
+        <strong>Componenti:</strong> {components}
+        <strong>Durata:</strong> {duration}<br>
+        Questo incantesimo rafforza il vigore e la determinazione degli alleati. L'incantatore sceglie fino a tre creature entro gittata. Il massimo dei punti ferita e i punti ferita attuali di ogni bersaglio aumentano di 5 per la durata dell'incantesimo.
+        <strong>Ai Livelli Superiori:</strong> Quando l'incantatore lancia questo incantesimo usando uno slot incantesimo di 3° livello o superiore, i punti ferita di un bersaglio aumentano di altri 5 punti per ogni slot di livello superiore al 2°.<br>
         <em>Fonte: D&D 5e</em>
       `,
       en: `
-        <em>Level 1 Abjuration (Ranger, Wizard)</em><br><br>
-        <strong>Casting Time:</strong> 1 minute or Ritual<br>
-        <strong>Range:</strong> 30 feet<br>
-        <strong>Components:</strong> V, S, M (a bell)<br>
+        <em>Level {level} {school} ({classes})</em>
+        <strong>Casting Time:</strong> {castingtime}
+        <strong>Range:</strong> {range}
+        <strong>Components:</strong> V, S, M (a bell)
         <strong>Duration:</strong> 8 hours<br><br>
-        You set an alarm against intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot Cube. Until the spell ends, an alarm alerts you whenever a creature touches or enters the warded area. When you cast the spell, you can designate creatures that won't set off the alarm. You also choose whether the alarm is audible or mental:<br><br>
-        <strong>Audible Alarm</strong> The alarm produces the sound of a handbell for 10 seconds within 60 feet of the warded area.<br>
+        You set an alarm against intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot Cube. Until the spell ends, an alarm alerts you whenever a creature touches or enters the warded area. When you cast the spell, you can designate creatures that won't set off the alarm. You also choose whether the alarm is audible or mental:
+        <strong>Audible Alarm</strong> The alarm produces the sound of a handbell for 10 seconds within 60 feet of the warded area.
         <strong>Mental Alarm</strong> You are alerted by a mental ping if you are within 1 mile of the warded area. This ping awakens you if you're asleep.<br>
         <em>Source: D&D 2024</em>
       `

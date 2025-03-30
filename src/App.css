@@ -144,6 +144,8 @@ button {
   border-radius: 10px;
 }
 
+
+
 .wiki-button {
   position: absolute;
   top: 50%; /* Posiziona il bottone al centro della pagina */
@@ -156,6 +158,10 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+}
+
+.toggle-language:hover {
+  background-color: #890000;
 }
 
 /* Quando la Wiki è aperta, togli la centratura */
@@ -180,24 +186,28 @@ button {
 
 .item {
   cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease;
+  margin: 1vw 0 1vw 0;
+  transition: color 0.3s ease;
   color: #ffffff; /* Colore scuro per una visibilità migliore */
 }
 
 .item:hover {
-  transform: scale(1.1);
   color: #C50000;
 }
 
 /* Stile temporaneo al tocco (active) */
-.item.active {
-  transform: scale(1.1);
-  color: #C50000;
-}
 /* Stile normale (ma con descrizione visibile) */
 .item.selected {
   transform: none;
   color: #ffffff;
+}
+
+.item.selected:hover {
+  color: #ffffff !important; /* Mantiene il colore originale */
+}
+
+.item:not(.selected):hover {
+  color: #C50000;
 }
 
 /* Ricerca */
@@ -219,11 +229,31 @@ button {
   outline: none;
 }
 
-.item-description p {
+.description p {
   white-space: pre-line;
+  text-align: center;
+  max-width: 800px;    /* Limita la larghezza della descrizione */
+  margin: 0 auto 0;      /* Centra il contenitore orizzontalmente */
+  padding: 2vw 1rem;
+  line-height: 1;
+  align-content: center;
   font-size: 16px;
-  color: #ffffff; /* Colore del testo nella descrizione per visibilità */
+  color: #ffffff;
+  background-color: #2e003433;
 }
+
+.translate-button-container {
+  white-space: pre-line;
+  text-align: center;
+  max-width: 800px;    /* Limita la larghezza della descrizione */
+  margin: 0 auto 0;      /* Centra il contenitore orizzontalmente */
+  padding: 2vw 1rem;
+  line-height: 1;
+  align-content: center;
+  color: #ffffff;
+  background-color: #2e003433;
+}
+
 
 /* Media Queries per schermi più piccoli */
 @media {

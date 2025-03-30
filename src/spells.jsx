@@ -5545,7 +5545,7 @@ const spells = [
 ];
 
 // Oggetti di traduzione per scuola e classi
-const schoolTranslations = {
+export const schoolTranslations = {
   Abjuration: "Abiurazione",
   Conjuration: "Evocazione",
   Divination: "Divinazione",
@@ -5556,7 +5556,7 @@ const schoolTranslations = {
   Transmutation: "Trasmutazione",
 };
 
-const classTranslations = {
+export const classTranslations = {
   Bard: "Bardo",
   Cleric: "Chierico",
   Druid: "Druido",
@@ -5567,7 +5567,7 @@ const classTranslations = {
   Warlock: "Warlock",
 };
 
-const rangeTranslations = {
+export const rangeTranslations = {
   "500 feet": "150 metri",
   "150 feet": "45 metri",
   "120 feet": "36 metri",
@@ -5581,7 +5581,8 @@ const rangeTranslations = {
   "Unlimited": "Illimitata",
 };
 
-const castingTimeTranslations = {
+export const castingTimeTranslations = {
+  "Action": "1 azione",
   "1 action": "1 azione",
   "1 bonus action": "1 azione bonus",
   "1 reaction": "1 reazione",
@@ -5595,7 +5596,7 @@ const castingTimeTranslations = {
   "Special": "Speciale"
 };
 
-const durationTranslations = {
+export const durationTranslations = {
   "Instantaneous": "Istantanea",
   "1 round": "1 round",
   "1 minute": "1 minuto",
