@@ -13,7 +13,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["acid splash"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -28,7 +28,7 @@ const spells = [
     components: "V, S, M (a strip of white cloth)",
     duration: "8 hours",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["aid"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -43,7 +43,7 @@ const spells = [
     components: "V, S, M (a bell and silver wire)",
     duration: "Instantaneous",
     ritual: true,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["alarm"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -58,7 +58,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["alter self"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -73,7 +73,7 @@ const spells = [
     components: "V, S, M (a morsel of food)",
     duration: "24 hours",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["animal friendship"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -88,7 +88,7 @@ const spells = [
     components: "V, S, M (a morsel of food)",
     duration: "24 hours",
     ritual: true,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["animal messenger"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -103,7 +103,7 @@ const spells = [
     components: "V, S",
     duration: "24 hours",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["animal shapes"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -118,7 +118,7 @@ const spells = [
     components: "V, S, M (a drop of blood, a piece of flesh, and a pinch of bone dust)",
     duration: "Instantaneous",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["animate dead"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -133,7 +133,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["animate objects"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -148,7 +148,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["antilife shell"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -163,7 +163,7 @@ const spells = [
     components: "V, S, M (iron filings)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["antimagic field"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -178,7 +178,7 @@ const spells = [
     components: "V, S, M (a mix of vinegar and honey)",
     duration: "10 days",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["antipathy/sympathy"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -193,7 +193,7 @@ const spells = [
     components: "V, S, M (a bit of bat fur)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["arcane eye"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -208,7 +208,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["arcane gate"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -223,7 +223,7 @@ const spells = [
     components: "V, S, M (gold dust worth 25+ GP, which the spell consumes)",
     duration: "Until dispelled",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["arcane lock"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -238,7 +238,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["arcane vigor"] || { it: "Traduzione non ancora pubblicata.", en: "Description not found" },
   },
   {
@@ -253,7 +253,7 @@ const spells = [
     components: "V, S, M (a shard of blue glass)",
     duration: "1 hour",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["armor of agathys"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -268,7 +268,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["arms of hadar"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -283,7 +283,7 @@ const spells = [
     components: "V, S, M (for each of the spell's targets, one jacinth worth 1,000+ GP and one silver bar worth 100+ gp, all of which the spell consumes)",
     duration: "Until dispelled",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["astral projection"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -298,7 +298,7 @@ const spells = [
     components: "V, S, M (specially marked sticks, bones, cards, or other divinatory tokens worth 25+ GP)",
     duration: "Instantaneous",
     ritual: true,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["augury"] || { it: "Descrizione non trovata", en: "Description not found" }, 
   },
   {
@@ -313,7 +313,7 @@ const spells = [
     components: "V",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["aura of life"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -328,7 +328,7 @@ const spells = [
     components: "V",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["aura of purity"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -343,7 +343,7 @@ const spells = [
     components: "V",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["aura of vitality"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -358,7 +358,7 @@ const spells = [
     components: "V, S, M (an agate worth 1000+ GP, which the spell consumes)",
     duration: "Instantaneous",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["awaken"] || { it: "Descrizione non trovata", en: "Description not found" }, 
   },
   {
@@ -373,7 +373,7 @@ const spells = [
     components: "V, S, M (a drop of blood)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["bane"] || { it: "Descrizione non trovata", en: "Description not found" }, 
   },
   {
@@ -388,7 +388,7 @@ const spells = [
     components: "V",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["banishing smite"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -403,7 +403,7 @@ const spells = [
     components: "V, S, M (a pentacle)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["banishment"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -1888,7 +1888,7 @@ const spells = [
     components: "V, S, M (a white feather)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["fear"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -1903,7 +1903,7 @@ const spells = [
     components: "V, M (a small feather or piece of down)",
     duration: "1 minute",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["feather fall"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -1918,7 +1918,7 @@ const spells = [
     components: "V, S, M (a pinch of graveyard dirt)",
     duration: "1 hour",
     ritual: true,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["feign death"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -1933,7 +1933,7 @@ const spells = [
     components: "V, S, M (burning incense worth 10+ GP, which the spell consumes)",
     duration: "Instantaneous",
     ritual: true,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["find familiar"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -1948,7 +1948,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["find steed"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -1963,7 +1963,7 @@ const spells = [
     components: "V, S, M (a set of divination tools - such as cards or runes - worth 100+ GP)",
     duration: "Concentration, up to 1 day",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["find the path"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -1978,7 +1978,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["find traps"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -1993,7 +1993,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["finger of death"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -2008,7 +2008,7 @@ const spells = [
     components: "V, S, M (a ball of bat guano and sulfur)",
     duration: "Instantaneous",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["fireball"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -2023,7 +2023,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["fire bolt"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -2038,7 +2038,7 @@ const spells = [
     components: "V, S, M (a bit of phosphorus or a firefly)",
     duration: "10 minutes",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["fire shield"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -2053,7 +2053,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["fire storm"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -2068,7 +2068,7 @@ const spells = [
     components: "V, S, M (a sumac leaf)",
     duration: "Concentration, up to 10 minute",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["flame blade"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -2083,7 +2083,7 @@ const spells = [
     components: "V, S, M (a pinch of sulfur)",
     duration: "Instantaneous",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["flame strike"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -2098,7 +2098,7 @@ const spells = [
     components: "V, S, M (a bit of wax)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["flaming sphere"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -2113,7 +2113,7 @@ const spells = [
     components: "V, S, M (a cockatrice feather)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["flesh to stone"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -2128,7 +2128,7 @@ const spells = [
     components: "V, S, M (a feather)",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["fly"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -2143,7 +2143,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["fog cloud"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -2158,7 +2158,7 @@ const spells = [
     components: "V, S, M (ruby dust worth 1,000+ GP)",
     duration: "1 day",
     ritual: true,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["forbiddance"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -2173,7 +2173,7 @@ const spells = [
     components: "V, S, M (ruby dust worth 1,500+ GP, which the spell consumes)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["forcecage"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -2202,7 +2202,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["fount of moonlight"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -2876,7 +2876,7 @@ const spells = [
     components: "V, S, M (a pinch of phosphorus)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["jallarzi's storm of radiance"] || { it: "Descrizione non trovata", en: "Description not found" }
   },
   {
@@ -4362,7 +4362,7 @@ const spells = [
     components: "V",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     description: descriptions["shining smite"] || { it: "Descrizione non trovata", en: "Description not found" },
   },
   {
@@ -4914,7 +4914,7 @@ const spells = [
     school: "Conjuration",
     level: 6,
     classes: ["Warlock", "Wizard"],
-    source: "D&D5.5 Player's Handbook",
+    source: "D&D 2024 Player's Handbook",
     castingtime: "Action",
     range: "5 feet",
     components: "V, S, M (a gilded ladle worth 500+ GP)",
