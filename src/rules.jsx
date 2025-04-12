@@ -2251,7 +2251,7 @@ const rules = [
     },
     { 
       term: "Starting at higher levels", 
-      translation: "Mutare Forma",
+      translation: "Iniziare a livelli superiori",
       pagePhb: ["43"],
       pagePhbIt: ["176", "191-192"],
       pageDmg: [""],

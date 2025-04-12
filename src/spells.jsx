@@ -14,7 +14,7 @@ const spells = [
     duration: "Instantaneous",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["acid splash"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["acid splash"] 
   },
   {
     key: "aid",
@@ -29,7 +29,7 @@ const spells = [
     duration: "8 hours",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["aid"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["aid"] 
   },
   {
     key: "alarm",
@@ -44,7 +44,7 @@ const spells = [
     duration: "Instantaneous",
     ritual: true,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["alarm"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["alarm"] 
   },
   {
     key: "alter_self",
@@ -59,7 +59,7 @@ const spells = [
     duration: "Concentration, up to 1 hour",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["alter self"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["alter self"] 
   },
   {
     key: "animal_friendship",
@@ -74,7 +74,7 @@ const spells = [
     duration: "24 hours",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["animal friendship"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["animal friendship"] 
   },
   {
     key: "animal_messenger",
@@ -89,7 +89,7 @@ const spells = [
     duration: "24 hours",
     ritual: true,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["animal messenger"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["animal messenger"] 
   },
   {
     key: "animal_shapes",
@@ -104,7 +104,7 @@ const spells = [
     duration: "24 hours",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["animal shapes"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["animal shapes"] 
   },
   {
     key: "animate_dead",
@@ -119,7 +119,7 @@ const spells = [
     duration: "Instantaneous",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["animate dead"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["animate dead"] 
   },
   {
     key: "animate_objects",
@@ -134,7 +134,7 @@ const spells = [
     duration: "Concentration, up to 1 minute",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["animate objects"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["animate objects"] 
   },
   {
     key: "antilife_shell",
@@ -149,7 +149,7 @@ const spells = [
     duration: "Concentration, up to 1 hour",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["antilife shell"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["antilife shell"] 
   },
   {
     key: "antimagic_field",
@@ -164,7 +164,7 @@ const spells = [
     duration: "Concentration, up to 1 hour",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["antimagic field"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["antimagic field"] 
   },
   {
     key: "antipathy_sympathy",
@@ -179,7 +179,7 @@ const spells = [
     duration: "10 days",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["antipathy/sympathy"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["antipathy/sympathy"] 
   },
   {
     key: "arcane_eye",
@@ -194,7 +194,7 @@ const spells = [
     duration: "Concentration, up to 1 hour",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["arcane eye"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["arcane eye"] 
   },
   {
     key: "arcane_gate",
@@ -209,7 +209,7 @@ const spells = [
     duration: "Concentration, up to 10 minutes",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["arcane gate"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["arcane gate"] 
   },
   {
     key: "arcane_lock",
@@ -224,7 +224,7 @@ const spells = [
     duration: "Until dispelled",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["arcane lock"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["arcane lock"] 
   },
   {
     key: "arcane_vigor",
@@ -239,7 +239,7 @@ const spells = [
     duration: "Instantaneous",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["arcane vigor"] || { it: "Traduzione non ancora pubblicata.", en: "Description not found" },
+    description: descriptions["arcane vigor"]
   },
   {
     key: "armor_of_agathys",
@@ -254,7 +254,7 @@ const spells = [
     duration: "1 hour",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["armor of agathys"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["armor of agathys"] 
   },
   {
     key: "arms_of_hadar",
@@ -269,7 +269,7 @@ const spells = [
     duration: "Instantaneous",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["arms of hadar"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["arms of hadar"] 
   },
   {
     key: "astral_projection",
@@ -284,7 +284,7 @@ const spells = [
     duration: "Until dispelled",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["astral projection"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["astral projection"] 
   },
   {
     key: "augury",
@@ -299,7 +299,7 @@ const spells = [
     duration: "Instantaneous",
     ritual: true,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["augury"] || { it: "Descrizione non trovata", en: "Description not found" }, 
+    description: descriptions["augury"]  
   },
   {
     key: "aura_of_life",
@@ -314,7 +314,7 @@ const spells = [
     duration: "Concentration, up to 10 minutes",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["aura of life"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["aura of life"] 
   },
   {
     key: "aura_of_purity",
@@ -329,7 +329,7 @@ const spells = [
     duration: "Concentration, up to 10 minutes",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["aura of purity"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["aura of purity"] 
   },
   {
     key: "aura_of_vitality",
@@ -344,7 +344,7 @@ const spells = [
     duration: "Concentration, up to 1 minute",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["aura of vitality"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["aura of vitality"] 
   },
   {
     key: "awaken",
@@ -359,7 +359,7 @@ const spells = [
     duration: "Instantaneous",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["awaken"] || { it: "Descrizione non trovata", en: "Description not found" }, 
+    description: descriptions["awaken"]  
   },
   {
     key: "bane",
@@ -374,7 +374,7 @@ const spells = [
     duration: "Concentration, up to 1 minute",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["bane"] || { it: "Descrizione non trovata", en: "Description not found" }, 
+    description: descriptions["bane"]  
   },
   {
     key: "banishing_Smite",
@@ -389,7 +389,7 @@ const spells = [
     duration: "Concentration, up to 1 minute",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["banishing smite"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["banishing smite"] 
   },
   {
     key: "banishment",
@@ -404,7 +404,7 @@ const spells = [
     duration: "Concentration, up to 1 minute",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["banishment"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["banishment"] 
   },
   {
     key: "barkskin",
@@ -418,7 +418,7 @@ const spells = [
     components: "V, S, M (a handful of bark)",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["barkskin"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["barkskin"] 
   },
   {
     key: "beacon_of_hope",
@@ -432,7 +432,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["beacon of hope"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["beacon of hope"] 
   },
   {
     key: "beast_sense",
@@ -446,7 +446,7 @@ const spells = [
     components: "S",
     duration: "Concentration, up to 1 hour",
     ritual: true,
-    description: descriptions["beast sense"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["beast sense"] 
   },
   {
     key: "befuddlement",
@@ -460,7 +460,7 @@ const spells = [
     components: "V, S, M (a key ring with no keys)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["befuddlement"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["befuddlement"] 
   },
   {
     key: "bestow_curse",
@@ -474,7 +474,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["bestow curse"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["bestow curse"] 
   },
   {
     key: "bigbys_hand",
@@ -488,7 +488,7 @@ const spells = [
     components: "V, S, M (an eggshell and a snakeskin glove)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["bigby's hand"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["bigby's hand"] 
   },
   {
     key: "blade_barrier",
@@ -502,7 +502,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["blade barrier"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["blade barrier"] 
   },
   {
     key: "blade_ward",
@@ -516,7 +516,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["blade ward"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["blade ward"] 
   },
   {
     key: "bless",
@@ -530,7 +530,7 @@ const spells = [
     components: "V, S, M (a Holy Symbol worth 5+ GP",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["bless"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["bless"] 
   },
   {
     key: "blight",
@@ -544,7 +544,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["blight"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["blight"] 
   },
   {
     key: "blinding_smite",
@@ -558,7 +558,7 @@ const spells = [
     components: "V",
     duration: "1 minute",
     ritual: false,
-    description: descriptions["blinding smite"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["blinding smite"] 
   },
   {
     key: "blindness_deafness",
@@ -572,7 +572,7 @@ const spells = [
     components: "V",
     duration: "1 minute",
     ritual: false,
-    description: descriptions["blindness/deafness"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["blindness/deafness"] 
   },
   {
     key: "blink",
@@ -586,7 +586,7 @@ const spells = [
     components: "V, S",
     duration: "1 minute",
     ritual: false,
-    description: descriptions["blink"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["blink"] 
   },
   {
     key: "blur",
@@ -600,7 +600,7 @@ const spells = [
     components: "V",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["blur"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["blur"] 
   },
   {
     key: "burning_hands",
@@ -614,7 +614,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["burning hands"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["burning hands"] 
   },
   {
     key: "call_lightning",
@@ -628,7 +628,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["call lightning"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["call lightning"] 
   },
   {
     key: "calm_emotions",
@@ -642,7 +642,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["calm emotions"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["calm emotions"] 
   },
   {
     key: "chain_lightning",
@@ -656,7 +656,7 @@ const spells = [
     components: "V, S, M (three silver pins)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["chain lightning"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["chain lightning"] 
   },
   {
     key: "charm_monster",
@@ -670,7 +670,7 @@ const spells = [
     components: "V, S",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["charm monster"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["charm monster"] 
   },
   {
     key: "charm_person",
@@ -684,7 +684,7 @@ const spells = [
     components: "V, S",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["charm person"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["charm person"] 
   },
   {
     key: "chill_touch",
@@ -698,7 +698,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["chill touch"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["chill touch"] 
   },
   {
     key: "chromatic_orb",
@@ -712,7 +712,7 @@ const spells = [
     components: "V, S, M (a diamond worth 50+ gp)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["chromatic orb"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["chromatic orb"] 
   },
   {
     key: "circle_of_death",
@@ -726,7 +726,7 @@ const spells = [
     components: "V, S, M (the powder of a crushed black pearl worth 500+ GP)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["circle of death"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["circle of death"] 
   },
   {
     key: "circle_of_power",
@@ -740,7 +740,7 @@ const spells = [
     components: "V",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["circle of power"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["circle of power"] 
   },
   {
     key: "clairvoyance",
@@ -754,7 +754,7 @@ const spells = [
     components: "V, S, M (a focus worth 100+ GP, either a jeweled horn for hearing or a glass eye for seeing)",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["clairvoyance"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["clairvoyance"] 
   },
   {
     key: "clone",
@@ -768,7 +768,7 @@ const spells = [
     components: "V, S, M (a diamond worth 1,000+ GP, which the spell consumes, and a sealable vessel worth 2000+ GP that is large enough to hold the creature being cloned)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["clone"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["clone"] 
   },
   {
     key: "cloudkill",
@@ -782,7 +782,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["cloudkill"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["cloudkill"] 
   },
   {
     key: "cloud_of_daggers",
@@ -796,7 +796,7 @@ const spells = [
     components: "V, S, M (a sliver of glass)",
     duration: "Concentration, up to 1 minutes",
     ritual: false,
-    description: descriptions["cloud of daggers"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["cloud of daggers"] 
   },
   {
     key: "color_spray",
@@ -810,7 +810,7 @@ const spells = [
     components: "V, S, (a pinch of colorful sand)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["color spray"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["color spray"] 
   },
   {
     key: "command",
@@ -824,7 +824,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["command"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["command"] 
   },
   {
     key: "commune",
@@ -838,7 +838,7 @@ const spells = [
     components: "V, S, M (incense)",
     duration: "1 minute",
     ritual: true,
-    description: descriptions["commune"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["commune"] 
   },
   {
     key: "commune_with_nature",
@@ -852,7 +852,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: true,
-    description: descriptions["commune with nature"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["commune with nature"] 
   },
   {
     key: "compelled_duel",
@@ -866,7 +866,7 @@ const spells = [
     components: "V",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["compelled duel"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["compelled duel"] 
   },
   {
     key: "comprehend_languages",
@@ -880,7 +880,7 @@ const spells = [
     components: "V, S, M (a pinch of soot and salt)",
     duration: "1 hour",
     ritual: true,
-    description: descriptions["comprehend languages"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["comprehend languages"] 
   },
   {
     key: "compulsion",
@@ -894,7 +894,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["compulsion"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["compulsion"] 
   },
   {
     key: "cone_of_cold",
@@ -908,7 +908,7 @@ const spells = [
     components: "V, S, M (a small crystal or glass cone)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["cone of cold"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["cone of cold"] 
   },
   {
     key: "confusion",
@@ -922,7 +922,7 @@ const spells = [
     components: "V, S, M (three nut shells)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["confusion"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["confusion"] 
   },
   {
     key: "conjure_animals",
@@ -936,7 +936,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["conjure animals"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["conjure animals"] 
   },
   {
     key: "conjure_barrage",
@@ -950,7 +950,7 @@ const spells = [
     components: "V, S, M (a Melee or Ranged weapon worth at least 1 CP)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["conjure barrage"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["conjure barrage"] 
   },
   {
     key: "conjure_celestial",
@@ -964,7 +964,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["conjure celestial"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["conjure celestial"] 
   },
   {
     key: "conjure_elemental",
@@ -978,7 +978,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["conjure elemental"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["conjure elemental"] 
   },
   {
     key: "conjure_fey",
@@ -992,7 +992,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["conjure fey"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["conjure fey"] 
   },
   {
     key: "conjure_minor_elementals",
@@ -1006,7 +1006,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["conjure minor elementals"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["conjure minor elementals"] 
   },
   {
     key: "conjure_volley",
@@ -1020,7 +1020,7 @@ const spells = [
     components: "V, S, M (a Melee or Ranged weapon worth at least 1 CP)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["conjure volley"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["conjure volley"] 
   },
   {
     key: "conjure_woodland_beings",
@@ -1034,7 +1034,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["conjure woodland beings"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["conjure woodland beings"] 
   },
   {
     key: "contact_other_plane",
@@ -1048,7 +1048,7 @@ const spells = [
     components: "V",
     duration: "1 minute",
     ritual: true,
-    description: descriptions["contact other plane"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["contact other plane"] 
   },
   {
     key: "contagion",
@@ -1062,7 +1062,7 @@ const spells = [
     components: "V, S",
     duration: "7 days",
     ritual: false,
-    description: descriptions["contagion"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["contagion"] 
   },
   {
     key: "contingency",
@@ -1076,7 +1076,7 @@ const spells = [
     components: "V, S, M (a gem-encrusted statuette of yourself worth 1500+ GP)",
     duration: "10 days",
     ritual: false,
-    description: descriptions["contingency"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["contingency"] 
   },
   {
     key: "continual_flame",
@@ -1090,7 +1090,7 @@ const spells = [
     components: "V, S, M (ruby dust worth 50+ GP, which the spell consumes)",
     duration: "Until dispelled",
     ritual: false,
-    description: descriptions["continual flame"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["continual flame"] 
   },
   {
     key: "control_water",
@@ -1104,7 +1104,7 @@ const spells = [
     components: "V, S, M (a mixture of water and dust)",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["control water"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["control water"] 
   },
   {
     key: "control_weather",
@@ -1118,7 +1118,7 @@ const spells = [
     components: "V, S, M (burning incense)",
     duration: "Concentration, up to 8 hours",
     ritual: false,
-    description: descriptions["control weather"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["control weather"] 
   },
   {
     key: "cordon_of_arrows",
@@ -1132,7 +1132,7 @@ const spells = [
     components: "V, S, M (an ornamental braid)",
     duration: "8 hours",
     ritual: false,
-    description: descriptions["cordon of arrows"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["cordon of arrows"] 
   },
   {
     key: "counterspell",
@@ -1146,7 +1146,7 @@ const spells = [
     components: "S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["counterspell"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["counterspell"] 
   },
   {
     key: "create_food_and_water",
@@ -1160,7 +1160,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["conjure minor elementals"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["conjure minor elementals"] 
   },
   {
     key: "create_or_destroy_water",
@@ -1174,7 +1174,7 @@ const spells = [
     components: "V, S, M (a mix of water and sand)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["create or destroy water"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["create or destroy water"] 
   },
   {
     key: "create_undead",
@@ -1188,7 +1188,7 @@ const spells = [
     components: "V, S, M (one 150+ GP black onyx stone for each corpse)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["create undead"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["create undead"] 
   },
   {
     key: "creation",
@@ -1202,7 +1202,7 @@ const spells = [
     components: "V, S, M (a paintbrush)",
     duration: "Special",
     ritual: false,
-    description: descriptions["creation"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["creation"] 
   },
   {
     key: "crown_of_madness",
@@ -1216,7 +1216,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["crown of madness"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["crown of madness"] 
   },
   {
     key: "crusaders_mantle",
@@ -1230,7 +1230,7 @@ const spells = [
     components: "V",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["crusader's mantle"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["crusader's mantle"] 
   },
   {
     key: "cure_wounds",
@@ -1244,7 +1244,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["cure wounds"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["cure wounds"] 
   },
   {
     key: "dancing_lights",
@@ -1258,7 +1258,7 @@ const spells = [
     components: "V, S, M (a bit of phosphorus)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["dancing lights"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["dancing lights"] 
   },
   {
     key: "darkness",
@@ -1272,7 +1272,7 @@ const spells = [
     components: "V, M (bat fur and a piece of coal)",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["darkness"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["darkness"] 
   },
   {
     key: "darkvision",
@@ -1286,7 +1286,7 @@ const spells = [
     components: "V, S, M (a dried carrot)",
     duration: "8 hours",
     ritual: false,
-    description: descriptions["darkvision"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["darkvision"] 
   },
   {
     key: "daylight",
@@ -1300,7 +1300,7 @@ const spells = [
     components: "V, S",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["daylight"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["daylight"] 
   },
   {
     key: "death_ward",
@@ -1314,7 +1314,7 @@ const spells = [
     components: "V, S",
     duration: "8 hours",
     ritual: false,
-    description: descriptions["death ward"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["death ward"] 
   },
   {
     key: "delayed_blast_fireball",
@@ -1328,7 +1328,7 @@ const spells = [
     components: "V, S, M (a ball of bat guano and sulfur)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["delayed blast fireball"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["delayed blast fireball"] 
   },
   {
     key: "demiplane",
@@ -1342,7 +1342,7 @@ const spells = [
     components: "S",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["demiplane"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["demiplane"] 
   },
   {
     key: "destructive_wave",
@@ -1356,7 +1356,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["destructive wave"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["destructive wave"] 
   },
   {
     key: "detect_evil_and_good",
@@ -1370,7 +1370,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["detect evil and good"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["detect evil and good"] 
   },
   {
     key: "detect_magic",
@@ -1384,7 +1384,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 10 minutes",
     ritual: true,
-    description: descriptions["detect magic"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["detect magic"] 
   },
   {
     key: "detect_poison_and_desease",
@@ -1398,7 +1398,7 @@ const spells = [
     components: "V, S, M (a yew leaf)",
     duration: "Concentration, up to 10 minutes",
     ritual: true,
-    description: descriptions["detect poison and desease"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["detect poison and desease"] 
   },
   {
     key: "detect_thoughts",
@@ -1412,7 +1412,7 @@ const spells = [
     components: "V, S, M (1 copper piece)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["detect thoughts"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["detect thoughts"] 
   },
   {
     key: "dimension_door",
@@ -1426,7 +1426,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["dimension door"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["dimension door"] 
   },
   {
     key: "disguise_self",
@@ -1440,7 +1440,7 @@ const spells = [
     components: "V, S",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["disguise self"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["disguise self"] 
   },
   {
     key: "disintegrate",
@@ -1454,7 +1454,7 @@ const spells = [
     components: "V, S, M (a lodestone and a pinch of dust)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["disintegrate"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["disintegrate"] 
   },
   {
     key: "dispel_evil_and_good",
@@ -1468,7 +1468,7 @@ const spells = [
     components: "V, S, M (powdered silver and iron)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["dispel evil and good"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["dispel evil and good"] 
   },
   {
     key: "dispel_magic",
@@ -1482,7 +1482,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["dispel magic"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["dispel magic"] 
   },
   {
     key: "dissonant_whispers",
@@ -1496,7 +1496,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["dissonant whispers"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["dissonant whispers"] 
   },
   {
     key: "divination",
@@ -1510,7 +1510,7 @@ const spells = [
     components: "V, S, M (incense worth 25+ GP, which the spell consumes)",
     duration: "Instantaneous",
     ritual: true,
-    description: descriptions["divination"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["divination"] 
   },
   {
     key: "divine_favor",
@@ -1524,7 +1524,7 @@ const spells = [
     components: "V, S",
     duration: "1 minute",
     ritual: false,
-    description: descriptions["divine favor"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["divine favor"] 
   },
   {
     key: "divine_smite",
@@ -1538,7 +1538,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["divine favor"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["divine favor"] 
   },
   {
     key: "divine_word",
@@ -1552,7 +1552,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["divine word"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["divine word"] 
   },
   {
     key: "dominate_beast",
@@ -1566,7 +1566,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["dominate beast"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["dominate beast"] 
   },
   {
     key: "dominate_monster",
@@ -1580,7 +1580,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["dominate monster"] || { it: "Descrizione non trovata", en: "Description not found" }, // Usa la descrizione da descriptions.jsx
+    description: descriptions["dominate monster"]  // Usa la descrizione da descriptions.jsx
   },
   {
     key: "dominate_person",
@@ -1594,7 +1594,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["dominate person"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["dominate person"] 
   },
   {
     key: "dragons_breath",
@@ -1608,7 +1608,7 @@ const spells = [
     components: "V, S, M (a hot pepper)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["dragon's breath"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["dragon's breath"] 
   },
   {
     key: "drawmijs_instant_summons",
@@ -1622,7 +1622,7 @@ const spells = [
     components: "V, S, M (a sapphire worth 1000+ GP)",
     duration: "Until dispelled",
     ritual: true,
-    description: descriptions["drawmij's instant summons"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["drawmij's instant summons"] 
   },
   {
     key: "dream",
@@ -1636,7 +1636,7 @@ const spells = [
     components: "V, S, M (a handful of sand)",
     duration: "8 hours",
     ritual: false,
-    description: descriptions["dream"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["dream"] 
   },
   {
     key: "druidcraft",
@@ -1650,7 +1650,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["druidcraft"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["druidcraft"] 
   },
   {
     key: "earthquake",
@@ -1664,7 +1664,7 @@ const spells = [
     components: "V, S, M (a fractured rock)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["earthquake"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["earthquake"] 
   },
   {
     key: "eldritch_blast",
@@ -1678,7 +1678,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["eldritch blast"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["eldritch blast"] 
   },
   {
     key: "elementalism",
@@ -1692,7 +1692,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["elementalism"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["elementalism"] 
   },
   {
     key: "elemental_weapon",
@@ -1706,7 +1706,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["elemental weapon"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["elemental weapon"] 
   },
   {
     key: "enhance_ability",
@@ -1720,7 +1720,7 @@ const spells = [
     components: "V, S, M (fur or a feather)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["enhance ability"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["enhance ability"] 
   },
   {
     key: "enlarge_reduce",
@@ -1734,7 +1734,7 @@ const spells = [
     components: "V, S, M (a pinch of powdered iron)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["enlarge/reduce"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["enlarge/reduce"] 
   },
   {
     key: "ensnaring_strike",
@@ -1748,7 +1748,7 @@ const spells = [
     components: "V",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["ensnaring strike"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["ensnaring strike"] 
   },
   {
     key: "entangle",
@@ -1762,7 +1762,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["entangle"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["entangle"] 
   },
   {
     key: "enthrall",
@@ -1776,7 +1776,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["enthrall"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["enthrall"] 
   },
   {
     key: "etherealness",
@@ -1790,7 +1790,7 @@ const spells = [
     components: "V, S",
     duration: "Up to 8 hours",
     ritual: false,
-    description: descriptions["etherealness"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["etherealness"] 
   },
   {
     key: "evards_black_tentacles",
@@ -1804,7 +1804,7 @@ const spells = [
     components: "V, S, M (a tentacle)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["evard's black tentacles"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["evard's black tentacles"] 
   },
   {
     key: "expeditious_retreat",
@@ -1818,7 +1818,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["expeditious retreat"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["expeditious retreat"] 
   },
   {
     key: "eyebite",
@@ -1832,7 +1832,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["eyebite"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["eyebite"] 
   },
   {
     key: "fabricate",
@@ -1846,7 +1846,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["fabricate"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["fabricate"] 
   },
   {
     key: "faerie_fire",
@@ -1860,7 +1860,7 @@ const spells = [
     components: "V",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["faerie fire"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["faerie fire"] 
   },
   {
     key: "false_life",
@@ -1874,7 +1874,7 @@ const spells = [
     components: "V, S, M (a drop of alcohol)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["false life"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["false life"] 
   },
   {
     key: "fear",
@@ -1889,7 +1889,7 @@ const spells = [
     duration: "Concentration, up to 1 minute",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["fear"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["fear"] 
   },
   {
     key: "feather_fall",
@@ -1904,7 +1904,7 @@ const spells = [
     duration: "1 minute",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["feather fall"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["feather fall"] 
   },
   {
     key: "feign_death",
@@ -1919,7 +1919,7 @@ const spells = [
     duration: "1 hour",
     ritual: true,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["feign death"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["feign death"] 
   },
   {
     key: "find_familiar",
@@ -1934,7 +1934,7 @@ const spells = [
     duration: "Instantaneous",
     ritual: true,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["find familiar"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["find familiar"] 
   },
   {
     key: "find_steed",
@@ -1949,7 +1949,7 @@ const spells = [
     duration: "Instantaneous",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["find steed"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["find steed"] 
   },
   {
     key: "find_the_path",
@@ -1964,7 +1964,7 @@ const spells = [
     duration: "Concentration, up to 1 day",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["find the path"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["find the path"] 
   },
   {
     key: "find_traps",
@@ -1979,7 +1979,7 @@ const spells = [
     duration: "Instantaneous",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["find traps"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["find traps"] 
   },
   {
     key: "finger_of_death",
@@ -1994,7 +1994,7 @@ const spells = [
     duration: "Instantaneous",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["finger of death"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["finger of death"] 
   },
   {
     key: "fireball",
@@ -2009,7 +2009,7 @@ const spells = [
     duration: "Instantaneous",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["fireball"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["fireball"] 
   },
   {
     key: "fire_bolt",
@@ -2024,7 +2024,7 @@ const spells = [
     duration: "Instantaneous",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["fire bolt"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["fire bolt"] 
   },
   {
     key: "fire_shield",
@@ -2039,7 +2039,7 @@ const spells = [
     duration: "10 minutes",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["fire shield"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["fire shield"] 
   },
   {
     key: "fire_storm",
@@ -2054,7 +2054,7 @@ const spells = [
     duration: "Instantaneous",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["fire storm"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["fire storm"] 
   },
   {
     key: "flame_blade",
@@ -2069,7 +2069,7 @@ const spells = [
     duration: "Concentration, up to 10 minute",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["flame blade"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["flame blade"] 
   },
   {
     key: "flame_strike",
@@ -2084,7 +2084,7 @@ const spells = [
     duration: "Instantaneous",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["flame strike"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["flame strike"] 
   },
   {
     key: "flaming_sphere",
@@ -2099,7 +2099,7 @@ const spells = [
     duration: "Concentration, up to 1 minute",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["flaming sphere"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["flaming sphere"] 
   },
   {
     key: "flesh_to_stone",
@@ -2114,7 +2114,7 @@ const spells = [
     duration: "Concentration, up to 1 minute",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["flesh to stone"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["flesh to stone"] 
   },
   {
     key: "fly",
@@ -2129,7 +2129,7 @@ const spells = [
     duration: "Concentration, up to 10 minutes",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["fly"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["fly"] 
   },
   {
     key: "fog_cloud",
@@ -2144,7 +2144,7 @@ const spells = [
     duration: "Concentration, up to 1 hour",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["fog cloud"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["fog cloud"] 
   },
   {
     key: "forbiddance",
@@ -2159,7 +2159,7 @@ const spells = [
     duration: "1 day",
     ritual: true,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["forbiddance"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["forbiddance"] 
   },
   {
     key: "forcecage",
@@ -2174,7 +2174,7 @@ const spells = [
     duration: "Concentration, up to 1 hour",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["forcecage"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["forcecage"] 
   },
   {
     key: "foresight",
@@ -2188,7 +2188,7 @@ const spells = [
     components: "V, S, M (a hummingbird feather)",
     duration: "8 hours",
     ritual: false,
-    description: descriptions["foresight"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["foresight"] 
   },
   {
     key: "fount_of_moonlight",
@@ -2203,7 +2203,7 @@ const spells = [
     duration: "Concentration, up to 10 minutes",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["fount of moonlight"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["fount of moonlight"] 
   },
   {
     key: "freedom_of_movement",
@@ -2217,7 +2217,7 @@ const spells = [
     components: "V, S, M (a leather strap)",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["freedom of movement"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["freedom of movement"] 
   },
   {
     key: "friends",
@@ -2231,7 +2231,7 @@ const spells = [
     components: "S, M (some makeup)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["friends"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["friends"] 
   },
   {
     key: "gaseous_form",
@@ -2245,7 +2245,7 @@ const spells = [
     components: "V, S, M (a bit of gauze)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["gaseous form"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["gaseous form"] 
   },
   {
     key: "gate",
@@ -2259,7 +2259,7 @@ const spells = [
     components: "V, S, M (a diamond worth 5,000+ GP)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["gate"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["gate"] 
   },
   {
     key: "geas",
@@ -2273,7 +2273,7 @@ const spells = [
     components: "V",
     duration: "30 days",
     ritual: false,
-    description: descriptions["geas"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["geas"] 
   },
   {
     key: "gentle_repose",
@@ -2287,7 +2287,7 @@ const spells = [
     components: "V, S, M (2 Copper Pieces, which the spell consumes)",
     duration: "10 days",
     ritual: true,
-    description: descriptions["gentle repose"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["gentle repose"] 
   },
   {
     key: "giant_insect",
@@ -2301,7 +2301,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["giant insect"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["giant insect"] 
   },
   {
     key: "glibness",
@@ -2315,7 +2315,7 @@ const spells = [
     components: "V",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["glibness"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["glibness"] 
   },
   {
     key: "globe_of_invulnerability",
@@ -2329,7 +2329,7 @@ const spells = [
     components: "V, S, M (a glass bead)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["globe of invulnerability"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["globe of invulnerability"] 
   },
   {
     key: "glyph_of_warding",
@@ -2343,7 +2343,7 @@ const spells = [
     components: "V, S, M (powdered diamond worth 200+ GP, which the spell consumes)",
     duration: "Until dispelled or triggered",
     ritual: false,
-    description: descriptions["glyph of warding"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["glyph of warding"] 
   },
   {
     key: "goodberry",
@@ -2357,7 +2357,7 @@ const spells = [
     components: "V, S, M (a sprig of mistletoe)",
     duration: "24 hours",
     ritual: false,
-    description: descriptions["goodberry"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["goodberry"] 
   },
   {
     key: "grasping_vine",
@@ -2371,7 +2371,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["grasping vine"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["grasping vine"] 
   },
   {
     key: "grease",
@@ -2385,7 +2385,7 @@ const spells = [
     components: "V, S, M (a bit of pork rind or butter)",
     duration: "1 minute",
     ritual: false,
-    description: descriptions["grease"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["grease"] 
   },
   {
     key: "greater_invisibility",
@@ -2399,7 +2399,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["greater invisibility"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["greater invisibility"] 
   },
   {
     key: "greater_restoration",
@@ -2413,7 +2413,7 @@ const spells = [
     components: "V, S, M (diamond dust worth 100+ GP, which the spell consumes)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["greater restoration"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["greater restoration"] 
   },
   {
     key: "guardian_of_faith",
@@ -2427,7 +2427,7 @@ const spells = [
     components: "V",
     duration: "8 hours",
     ritual: false,
-    description: descriptions["guardian of faith"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["guardian of faith"] 
   },
   {
     key: "guards_and_wards",
@@ -2441,7 +2441,7 @@ const spells = [
     components: "V, S, M (a silver rod worth 10+ GP)",
     duration: "24 hours",
     ritual: false,
-    description: descriptions["guards and wards"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["guards and wards"] 
   },
   {
     key: "guidance",
@@ -2455,7 +2455,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["guidance"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["guidance"] 
   },
   {
     key: "guiding_bolt",
@@ -2469,7 +2469,7 @@ const spells = [
     components: "V, S",
     duration: "1 round",
     ritual: false,
-    description: descriptions["guiding bolt"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["guiding bolt"] 
   },
   {
     key: "gust_of_wind",
@@ -2483,7 +2483,7 @@ const spells = [
     components: "V, S, M (a legume seed)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["gust of wind"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["gust of wind"] 
   },
   {
     key: "hail_of_thorns",
@@ -2497,7 +2497,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["hail of thorns"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["hail of thorns"] 
   },
   {
     key: "hallow",
@@ -2511,7 +2511,7 @@ const spells = [
     components: "V, S, M (incense worth 1,000 GP, which the spell consumes)",
     duration: "Until dispelled",
     ritual: false,
-    description: descriptions["hallow"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["hallow"] 
   },
   {
     key: "hallucinatory_terrain",
@@ -2525,7 +2525,7 @@ const spells = [
     components: "V, S, M (a mushroom)",
     duration: "24 hours",
     ritual: false,
-    description: descriptions["hallucinatory terrain"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["hallucinatory terrain"] 
   },
   {
     key: "harm",
@@ -2539,7 +2539,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["harm"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["harm"] 
   },
   {
     key: "haste",
@@ -2553,7 +2553,7 @@ const spells = [
     components: "V, S, M (a shaving of licorice root)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["haste"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["haste"] 
   },
   {
     key: "heal",
@@ -2567,7 +2567,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["heal"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["heal"] 
   },
   {
     key: "healing_word",
@@ -2581,7 +2581,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["healing word"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["healing word"] 
   },
   {
     key: "heat_metal",
@@ -2595,7 +2595,7 @@ const spells = [
     components: "V, S, M (a piece of iron and a flame)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["heat metal"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["heat metal"] 
   },
   {
     key: "hellish_rebuke",
@@ -2609,7 +2609,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["hellish rebuke"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["hellish rebuke"] 
   },
   {
     key: "heroes_feast",
@@ -2623,7 +2623,7 @@ const spells = [
     components: "V, S, M (a gem-encrusted bowl worth 1,000+ GP, which the spell consumes)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["heroes' feast"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["heroes' feast"] 
   },
   {
     key: "heroism",
@@ -2637,7 +2637,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["heroism"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["heroism"] 
   },
   {
     key: "hex",
@@ -2651,7 +2651,7 @@ const spells = [
     components: "V, S, M (the petrified eye of a newt)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["hex"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["hex"] 
   },
   {
     key: "hold_monster",
@@ -2665,7 +2665,7 @@ const spells = [
     components: "V, S, M (a straight piece of iron)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["hold monster"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["hold monster"] 
   },
   {
     key: "hold_person",
@@ -2679,7 +2679,7 @@ const spells = [
     components: "V, S, M (a straight piece of iron)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["hold person"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["hold person"] 
   },
   {
     key: "holy_aura",
@@ -2693,7 +2693,7 @@ const spells = [
     components: "V, S, M (a reliquary worth 1,000+ GP)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["holy aura"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["holy aura"] 
   },
   {
     key: "hunger_of_hadar",
@@ -2707,7 +2707,7 @@ const spells = [
     components: "V, S, M (a picked tentacle)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["hunger of hadar"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["hunger of hadar"] 
   },
   {
     key: "hunters_mark",
@@ -2721,7 +2721,7 @@ const spells = [
     components: "V",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["hunter's mask"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["hunter's mask"] 
   },
   {
     key: "hypnotic_pattern",
@@ -2735,7 +2735,7 @@ const spells = [
     components: "S, M (a pinch of confetti)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["hypnotic pattern"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["hypnotic pattern"] 
   },
   {
     key: "ice_knife",
@@ -2750,7 +2750,7 @@ const spells = [
     duration: "Instantaneous",
     ritual: false,
     source: "Xanathar's Guide to Everything",
-    description: descriptions["ice knife"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["ice knife"] 
   },
   {
     key: "ice_storm",
@@ -2764,7 +2764,7 @@ const spells = [
     components: "V, S, M (a mitten)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["ice storm"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["ice storm"] 
   },
   {
     key: "identify",
@@ -2778,7 +2778,7 @@ const spells = [
     components: "V, S, M (a pearl worth 100+ GP)",
     duration: "Instantaneous",
     ritual: true,
-    description: descriptions["identify"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["identify"] 
   },
   {
     key: "illusory_script",
@@ -2792,7 +2792,7 @@ const spells = [
     components: "S, M (ink worth 10+ GP, which the spell consumes)",
     duration: "10 days",
     ritual: true,
-    description: descriptions["illusory script"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["illusory script"] 
   },
   {
     key: "imprisonment",
@@ -2806,7 +2806,7 @@ const spells = [
     components: "V, S, M (a statuette of the target worth 5,000+ GP)",
     duration: "Until dispelled",
     ritual: false,
-    description: descriptions["imprisonment"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["imprisonment"] 
   },
   {
     key: "inciendiary_cloud",
@@ -2820,7 +2820,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["inciendiary cloud"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["inciendiary cloud"] 
   },
   {
     key: "inflict_wounds",
@@ -2834,7 +2834,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["inflict wounds"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["inflict wounds"] 
   },
   {
     key: "insect_plague",
@@ -2848,7 +2848,7 @@ const spells = [
     components: "V, S, M (a locust)",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["insect plague"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["insect plague"] 
   },
   {
     key: "invisibility",
@@ -2862,7 +2862,7 @@ const spells = [
     components: "V, S, M (an eyelash in gum arabic)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["invisibility"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["invisibility"] 
   },
   {
     key: "jallarzis_storm_of_radiance",
@@ -2877,7 +2877,7 @@ const spells = [
     duration: "Concentration, up to 1 minute",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["jallarzi's storm of radiance"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["jallarzi's storm of radiance"] 
   },
   {
     key: "jump",
@@ -2891,7 +2891,7 @@ const spells = [
     components: "V, S, M (a grasshopper's hind leg)",
     duration: "1 minute",
     ritual: false,
-    description: descriptions["jump"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["jump"] 
   },
   {
     key: "knock",
@@ -2905,7 +2905,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["knock"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["knock"] 
   },
   {
     key: "legend_lore",
@@ -2919,7 +2919,7 @@ const spells = [
     components: "V, S, M (incense worth 250+ GP, which the spell consumes, and four ivory strips worth 50+ GP each)",
     duration: "Instantaneous",
     ritual: true,
-    description: descriptions["legend lore"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["legend lore"] 
   },
   {
     key: "leomunds_secret_chest",
@@ -2933,7 +2933,7 @@ const spells = [
     components: "V, S, M (a chest, 3 feet by 2 feet by 2 feet, constructed from rare materials worth 5,000+ GP, and a Tiny replica of the chest made from the same materials worth 50+ GP)",
     duration: "Until dispelled",
     ritual: false,
-    description: descriptions["leomund's secret chest"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["leomund's secret chest"] 
   },
   {
     key: "leomunds_tiny_hut",
@@ -2947,7 +2947,7 @@ const spells = [
     components: "V, S, M (a crystal bead)",
     duration: "8 hours",
     ritual: false,
-    description: descriptions["leomund's tiny hut"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["leomund's tiny hut"] 
   },
   {
     key: "lesser_restoration",
@@ -2961,7 +2961,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["lesser restoration"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["lesser restoration"] 
   },
   {
     key: "levitate",
@@ -2975,7 +2975,7 @@ const spells = [
     components: "V, S, M (a metal spring)",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["levitate"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["levitate"] 
   },
   {
     key: "light",
@@ -2989,7 +2989,7 @@ const spells = [
     components: "V, M (a firefly or phosphorescent moss)",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["light"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["light"] 
   },
   {
     key: "lighting_arrow",
@@ -3003,7 +3003,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["lighting arrow"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["lighting arrow"] 
   },
   {
     key: "lightning_bolt",
@@ -3017,7 +3017,7 @@ const spells = [
     components: "V, S, M (a bit of fur and a crystal rod)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["lightning bolt"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["lightning bolt"] 
   },
   {
     key: "locate_animals_or_plants",
@@ -3031,7 +3031,7 @@ const spells = [
     components: "V, S, M (fur from a bloodhound)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["locate animals or plants"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["locate animals or plants"] 
   },
   {
     key: "locate_creature",
@@ -3045,7 +3045,7 @@ const spells = [
     components: "V, S, M (fur from a boodhound)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["locate creature"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["locate creature"] 
   },
   {
     key: "locate_object",
@@ -3059,7 +3059,7 @@ const spells = [
     components: "V, S, M (a forked twig)",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["locate object"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["locate object"] 
   },
   {
     key: "longstrider",
@@ -3073,7 +3073,7 @@ const spells = [
     components: "V, S, M (a pinch of dirt)",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["longstrider"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["longstrider"] 
   },
   {
     key: "mage_armor",
@@ -3087,7 +3087,7 @@ const spells = [
     components: "V, S, M (a piece of cured leather)",
     duration: "8 hours",
     ritual: false,
-    description: descriptions["mage armor"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["mage armor"] 
   },
   {
     key: "mage_hand",
@@ -3101,7 +3101,7 @@ const spells = [
     components: "V, S",
     duration: "1 minute",
     ritual: false,
-    description: descriptions["mage hand"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["mage hand"] 
   },
   {
     key: "magic_circle",
@@ -3115,7 +3115,7 @@ const spells = [
     components: "V, S, M (salt and powdered silver worth 100+ GP, which the spell consumes)",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["magic circle"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["magic circle"] 
   },
   {
     key: "magic_jar",
@@ -3129,7 +3129,7 @@ const spells = [
     components: "V, S, M (a gem, crystal, or reliquary worth 500+ GP)",
     duration: "Until dispelled",
     ritual: false,
-    description: descriptions["magic jar"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["magic jar"] 
   },
   {
     key: "magic_missile",
@@ -3143,7 +3143,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["magic missile"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["magic missile"] 
   },
   {
     key: "magic_mouth",
@@ -3157,7 +3157,7 @@ const spells = [
     components: "V, S, M (jade dust worth 10+ GP, which the spell consumes)",
     duration: "Until dispelled",
     ritual: false,
-    description: descriptions["magic mouth"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["magic mouth"] 
   },
   {
     key: "magic_weapon",
@@ -3171,7 +3171,7 @@ const spells = [
     components: "V, S",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["magic weapon"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["magic weapon"] 
   },
   {
     key: "major_image",
@@ -3185,7 +3185,7 @@ const spells = [
     components: "V, S, M (a bit of fleece)",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["major image"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["major image"] 
   },
   {
     key: "mass_cure_wounds",
@@ -3199,7 +3199,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["mass cure wounds"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["mass cure wounds"] 
   },
   {
     key: "mass_heal",
@@ -3213,7 +3213,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["mass heal"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["mass heal"] 
   },
   {
     key: "mass_healing_word",
@@ -3227,7 +3227,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["mass healing word"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["mass healing word"] 
   },
   {
     key: "mass_suggestion",
@@ -3241,7 +3241,7 @@ const spells = [
     components: "V, S (a snake's tongue)",
     duration: "24 hours",
     ritual: false,
-    description: descriptions["mass suggestion"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["mass suggestion"] 
   },
   {
     key: "maze",
@@ -3255,7 +3255,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["maze"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["maze"] 
   },
   {
     key: "meld_into_stone",
@@ -3269,7 +3269,7 @@ const spells = [
     components: "V, S",
     duration: "8 hours",
     ritual: true,
-    description: descriptions["meld into stone"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["meld into stone"] 
   },
   {
     key: "melfs_acid_arrow",
@@ -3283,7 +3283,7 @@ const spells = [
     components: "V, S, M (powdered rhubarb leaf)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["melf's acid arrow"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["melf's acid arrow"] 
   },
   {
     key: "mending",
@@ -3297,7 +3297,7 @@ const spells = [
     components: "V, S, M (two lodestones)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["mending"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["mending"] 
   },
   {
     key: "message",
@@ -3311,7 +3311,7 @@ const spells = [
     components: "S, M (a copper wire)",
     duration: "1 round",
     ritual: false,
-    description: descriptions["message"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["message"] 
   },
   {
     key: "meteor_swarm",
@@ -3325,7 +3325,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["meteor swarm"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["meteor swarm"] 
   },
   {
     key: "mind_blank",
@@ -3339,7 +3339,7 @@ const spells = [
     components: "V, S",
     duration: "24 hours",
     ritual: true,
-    description: descriptions["mind blank"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["mind blank"] 
   },
   {
     key: "mind_sliver",
@@ -3353,7 +3353,7 @@ const spells = [
     components: "V",
     duration: "1 round",
     ritual: false,
-    description: descriptions["mind sliver"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["mind sliver"] 
   },
   {
     key: "mind_spike",
@@ -3367,7 +3367,7 @@ const spells = [
     components: "S",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["mind spike"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["mind spike"] 
   },
 
   {
@@ -3382,7 +3382,7 @@ const spells = [
     components: "S, M (a bit of fleece)",
     duration: "1 minute",
     ritual: false,
-    description: descriptions["minor illusion"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["minor illusion"] 
   },
   {
     key: "mirage_arcane",
@@ -3396,7 +3396,7 @@ const spells = [
     components: "V, S",
     duration: "10 days",
     ritual: false,
-    description: descriptions["mirage arcane"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["mirage arcane"] 
   },
   {
     key: "mirror_image",
@@ -3410,7 +3410,7 @@ const spells = [
     components: "V, S",
     duration: "1 minute",
     ritual: false,
-    description: descriptions["mirror image"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["mirror image"] 
   },
   {
     key: "mislead",
@@ -3424,7 +3424,7 @@ const spells = [
     components: "S",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["mislead"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["mislead"] 
   },
   {
     key: "misty_step",
@@ -3438,7 +3438,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["misty step"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["misty step"] 
   },
   {
     key: "modify_memory",
@@ -3452,7 +3452,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["modify memory"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["modify memory"] 
   },
   {
     key: "moonbeam",
@@ -3466,7 +3466,7 @@ const spells = [
     components: "V, S, M (a moonseed leaf)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["moonbeam"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["moonbeam"] 
   },
   {
     key: "mordenkainens_faithful_hound",
@@ -3480,7 +3480,7 @@ const spells = [
     components: "V, S, M (a silver whistle)",
     duration: "8 hours",
     ritual: false,
-    description: descriptions["mordenkainen's faithful hound"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["mordenkainen's faithful hound"] 
   },
   {
     key: "mordenkainens_magnificent_mansion",
@@ -3494,7 +3494,7 @@ const spells = [
     components: "V, S, M (a miniature door worth 15+ GP)",
     duration: "24 hours",
     ritual: false,
-    description: descriptions["mordenkainen's magnificent mansion"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["mordenkainen's magnificent mansion"] 
   },
   {
     key: "mordenkainens_private_sanctum",
@@ -3508,7 +3508,7 @@ const spells = [
     components: "V, S, M (a thin sheet of lead)",
     duration: "24 hours",
     ritual: false,
-    description: descriptions["mordenkainen's private sanctum"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["mordenkainen's private sanctum"] 
   },
   {
     key: "mordenkainens_sword",
@@ -3522,7 +3522,7 @@ const spells = [
     components: "V, S, M (a miniature sword worth 250+ GP)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["mordenkainen's sword"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["mordenkainen's sword"] 
   },
   {
     key: "move_earth",
@@ -3536,7 +3536,7 @@ const spells = [
     components: "V, S, M (a miniature shovel)",
     duration: "Concentration, up to 2 hours",
     ritual: false,
-    description: descriptions["move earth"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["move earth"] 
   },
   {
     key: "nondetection",
@@ -3550,7 +3550,7 @@ const spells = [
     components: "V, S, M (a pinch of diamond dust worth 25+ GP, which the spell consumes)",
     duration: "8 hours",
     ritual: false,
-    description: descriptions["nondetection"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["nondetection"] 
   },
   {
     key: "nystuls_magic_aura",
@@ -3564,7 +3564,7 @@ const spells = [
     components: "V, S, M (a small square of silk)",
     duration: "24 hours",
     ritual: false,
-    description: descriptions["nystul's magic aura"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["nystul's magic aura"] 
   },
   {
     key: "otilukes_freezing_sphere",
@@ -3578,7 +3578,7 @@ const spells = [
     components: "V, S, M (a miniature crystal sphere)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["otiluke's freezing sphere"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["otiluke's freezing sphere"] 
   },
   {
     key: "otiluke_s_resilient_sphere",
@@ -3592,7 +3592,7 @@ const spells = [
     components: "V, S, M (a glass sphere)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["otiluke's resilient sphere"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["otiluke's resilient sphere"] 
   },
   {
     key: "otto_s_irresistible_dance",
@@ -3606,7 +3606,7 @@ const spells = [
     components: "V",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["otto's irresistible dance"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["otto's irresistible dance"] 
   },
   {
     key: "passwall",
@@ -3620,7 +3620,7 @@ const spells = [
     components: "V, S, M (a pinch of sesame seeds)",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["passwall"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["passwall"] 
   },
   {
     key: "pass_without_trace",
@@ -3634,7 +3634,7 @@ const spells = [
     components: "V, S, M (ashes from burned mistletoe)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["pass without trace"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["pass without trace"] 
   },
   {
     key: "phantasmal_force",
@@ -3648,7 +3648,7 @@ const spells = [
     components: "V, S, M (a bit of fleece)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["phantasmal force"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["phantasmal force"] 
   },
   {
     key: "phantasmal_killer",
@@ -3662,7 +3662,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["phantasmal killer"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["phantasmal killer"] 
   },
   {
     key: "phantom_steed",
@@ -3676,7 +3676,7 @@ const spells = [
     components: "V, S",
     duration: "1 hour",
     ritual: true,
-    description: descriptions["phantom steed"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["phantom steed"] 
   },
   {
     key: "planar_ally",
@@ -3690,7 +3690,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["planar ally"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["planar ally"] 
   },
   {
     key: "planar_binding",
@@ -3704,7 +3704,7 @@ const spells = [
     components: "V, S, M (a jewel worth 1,000+ GP, which the spell consumes)",
     duration: "24 hours",
     ritual: false,
-    description: descriptions["planar binding"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["planar binding"] 
   },
   {
     key: "plane_shift",
@@ -3718,7 +3718,7 @@ const spells = [
     components: "V, S, M (a forked, metalrod worth 250+ GP and attuned to a plane of existenxe)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["plane shift"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["plane shift"] 
   },
   {
     key: "plant_growth",
@@ -3732,7 +3732,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["plant growth"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["plant growth"] 
   },
   {
     key: "poison_spray",
@@ -3746,7 +3746,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["poison spray"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["poison spray"] 
   },
   {
     key: "polymorph",
@@ -3760,7 +3760,7 @@ const spells = [
     components: "V, S, M (a caterpillar cocoon)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["polymorph"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["polymorph"] 
   },
   {
     key: "power_word_fortify",
@@ -3774,7 +3774,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["power word fortify"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["power word fortify"] 
   },
   {
     key: "power_word_heal",
@@ -3788,7 +3788,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["power word heal"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["power word heal"] 
   },
   {
     key: "power_word_kill",
@@ -3802,7 +3802,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["power word kill"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["power word kill"] 
   },
   {
     key: "power_word_stun",
@@ -3816,7 +3816,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["power word stun"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["power word stun"] 
   },
   {
     key: "prayer_of_healing",
@@ -3830,7 +3830,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["prayer of healing"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["prayer of healing"] 
   },
   {
     key: "prestidigitation",
@@ -3844,7 +3844,7 @@ const spells = [
     components: "V, S",
     duration: "Up to 1 hour",
     ritual: false,
-    description: descriptions["prestidigitation"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["prestidigitation"] 
   },
   {
     key: "prismatic_spray",
@@ -3858,7 +3858,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["prismatic spray"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["prismatic spray"] 
   },
   {
     key: "prismatic_wall",
@@ -3872,7 +3872,7 @@ const spells = [
     components: "V, S",
     duration: "10 minutes",
     ritual: false,
-    description: descriptions["prismatic wall"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["prismatic wall"] 
   },
   {
     key: "produce_flame",
@@ -3886,7 +3886,7 @@ const spells = [
     components: "V, S",
     duration: "10 minutes",
     ritual: false,
-    description: descriptions["produce flame"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["produce flame"] 
   },
   {
     key: "programmed_illusion",
@@ -3900,7 +3900,7 @@ const spells = [
     components: "V, S, M (jade dust worth 25+ GP)",
     duration: "Until dispelled",
     ritual: true,
-    description: descriptions["programmed illusion"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["programmed illusion"] 
   },
   {
     key: "project_image",
@@ -3914,7 +3914,7 @@ const spells = [
     components: "V, S, M (a statuette of yourslef worth 5+ GP)",
     duration: "Concentration, up to 1 day",
     ritual: false,
-    description: descriptions["project image"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["project image"] 
   },
   {
     key: "protection_from_energy",
@@ -3928,7 +3928,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["protection from energy"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["protection from energy"] 
   },
   {
     key: "protection_from_evil_and_good",
@@ -3942,7 +3942,7 @@ const spells = [
     components: "V, S, M (a flask of Holy Water worth 25+ GP, which the spell consumes)",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["protection from evil and good"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["protection from evil and good"] 
   },
   {
     key: "protection_from_poison",
@@ -3956,7 +3956,7 @@ const spells = [
     components: "V, S",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["protection from poison"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["protection from poison"] 
   },
   {
     key: "purify_food_and_drink",
@@ -3970,7 +3970,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["purify food and drink"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["purify food and drink"] 
   },
   {
     key: "raise_dead",
@@ -3984,7 +3984,7 @@ const spells = [
     components: "V, S, M (a diamond worth 500+ GP, which the spell consumes)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["raise dead"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["raise dead"] 
   },
   {
     key: "rarys_telepathic_bond",
@@ -3998,7 +3998,7 @@ const spells = [
     components: "V, S, M (two eggs)",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["rary's telepathic bond"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["rary's telepathic bond"] 
   },
   {
     key: "ray_of_enfeeblement",
@@ -4012,7 +4012,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration,up to 1 minute",
     ritual: false,
-    description: descriptions["ray of enfeeblement"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["ray of enfeeblement"] 
   },
   {
     key: "ray_of_frost",
@@ -4026,7 +4026,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["ray of frost"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["ray of frost"] 
   },
   {
     key: "ray_of_sickness",
@@ -4040,7 +4040,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["ray of sickness"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["ray of sickness"] 
   },
   {
     key: "regenerate",
@@ -4054,7 +4054,7 @@ const spells = [
     components: "V, S, M (a prayer wheel)",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["regenerate"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["regenerate"] 
   },
   {
     key: "reincarnate",
@@ -4068,7 +4068,7 @@ const spells = [
     components: "V, S, M (rare oils worth 1,000+ GP, which the sell consumes)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["reincarnate"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["reincarnate"] 
   },
   {
     key: "remove_curse",
@@ -4082,7 +4082,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["remove curse"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["remove curse"] 
   },
   {
     key: "resistance",
@@ -4096,7 +4096,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["resistance"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["resistance"] 
   },
   {
     key: "resurrection",
@@ -4110,7 +4110,7 @@ const spells = [
     components: "V, S, M (a diamond worth 1,000+ GP, which the spell consumes)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["resurrection"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["resurrection"] 
   },
   {
     key: "reverse_gravity",
@@ -4124,7 +4124,7 @@ const spells = [
     components: "V, S, M (a lodestone and iron filings)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["reverse gravity"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["reverse gravity"] 
   },
   {
     key: "revivify",
@@ -4138,7 +4138,7 @@ const spells = [
     components: "V, S, M (a diamond worth 300+ GP, which the spell consumes)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["revivify"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["revivify"] 
   },
   {
     key: "rope_trick",
@@ -4152,7 +4152,7 @@ const spells = [
     components: "V, S, M (a segment of rope)",
     duration: "1 hour",
     ritual: true,
-    description: descriptions["rope trick"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["rope trick"] 
   },
   {
     key: "sacred_flame",
@@ -4166,7 +4166,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["sacred flame"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["sacred flame"] 
   },
   {
     key: "sanctuary",
@@ -4180,7 +4180,7 @@ const spells = [
     components: "V, S, M (a shard of glass from a mirror)",
     duration: "1 minute",
     ritual: true,
-    description: descriptions["sanctuary"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["sanctuary"] 
   },
   {
     key: "scorching_ray",
@@ -4194,7 +4194,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["scorching ray"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["scorching ray"] 
   },
   {
     key: "scrying",
@@ -4208,7 +4208,7 @@ const spells = [
     components: "V, S, M (a focus worth 1,000+ GP, such as a crystal ball, mirror, or water-filled font)",
     duration: "Concentration, up to 10 minutes",
     ritual: true,
-    description: descriptions["scrying"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["scrying"] 
   },
   {
     key: "searing_smite",
@@ -4222,7 +4222,7 @@ const spells = [
     components: "V",
     duration: "1 minute",
     ritual: false,
-    description: descriptions["searing smite"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["searing smite"] 
   },
   {
     key: "see_invisibility",
@@ -4236,7 +4236,7 @@ const spells = [
     components: "V, S, M (a pinch of talc)",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["see invisibility"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["see invisibility"] 
   },
   {
     key: "seeming",
@@ -4250,7 +4250,7 @@ const spells = [
     components: "V, S",
     duration: "8 hour",
     ritual: true,
-    description: descriptions["seeming"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["seeming"] 
   },
   {
     key: "sending",
@@ -4264,7 +4264,7 @@ const spells = [
     components: "V, S, M (a copper wire)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["sending"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["sending"] 
   },
   {
     key: "sequester",
@@ -4278,7 +4278,7 @@ const spells = [
     components: "V, S, M (gem dust worth 5,000+ GP,which the spell consumes)",
     duration: "Until Dispelled",
     ritual: true,
-    description: descriptions["sequester"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["sequester"] 
   },
   {
     key: "shapechange",
@@ -4292,7 +4292,7 @@ const spells = [
     components: "V, S, M (a jade circlet worth 1,500+ GP)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["shapechange"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["shapechange"] 
   },
   {
     key: "shatter",
@@ -4306,7 +4306,7 @@ const spells = [
     components: "V, S, M (a chip of mica)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["shatter"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["shatter"] 
   },
   {
     key: "shield",
@@ -4320,7 +4320,7 @@ const spells = [
     components: "V, S",
     duration: "1 round",
     ritual: false,
-    description: descriptions["shield"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["shield"] 
   },
   {
     key: "shield_of_faith",
@@ -4334,7 +4334,7 @@ const spells = [
     components: "V, S, M (a prayer scroll)",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["shield of faith"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["shield of faith"] 
   },
   {
     key: "shillelagh",
@@ -4348,7 +4348,7 @@ const spells = [
     components: "V, S, M (mistletoe)",
     duration: "1 minute",
     ritual: false,
-    description: descriptions["shillelagh"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["shillelagh"] 
   },
   {
     key: "shining_smite",
@@ -4363,7 +4363,7 @@ const spells = [
     duration: "Concentration, up to 1 minute",
     ritual: false,
     source: "D&D 2024 Player's Handbook",
-    description: descriptions["shining smite"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["shining smite"] 
   },
   {
     key: "shocking_grasp",
@@ -4377,7 +4377,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["shocking grasp"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["shocking grasp"] 
   },
   {
     key: "silence",
@@ -4391,7 +4391,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 10 minutes",
     ritual: true,
-    description: descriptions["silence"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["silence"] 
   },
   {
     key: "silent_image",
@@ -4405,7 +4405,7 @@ const spells = [
     components: "V, S, M (a bit of fleece)",
     duration: "Concentration, up to 10 minute",
     ritual: false,
-    description: descriptions["silent image"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["silent image"] 
   },
   {
     key: "simulacrum",
@@ -4419,7 +4419,7 @@ const spells = [
     components: "V, S, M (powdered ruby worth 1,500+ GP, which the spell consumes)",
     duration: "Until dispelled",
     ritual: false,
-    description: descriptions["simulacrum"] || { it: "Descrizione non trovata", en: "Description not found" },
+    description: descriptions["simulacrum"] 
   },
   {
     key: "sleep",
@@ -4433,7 +4433,7 @@ const spells = [
     components: "V, S, M (a pinch of sand or rose petals)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["sleep"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["sleep"] 
   },
   {
     key: "sleet_storm",
@@ -4447,7 +4447,7 @@ const spells = [
     components: "V, S, M (a miniature umbrella)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["sleet storm"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["sleet storm"] 
   },
   {
     key: "slow",
@@ -4461,7 +4461,7 @@ const spells = [
     components: "V, S, M (a drop of molasses)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["slow"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["slow"] 
   },
   {
     key: "sorcerous_burst",
@@ -4475,7 +4475,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["sorcerous burst"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["sorcerous burst"] 
   },
   {
     key: "spare_the_dying",
@@ -4489,7 +4489,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["spare the dying"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["spare the dying"] 
   },
   {
     key: "speak_with_animals",
@@ -4503,7 +4503,7 @@ const spells = [
     components: "V, S",
     duration: "10 minutes",
     ritual: false,
-    description: descriptions["speak with animals"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["speak with animals"] 
   },
   {
     key: "speak_with_dead",
@@ -4517,7 +4517,7 @@ const spells = [
     components: "V, S, M (burning incense)",
     duration: "10 minutes",
     ritual: false,
-    description: descriptions["speak with dead"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["speak with dead"] 
   },
   {
     key: "speak_with_plants",
@@ -4531,7 +4531,7 @@ const spells = [
     components: "V, S",
     duration: "10 minutes",
     ritual: false,
-    description: descriptions["speak with plants"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["speak with plants"] 
   },
   {
     key: "spider_climb",
@@ -4545,7 +4545,7 @@ const spells = [
     components: "V, S, M (a drop of bitumen and a spider)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["spider climb"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["spider climb"] 
   },
   {
     key: "spike_growth",
@@ -4559,7 +4559,7 @@ const spells = [
     components: "V, S, M (seven thorns)",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["spike growth"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["spike growth"] 
   },
   {
     key: "spirit_guardians",
@@ -4573,7 +4573,7 @@ const spells = [
     components: "V, S, M (a prayer scroll)",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["spirit guardians"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["spirit guardians"] 
   },
   {
     key: "spiritual_weapon",
@@ -4587,7 +4587,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["spiritual weapon"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["spiritual weapon"] 
   },
   {
     key: "staggering_smite",
@@ -4601,7 +4601,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["staggering smite"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["staggering smite"] 
   },
   {
     key: "starry_wisp",
@@ -4615,7 +4615,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["starry wisp"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["starry wisp"] 
   },
   {
     key: "steel_wind_strike",
@@ -4629,7 +4629,7 @@ const spells = [
     components: "S, M (a Melee weapon worth 1+ SP)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["steel wind strike"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["steel wind strike"] 
   },
   {
     key: "stinking_cloud",
@@ -4643,7 +4643,7 @@ const spells = [
     components: "V, S, M (a rotten egg)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["stinking cloud"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["stinking cloud"] 
   },
   {
     key: "stone_shape",
@@ -4657,7 +4657,7 @@ const spells = [
     components: "V, S, M (soft clay)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["stone shape"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["stone shape"] 
   },
   {
     key: "stoneskin",
@@ -4671,7 +4671,7 @@ const spells = [
     components: "V, S, M (diamond dust worth 100+ GP, which the spell consumes)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["stoneskin"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["stoneskin"] 
   },
   {
     key: "storm_of_vengeance",
@@ -4685,7 +4685,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["storm of vengeance"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["storm of vengeance"] 
   },
   {
     key: "suggestion",
@@ -4699,7 +4699,7 @@ const spells = [
     components: "V, M (a drop of honey)",
     duration: "Concentration, up to 8 hours",
     ritual: false,
-    description: descriptions["suggestion"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["suggestion"] 
   },
   {
     key: "summon_aberration",
@@ -4714,7 +4714,7 @@ const spells = [
     components: "V, S, M (a pinckled tentale and an eye-ball in a platinum-inlaid vial worth 400+ GP)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["summon aberration"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["summon aberration"] 
   },
   {
     key: "summon_beast",
@@ -4729,7 +4729,7 @@ const spells = [
     components: "V, S, M (a feather, tuft of fur, and fish tail inside a gilded acorn worth 200+ GP)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["summon beast"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["summon beast"] 
   },
   {
     key: "summon_celestial",
@@ -4744,7 +4744,7 @@ const spells = [
     components: "V, S, M (a reliquary worth 500+ GP)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["summon celestial"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["summon celestial"] 
   },
   {
     key: "summon_construct",
@@ -4759,7 +4759,7 @@ const spells = [
     components: "V, S, M (a lockbox worth 400+ GP)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["summon construct"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["summon construct"] 
   },
   {
     key: "summon_dragon",
@@ -4774,7 +4774,7 @@ const spells = [
     components: "V, S, M (an object with the image of a dragon engraved on it worth 500+ GP)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["summon dragon"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["summon dragon"] 
   },
   {
     key: "summon_elemental",
@@ -4789,7 +4789,7 @@ const spells = [
     components: "V, S, M (air, a pebble, ash, and water inside a gold-inlaid vial worth 400+ GP)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["summon elemental"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["summon elemental"] 
   },
   {
     key: "summon_fey",
@@ -4804,7 +4804,7 @@ const spells = [
     components: "V, S, M (a gilded flower worth 300+ GP)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["summon fey"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["summon fey"] 
   },
   {
     key: "summon_fiend",
@@ -4819,7 +4819,7 @@ const spells = [
     components: "V, S, M (a bloody vial worth 600+ GP)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["summon fiend"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["summon fiend"] 
   },
   {
     key: "summon_undead",
@@ -4834,7 +4834,7 @@ const spells = [
     components: "V, S, M (a gilded skull worth 300+ GP)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["summon undead"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["summon undead"] 
   },
   {
     key: "sunbeam",
@@ -4848,7 +4848,7 @@ const spells = [
     components: "V, S, M (a magnifying glass)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["sunbeam"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["sunbeam"] 
   },
   {
     key: "sunburst",
@@ -4862,7 +4862,7 @@ const spells = [
     components: "V, S, M (a piece of sunstone)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["sunburst"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["sunburst"] 
   },
   {
     key: "swift_quiver",
@@ -4876,7 +4876,7 @@ const spells = [
     components: "V, S, M (a Quiver worth 1+ GP)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["swift quiver"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["swift quiver"] 
   },
   {
     key: "symbol",
@@ -4890,7 +4890,7 @@ const spells = [
     components: "V, S, M (powdered diamond worth 1,000+ GP, which the spell consumes)",
     duration: "Until dispelled or triggered",
     ritual: true,
-    description: descriptions["symbol"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["symbol"] 
   },
   {
     key: "synaptic_static",
@@ -4905,7 +4905,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["synaptic static"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["synaptic static"] 
   },
   {
     key: "tashas_bubbling_cauldron",
@@ -4920,7 +4920,7 @@ const spells = [
     components: "V, S, M (a gilded ladle worth 500+ GP)",
     duration: "10 minute",
     ritual: false,
-    description: descriptions["tasha's bubbling cauldron"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["tasha's bubbling cauldron"] 
   },
   {
     key: "tashas_hideous_laughter",
@@ -4934,7 +4934,7 @@ const spells = [
     components: "V, S, M (a tart and a feather)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["tasha's hideous laughter"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["tasha's hideous laughter"] 
   },
   {
     key: "telekinesis",
@@ -4948,7 +4948,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["telekinesis"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["telekinesis"] 
   },
   {
     key: "telepathy",
@@ -4962,7 +4962,7 @@ const spells = [
     components: "V, S, M (a pair of linked silver rings)",
     duration: "24 hours",
     ritual: false,
-    description: descriptions["telepathy"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["telepathy"] 
   },
   {
     key: "teleport",
@@ -4976,7 +4976,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["teleport"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["teleport"] 
   },
   {
     key: "teleportation_circle",
@@ -4990,7 +4990,7 @@ const spells = [
     components: "V, M (rare inks worth 50+ GP, which the spell consumes)",
     duration: "1 round",
     ritual: false,
-    description: descriptions["teleportation circle"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["teleportation circle"] 
   },
   {
     key: "tenser's_floating_disk",
@@ -5004,7 +5004,7 @@ const spells = [
     components: "V, S, M (a drop of mercury)",
     duration: "1 hour",
     ritual: true,
-    description: descriptions["tenser's floating disk"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["tenser's floating disk"] 
   },
   {
     key: "thaumaturgy",
@@ -5018,7 +5018,7 @@ const spells = [
     components: "V",
     duration: "Up to 1 minute",
     ritual: false,
-    description: descriptions["thaumaturgy"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["thaumaturgy"] 
   },
   {
     key: "thorn_whip",
@@ -5032,7 +5032,7 @@ const spells = [
     components: "V, S, M (the stem of a thorny plant)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["thorn whip"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["thorn whip"] 
   },
   {
     key: "thunderclap",
@@ -5047,7 +5047,7 @@ const spells = [
     components: "S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["thunderclap"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["thunderclap"] 
   },
   {
     key: "thunderous_smite",
@@ -5061,7 +5061,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["thunderous smite"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["thunderous smite"] 
   },
   {
     key: "thunderwave",
@@ -5075,7 +5075,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["thunderwave"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["thunderwave"] 
   },
   {
     key: "time_stop",
@@ -5089,7 +5089,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["time stop"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["time stop"] 
   },
   {
     key: "toll_the_dead",
@@ -5104,7 +5104,7 @@ const spells = [
     components: "V, S",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["toll the dead"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["toll the dead"] 
   },
   {
     key: "tongues",
@@ -5118,7 +5118,7 @@ const spells = [
     components: "V, M (a miniature ziggurat)",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["tongues"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["tongues"] 
   },
   {
     key: "transport_via_plants",
@@ -5132,7 +5132,7 @@ const spells = [
     components: "V, S",
     duration: "1 minute",
     ritual: false,
-    description: descriptions["transport via plants"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["transport via plants"] 
   },
   {
     key: "tree_stride",
@@ -5146,7 +5146,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["tree stride"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["tree stride"] 
   },
   {
     key: "true_polymorph",
@@ -5160,7 +5160,7 @@ const spells = [
     components: "V, S, M (a drop of mercury, a dollop of gum arabic, and a wisp of smoke)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["true polymorph"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["true polymorph"] 
   },
   {
     key: "true_resurrection",
@@ -5174,7 +5174,7 @@ const spells = [
     components: "V, S, M (diamonds worth 25,000+ GP, which the spell consumes)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["true resurrection"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["true resurrection"] 
   },
   {
     key: "true_seeing",
@@ -5188,7 +5188,7 @@ const spells = [
     components: "V, S, M (mushroom powder worth 25+ GP, which the spell consumes)",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["true seeing"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["true seeing"] 
   },
   {
     key: "true_strike",
@@ -5202,7 +5202,7 @@ const spells = [
     components: "S, M (a weapon with which you have proficiency and that is worth 1+ CP)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["true strike"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["true strike"] 
   },
   {
     key: "tsunami",
@@ -5216,7 +5216,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 6 rounds",
     ritual: false,
-    description: descriptions["tsunami"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["tsunami"] 
   },
   {
     key: "unseen_servant",
@@ -5230,7 +5230,7 @@ const spells = [
     components: "V, S, M (a bit of string and of wood)",
     duration: "1 hour",
     ritual: true,
-    description: descriptions["unseen servant"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["unseen servant"] 
   },
   {
     key: "vampiric_touch",
@@ -5244,7 +5244,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["vampiric touch"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["vampiric touch"] 
   },
   {
     key: "vicious_mockery",
@@ -5258,7 +5258,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["vicious mockery"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["vicious mockery"] 
   },
   {
     key: "vitriolitic_sphere",
@@ -5273,7 +5273,7 @@ const spells = [
     components: "V, S, M (a drop of bile)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["vitriolitic sphere"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["vitriolitic sphere"] 
   },
   {
     key: "wall_of_fire",
@@ -5287,7 +5287,7 @@ const spells = [
     components: "V, S, M (a piece of charcoal)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["wall of fire"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["wall of fire"] 
   },
   {
     key: "wall_of_force",
@@ -5301,7 +5301,7 @@ const spells = [
     components: "V, S, M (a shard of glass)",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["wall of force"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["wall of force"] 
   },
   {
     key: "wall_of_ice",
@@ -5315,7 +5315,7 @@ const spells = [
     components: "V, S, M () a piece of quartz",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["wall of ice"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["wall of ice"] 
   },
   {
     key: "wall_of_stone",
@@ -5329,7 +5329,7 @@ const spells = [
     components: "V, S, M (a cube of granite)",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["wall of stone"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["wall of stone"] 
   },
   {
     key: "wall_of_thorns",
@@ -5343,7 +5343,7 @@ const spells = [
     components: "V, S, M (a handful of thorns)",
     duration: "Concentration, up to 10 minutes",
     ritual: false,
-    description: descriptions["wall of thorns"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["wall of thorns"] 
   },
   {
     key: "warding_bond",
@@ -5357,7 +5357,7 @@ const spells = [
     components: "V, S, M (a pair of platinum rings worth 50+ GP each, which you and the target must wear for the duration)",
     duration: "1 hour",
     ritual: false,
-    description: descriptions["warding bond"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["warding bond"] 
   },
   {
     key: "water_breathing",
@@ -5371,7 +5371,7 @@ const spells = [
     components: "V, S, M (a short reed)",
     duration: "24 hours",
     ritual: true,
-    description: descriptions["water breathing"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["water breathing"] 
   },
   {
     key: "water_walk",
@@ -5385,7 +5385,7 @@ const spells = [
     components: "V, S, M (a piece of cork)",
     duration: "1 hour",
     ritual: true,
-    description: descriptions["water walk"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["water walk"] 
   },
   {
     key: "web",
@@ -5399,7 +5399,7 @@ const spells = [
     components: "V, S, M (a bit of spiderweb)",
     duration: "Concentration, up to 1 hour",
     ritual: false,
-    description: descriptions["web"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["web"] 
   },
   {
     key: "weird",
@@ -5413,7 +5413,7 @@ const spells = [
     components: "V, S",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["weird"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["weird"] 
   },
   {
     key: "wind_walk",
@@ -5427,7 +5427,7 @@ const spells = [
     components: "V, S, M (a candle)",
     duration: "8 hours",
     ritual: false,
-    description: descriptions["wind walk"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["wind walk"] 
   },
   {
     key: "wind_wall",
@@ -5441,7 +5441,7 @@ const spells = [
     components: "V, S, M (a fan and a feather)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["wind wall"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["wind wall"] 
   },
   {
     key: "wish",
@@ -5455,7 +5455,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["wish"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["wish"] 
   },
   {
     key: "witch_bolt",
@@ -5469,7 +5469,7 @@ const spells = [
     components: "V, S, M (a twig struck by lightning)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["witch bolt"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["witch bolt"] 
   },
   {
     key: "word_of_radiance",
@@ -5484,7 +5484,7 @@ const spells = [
     components: "V, M (a sunburst token)",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["word of radiance"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["word of radiance"] 
   },
   {
     key: "word_of_recall",
@@ -5498,7 +5498,7 @@ const spells = [
     components: "V",
     duration: "Instantaneous",
     ritual: false,
-    description: descriptions["word of recall"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["word of recall"] 
   },
   {
     key: "wrathful_smite",
@@ -5512,7 +5512,7 @@ const spells = [
     components: "V",
     duration: "1 minute",
     ritual: false,
-    description: descriptions["wrathful smite"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["wrathful smite"] 
   },
   {
     key: "yolandes_regal_presence",
@@ -5526,7 +5526,7 @@ const spells = [
     components: "V, S, M (a miniature tiara)",
     duration: "Concentration, up to 1 minute",
     ritual: false,
-    description: descriptions["yolande's regal presence"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["yolande's regal presence"] 
   },
   {
     key: "zone_of_truth",
@@ -5540,7 +5540,7 @@ const spells = [
     components: "V, S",
     duration: "10 minutes",
     ritual: false,
-    description: descriptions["zone of truth"] || { it: "Descrizione non trovata", en: "Description not found" }
+    description: descriptions["zone of truth"] 
   }
 ];
 
