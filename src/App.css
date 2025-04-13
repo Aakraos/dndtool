@@ -336,8 +336,8 @@ button {
     font-size: 10px;
     font-weight: 400;
   }
-  .sub-filter {
-    font-size: 0.rem;
+  .type-buttons {
+    font-size: 1.9vw;
   }
 
   .schools {
@@ -348,10 +348,28 @@ button {
   }
 
   .school-button {
+    height: 5.5vw;
+    font-size: 2vw;
     flex: 1 1 24%; /* Ogni bottone occuperà circa il 48% della larghezza */
     text-align: center; /* Centra il testo nei bottoni */
 
   }
+
+  .filter-buttons.rarity-buttons button {
+   font-size: 1.9vw;
+ }
+
+  .filter-buttons.category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+   }
+  
+  .filter-buttons.category-buttons button {
+    flex: 1 1 16%; /* Ogni bottone occuperà circa il 48% della larghezza */
+    text-align: center; /* Centra il testo nei bottoni */
+    margin-bottom: 8px; /* Distanza tra le righe */
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -375,11 +393,9 @@ button {
   }
   .school-button,
   .filter-buttons,
-  .sub-filter {
-    font-size: 0.46rem;
-    min-width: 6vw;
-    min-height: 5vw;
-   }
+  .type-buttons {
+    font-size: 1.9vw;
+  }
    .button-main {
     font-size: 0.85rem;
     min-width: 10vw;
@@ -394,6 +410,18 @@ button {
   }
 
   .school-button {
+    height: 5.5vw;
+    font-size: 1.9vw;
+    flex: 1 1 24%; /* Ogni bottone occuperà circa il 48% della larghezza */
+    text-align: center; /* Centra il testo nei bottoni */
+    margin-bottom: 8px; /* Distanza tra le righe */
+  }
+  .filter-buttons.category-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Spazio tra i bottoni */
+  }
+  
+  .filter-buttons.category-buttons button {
     flex: 1 1 24%; /* Ogni bottone occuperà circa il 48% della larghezza */
     text-align: center; /* Centra il testo nei bottoni */
     margin-bottom: 8px; /* Distanza tra le righe */

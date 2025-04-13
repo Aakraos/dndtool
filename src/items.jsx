@@ -8668,6 +8668,7 @@ const rarityTranslations = {
     "Rare": "Raro",
     "Very Rare": "Molto Raro",
     "Legendary": "Leggendario",
+    "Artifact": "Artefatto",
   };
   const categoryTranslations = {
     "Armor": "Armatura",

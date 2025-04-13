@@ -27,6 +27,12 @@ function Wiki({ setShowWiki }) {
 
   const [selectedNormalItemTypes, setSelectedNormalItemTypes] = useState([]);
 
+  const [selectedRarities, setSelectedRarities] = useState([]);  // Per il filtro rarità
+  const [selectedMagicItemCategories, setSelectedMagicItemCategories] = useState([]);  // Per le categorie magiche
+  const [showAttunement, setShowAttunement] = useState(false);
+  const [showCursed, setShowCursed] = useState(false);
+  const [showSentient, setShowSentient] = useState(false);
+
   // Funzione per filtrare gli item in base alla ricerca
   const filterItems = (items) => {
     if (!searchQuery) return items;
@@ -52,6 +58,38 @@ function Wiki({ setShowWiki }) {
             itemsToDisplay = itemsToDisplay.filter(
               (item) => item.group?.toLowerCase() === itemTypeFilter
             );
+
+            // Applica sotto-filtro se "magic"
+
+                  // Filtro per oggetti magici
+      if (itemTypeFilter === "magic") {
+        // Filtro per rarità
+        if (selectedRarities.length > 0) {
+          itemsToDisplay = itemsToDisplay.filter((item) =>
+            selectedRarities.includes(item.rarity)
+          );
+        }
+
+        // Filtro per categoria
+        if (selectedMagicItemCategories.length > 0) {
+          itemsToDisplay = itemsToDisplay.filter((item) =>
+            selectedMagicItemCategories.includes(item.category)
+          );
+        }
+
+        // Filtro per proprietà (Sintonia, Maledetti, Senzienti)
+        if (showAttunement) {
+          itemsToDisplay = itemsToDisplay.filter((item) => item.attunement);
+        }
+        
+        if (showCursed) {
+          itemsToDisplay = itemsToDisplay.filter((item) => item.cursed);
+        }
+        
+        if (showSentient) {
+          itemsToDisplay = itemsToDisplay.filter((item) => item.sentient);
+        }
+      }
           
             // Applica sotto-filtro se "normal"
             if (itemTypeFilter === "normal" && selectedNormalItemTypes.length > 0) {
@@ -258,11 +296,13 @@ function Wiki({ setShowWiki }) {
     }
     resetView();
     
-    if (newCategory !== "items") {
+    if (newCategory === "items") {
       setItemTypeFilter("all");
-      setFilter("");
-      setSelectedNormalItemTypes([]);
+      setSelectedRarities([]);
+      setSelectedMagicItemCategories([]);
+      setSelectedMagicProperties([]);
     }
+    resetView();
   };
   
 
@@ -336,6 +376,7 @@ function Wiki({ setShowWiki }) {
       <button
         onClick={() => {
           setItemTypeFilter("normal");
+          setSelectedNormalItemTypes([]);
         }}
         className={`button-secondary ${itemTypeFilter === "normal" ? "selected" : ""}`}
       >
@@ -352,33 +393,117 @@ function Wiki({ setShowWiki }) {
       </button>
     </div>
 
+    {/* Sottofiltro per gli oggetti normali */}
     {itemTypeFilter === "normal" && (
-  <div className="filter-buttons sub-filter">
-    {[
-      { label: "Armature", type: "Armor" },
-      { label: "Armi", type: "Weapon" },
-      { label: "Eq. d'Avventura", type: "Adventuring Gear" },
-      { label: "Arnesi da Artigiano", type: "Artisan's Tool" },
-      { label: "Altri Strumenti", type: "Other Tool" }
-    ].map(({ label, type }) => (
-      <button
-        key={type}
-        onClick={() =>
-          setSelectedNormalItemTypes((prev) =>
-            prev.includes(type)
-              ? prev.filter((t) => t !== type)
-              : [...prev, type]
-          )
-        }
-        className={`button-secondary ${selectedNormalItemTypes.includes(type) ? "selected" : ""}`}
-      >
-        {label}
-      </button>
-    ))}
-  </div>
-)}
+      <div className="filter-buttons type-buttons">
+        {[
+          { label: "Armature", type: "Armor" },
+          { label: "Armi", type: "Weapon" },
+          { label: "Eq. d'Avventura", type: "Adventuring Gear" },
+          { label: "Arnesi da Artigiano", type: "Artisan's Tool" },
+          { label: "Altri Strumenti", type: "Other Tool" }
+        ].map(({ label, type }) => (
+          <button
+            key={type}
+            onClick={() =>
+              setSelectedNormalItemTypes((prev) =>
+                prev.includes(type)
+                  ? prev.filter((t) => t !== type)
+                  : [...prev, type]
+              )
+            }
+            className={`button-secondary ${selectedNormalItemTypes.includes(type) ? "selected" : ""}`}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+    )}
+
+    {/* Sottofiltro per gli oggetti magici */}
+    {itemTypeFilter === "magic" && (
+      <>
+        {/* Filtri per rarità */}
+        <div className="filter-buttons rarity-buttons">
+          {[
+            { label: "Comune", rarity: "Common" },
+            { label: "Non Comune", rarity: "Uncommon" },
+            { label: "Raro", rarity: "Rare" },
+            { label: "Molto Raro", rarity: "Very Rare" },
+            { label: "Leggendario", rarity: "Legendary" },
+            { label: "Artefatto", rarity: "Artifact" }
+          ].map(({ label, rarity }) => (
+            <button
+              key={rarity}
+              className={`button-secondary ${selectedRarities.includes(rarity) ? "selected" : ""}`}
+              onClick={() => {
+                setSelectedRarities((prev) =>
+                  prev.includes(rarity) ? prev.filter((r) => r !== rarity) : [...prev, rarity]
+                );
+              }}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+
+        {/* Filtri per categorie */}
+        <div className="filter-buttons category-buttons">
+          {[
+            { label: "Arma", category: "Weapon" },
+            { label: "Armatura", category: "Armor" },
+            { label: "Oggetto Meraviglioso", category: "Wondrous Item" },
+            { label: "Anello", category: "Ring" },
+            { label: "Bastone", category: "Staff" },
+            { label: "Verga", category: "Rod" },
+            { label: "Bacchetta", category: "Wand" },
+            { label: "Pozione", category: "Potion" },
+            { label: "Pergamena", category: "Scroll" },
+            { label: "Munizione", category: "Ammunition" }
+          ].map(({ label, category }) => (
+            <button
+              key={category}
+              className={`button-secondary ${selectedMagicItemCategories.includes(category) ? "selected" : ""}`}
+              onClick={() => {
+                setSelectedMagicItemCategories((prev) =>
+                  prev.includes(category) ? prev.filter((c) => c !== category) : [...prev, category]
+                );
+              }}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+
+        {/* Filtri per proprietà */}
+        <div className="filter-buttons">
+  <button
+    className={`button-secondary ${showAttunement ? "selected" : ""}`}
+    onClick={() => setShowAttunement((prev) => !prev)}
+  >
+    Sintonia
+  </button>
+  <button
+    className={`button-secondary ${showCursed ? "selected" : ""}`}
+    onClick={() => setShowCursed((prev) => !prev)}
+  >
+    Maledetti
+  </button>
+  <button
+    className={`button-secondary ${showSentient ? "selected" : ""}`}
+    onClick={() => setShowSentient((prev) => !prev)}
+  >
+    Senzienti
+  </button>
+</div>
+
+        // fine filtri ulteriori
+        
+      </>
+    )}
   </>
 )}
+
 
       {category === "spells" && (
         <>
