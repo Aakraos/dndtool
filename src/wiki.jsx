@@ -16,6 +16,7 @@ function Wiki({ setShowWiki }) {
   const [selectedClasses, setSelectedClasses] = useState([]);
   const [selectedSchools, setSelectedSchools] = useState([]);
   const [selectedRitual, setSelectedRitual] = useState(false);
+  const [itemTypeFilter, setItemTypeFilter] = useState("all"); // "all", "normal", "magic"
 
   // Stato per il filtro dei talenti (feats)
   const [selectedFeatCategory, setSelectedFeatCategory] = useState([]);
@@ -23,6 +24,8 @@ function Wiki({ setShowWiki }) {
   // Stato per gestire gli elementi selezionati e le loro descrizioni.
   // Ogni item sarà un oggetto con { ...item, description, active }.
   const [selectedItems, setSelectedItems] = useState([]);
+
+  const [selectedNormalItemTypes, setSelectedNormalItemTypes] = useState([]);
 
   // Funzione per filtrare gli item in base alla ricerca
   const filterItems = (items) => {
@@ -41,12 +44,45 @@ function Wiki({ setShowWiki }) {
       case "rules":
         itemsToDisplay = rules;
         break;
-      case "items":
-        itemsToDisplay = items;
-        break;
+        case "items":
+          itemsToDisplay = items;
+        
+          // Applica filtro normal/magic
+          if (itemTypeFilter !== "all") {
+            itemsToDisplay = itemsToDisplay.filter(
+              (item) => item.group?.toLowerCase() === itemTypeFilter
+            );
+          
+            // Applica sotto-filtro se "normal"
+            if (itemTypeFilter === "normal" && selectedNormalItemTypes.length > 0) {
+              itemsToDisplay = itemsToDisplay.filter((item) => {
+                const type = item.type || "";
+                const isArmor = selectedNormalItemTypes.includes("Armor") && (
+                  type.includes("Light Armor") ||
+                  type.includes("Medium Armor") ||
+                  type.includes("Heavy Armor") ||
+                  type.includes("Shield")
+                );
+                const isWeapon = selectedNormalItemTypes.includes("Weapon") && (
+                  type.includes("Simple Weapon") ||
+                  type.includes("Martial Weapon") ||
+                  type.includes("Ranged Weapon") ||
+                  type.includes("Melee Weapon")
+                );
+                const isOtherTool = selectedNormalItemTypes.includes("Other Tool") && type === "Other Tool";
+                const isAdvGear = selectedNormalItemTypes.includes("Adventuring Gear") && type === "Adventuring Gear";
+                const isArtisan = selectedNormalItemTypes.includes("Artisan's Tool") && type === "Artisan's Tool";
+          
+                return isArmor || isWeapon || isOtherTool || isAdvGear || isArtisan;
+              });
+            }
+          }
+          break;
+
       case "spells":
         itemsToDisplay = spells;
         break;
+
       case "feats":
         itemsToDisplay = feats;
         break;
@@ -54,6 +90,28 @@ function Wiki({ setShowWiki }) {
         // Categoria "all": unisci tutto
         itemsToDisplay = [...rules, ...items, ...spells, ...feats];
     }
+
+    {itemTypeFilter === "normal" && (
+      <div className="category-buttons">
+        {["Armor", "Weapon", "Tools", "Gear"].map((subtype) => (
+          <button
+            key={subtype}
+            className={`button-secondary ${
+              selectedNormalItemTypes.includes(subtype) ? "selected" : ""
+                }`}
+                onClick={() => {
+                  setSelectedNormalItemTypes((prev) =>
+                    prev.includes(subtype)
+                      ? prev.filter((s) => s !== subtype)
+                      : [...prev, subtype]
+                  );
+                }}
+              >
+            {subtype}
+          </button>
+        ))}
+      </div>
+    )}
 
     // Applica i filtri specifici per gli spells
     if (category === "spells") {
@@ -199,27 +257,35 @@ function Wiki({ setShowWiki }) {
       setSelectedFeatCategory([]);
     }
     resetView();
+    
+    if (newCategory !== "items") {
+      setItemTypeFilter("all");
+      setFilter("");
+      setSelectedNormalItemTypes([]);
+    }
   };
+  
 
   return (
     <div className="app-container">
-      <button
-        className="back-button"
-        onClick={() => setShowWiki(false)} // Torna alla home
-      >
-        Torna alla home
-      </button>
-
-      <div className="search-bar">
-        <input
-          type="text"
-          placeholder="Cerca..."
-          value={searchQuery}
-          onChange={(e) => {
-            setSearchQuery(e.target.value);
-            resetView();
-          }}
-        />
+        <div className="header-bar">
+          <button
+            className="back-button"
+            onClick={() => setShowWiki(false)} // Torna alla home
+          >
+            Home
+          </button>
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Cerca..."
+            value={searchQuery}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+              resetView();
+            }}
+          />
+        </div>
       </div>
 
       <div className="buttons">
@@ -255,6 +321,65 @@ function Wiki({ setShowWiki }) {
         </button>
       </div>
 
+      {category === "items" && (
+  <>
+    <div className="filter-buttons">
+      <button
+        onClick={() => {
+          setItemTypeFilter("all");
+          setSelectedNormalItemTypes([]);
+        }}
+        className={`button-secondary ${itemTypeFilter === "all" ? "selected" : ""}`}
+      >
+        Tutti
+      </button>
+      <button
+        onClick={() => {
+          setItemTypeFilter("normal");
+        }}
+        className={`button-secondary ${itemTypeFilter === "normal" ? "selected" : ""}`}
+      >
+        Normali
+      </button>
+      <button
+        onClick={() => {
+          setItemTypeFilter("magic");
+          setSelectedNormalItemTypes([]);
+        }}
+        className={`button-secondary ${itemTypeFilter === "magic" ? "selected" : ""}`}
+      >
+        Magici
+      </button>
+    </div>
+
+    {itemTypeFilter === "normal" && (
+  <div className="filter-buttons sub-filter">
+    {[
+      { label: "Armature", type: "Armor" },
+      { label: "Armi", type: "Weapon" },
+      { label: "Eq. d'Avventura", type: "Adventuring Gear" },
+      { label: "Arnesi da Artigiano", type: "Artisan's Tool" },
+      { label: "Altri Strumenti", type: "Other Tool" }
+    ].map(({ label, type }) => (
+      <button
+        key={type}
+        onClick={() =>
+          setSelectedNormalItemTypes((prev) =>
+            prev.includes(type)
+              ? prev.filter((t) => t !== type)
+              : [...prev, type]
+          )
+        }
+        className={`button-secondary ${selectedNormalItemTypes.includes(type) ? "selected" : ""}`}
+      >
+        {label}
+      </button>
+    ))}
+  </div>
+)}
+  </>
+)}
+
       {category === "spells" && (
         <>
           <div className="category-buttons levels">
@@ -280,46 +405,61 @@ function Wiki({ setShowWiki }) {
           </div>
 
           <div className="category-buttons classes">
-            {["Druid", "Cleric", "Sorcerer", "Wizard", "Paladin", "Ranger", "Warlock"].map((cls) => (
-              <button
-                key={cls}
-                className={`button-secondary class-button ${
-                  selectedClasses.includes(cls) ? "selected class-selected" : ""
-                }`}
-                onClick={() => {
-                  setSelectedClasses((prev) =>
-                    prev.includes(cls)
-                      ? prev.filter((item) => item !== cls)
-                      : [...prev, cls]
-                  );
-                }}
-              >
-                {cls}
-              </button>
-            ))}
-          </div>
+  {[
+    { label: "Druido", value: "Druid" },
+    { label: "Chierico", value: "Cleric" },
+    { label: "Stregone", value: "Sorcerer" },
+    { label: "Mago", value: "Wizard" },
+    { label: "Paladino", value: "Paladin" },
+    { label: "Ranger", value: "Ranger" },
+    { label: "Warlock", value: "Warlock" },
+  ].map(({ label, value }) => (
+    <button
+      key={value}
+      className={`button-secondary class-button ${
+        selectedClasses.includes(value) ? "selected class-selected" : ""
+      }`}
+      onClick={() => {
+        setSelectedClasses((prev) =>
+          prev.includes(value)
+            ? prev.filter((item) => item !== value)
+            : [...prev, value]
+        );
+      }}
+    >
+      {label}
+    </button>
+  ))}
+</div>
 
-          <div className="category-buttons schools">
-            {["Abjuration", "Conjuration", "Divination", "Enchantment", "Evocation", "Illusion", "Necromancy", "Transmutation"].map((school) => (
-              <button
-                key={school}
-                className={`button-secondary school-button ${
-                  selectedSchools.includes(school)
-                    ? "selected school-selected"
-                    : ""
-                }`}
-                onClick={() => {
-                  setSelectedSchools((prev) =>
-                    prev.includes(school)
-                      ? prev.filter((item) => item !== school)
-                      : [...prev, school]
-                  );
-                }}
-              >
-                {school}
-              </button>
-            ))}
-          </div>
+<div className="category-buttons schools">
+  {[
+    { label: "Abiurazione", value: "Abjuration" },
+    { label: "Evocazione", value: "Conjuration" },
+    { label: "Divinazione", value: "Divination" },
+    { label: "Ammaliamento", value: "Enchantment" },
+    { label: "Invocazione", value: "Evocation" },
+    { label: "Illusione", value: "Illusion" },
+    { label: "Necromanzia", value: "Necromancy" },
+    { label: "Trasmutazione", value: "Transmutation" },
+  ].map(({ label, value }) => (
+    <button
+      key={value}
+      className={`button-secondary school-button ${
+        selectedSchools.includes(value) ? "selected school-selected" : ""
+      }`}
+      onClick={() => {
+        setSelectedSchools((prev) =>
+          prev.includes(value)
+            ? prev.filter((item) => item !== value)
+            : [...prev, value]
+        );
+      }}
+    >
+      {label}
+    </button>
+  ))}
+</div>
 
           <div className="category-buttons ritual">
             <button

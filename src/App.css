@@ -36,7 +36,8 @@ body, html {
 
 /* Bottoni generali */
 .buttons,
-.category-buttons {
+.category-buttons,
+.filter-buttons {
   display: flex;
   gap: 5px;
   flex-wrap: nowrap;
@@ -138,12 +139,6 @@ button {
 }
 
 
-/* Bottoni specifici */
-.back-button {
-  margin-top: 1.2vw;
-  border-radius: 10px;
-}
-
 
 
 .wiki-button {
@@ -210,6 +205,22 @@ button {
   color: #C50000;
 }
 
+.header-bar {
+  display: flex; /* Usa flexbox per allineare gli elementi orizzontalmente */
+  align-items: center; /* Centra verticalmente gli elementi */
+  justify-content: flex-start; /* Puoi usare center per centrare tutto o flex-start per allineare a sinistra */
+  gap: 10px; /* Distanza tra il bottone e la search bar */
+}
+
+.back-button {
+  margin-top: 0.3vw;
+  border-radius: 10px;
+}
+
+.back-button:hover {
+  background-color: #890000;
+}
+
 /* Ricerca */
 .search-bar {
   margin: 10px 0;
@@ -257,8 +268,9 @@ button {
 
 /* Media Queries per schermi più piccoli */
 @media {
-  .school-button {
-   font-size: ;
+  .school-button,
+  .filter-buttons,
+  .sub-filter {
    min-width: 6vw;
    min-height: 2.5vw;
   }
@@ -284,11 +296,21 @@ button {
   }
   .level-button,
   .class-button,
-  .school-button {
+  .school-button,
+  .filter-buttons,
+  .sub-filter {
     font-size: 0.9rem; /* Riduce la dimensione del testo */
     padding: 5px 10px; /* Riduce il padding */
     margin-right: 0.5;
     margin-left: 0.5;
+  }
+  .school-button {
+    font-size: 0.8rem;
+    margin-left: -3px;
+    margin-right: -3px;
+  }
+  .schools {
+    max-width: 98%;
   }
 }
 
@@ -296,18 +318,39 @@ button {
   .app-container, .items-list, .item-description p {
     font-size: 18px; /* Aumenta un po' la dimensione del testo per schermi più piccoli */
   }
-  button {
-    font-size: 0.8rem; /* Ulteriore riduzione della dimensione del testo */
-    padding: 4px 8px;
-  }
   .level-button,
   .class-button,
-  .school-button {
+  .school-button,
+  .filter-buttons,
+  .sub-filter {
     font-size: 0.8rem; /* Riduce ulteriormente la dimensione del testo */
     padding: 4px 8px; /* Riduce il padding */
     margin-right: 0;
     margin-left: 0;
-    font-weight: 250;
+  }
+  .school-button {
+    
+    padding: 0 0 0 0;
+    margin-left: -2px;
+    margin-right: -2px;
+    font-size: 10px;
+    font-weight: 400;
+  }
+  .sub-filter {
+    font-size: 0.rem;
+  }
+
+  .schools {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Permette di andare su più righe */
+    gap: 4px; /* Aggiungi uno spazio tra i bottoni */
+  }
+
+  .school-button {
+    flex: 1 1 24%; /* Ogni bottone occuperà circa il 48% della larghezza */
+    text-align: center; /* Centra il testo nei bottoni */
+
   }
 }
 
@@ -321,21 +364,38 @@ button {
   }
   .level-button,
   .class-button,
-  .school-button {
+  .school-button,
+  .filter-buttons,
+  .sub-filter {
     font-size: 0.7rem; /* Ulteriore riduzione della dimensione del testo */
     padding: 3px 6px; /* Ulteriore riduzione del padding */
     margin-right: 0;
     margin-left: 0;
     font-weight: 175;
   }
-  .school-button {
+  .school-button,
+  .filter-buttons,
+  .sub-filter {
     font-size: 0.46rem;
-    min-width: 10vw;
+    min-width: 6vw;
     min-height: 5vw;
    }
    .button-main {
     font-size: 0.85rem;
     min-width: 10vw;
     min-height: 5vw;
+  }
+
+  .schools {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Permette di andare su più righe */
+    gap: 8px; /* Aggiungi uno spazio tra i bottoni */
+  }
+
+  .school-button {
+    flex: 1 1 24%; /* Ogni bottone occuperà circa il 48% della larghezza */
+    text-align: center; /* Centra il testo nei bottoni */
+    margin-bottom: 8px; /* Distanza tra le righe */
   }
 }
