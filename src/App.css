@@ -1,11 +1,17 @@
 /* Corpo e HTML */
-body, html {
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  background-color: #222222 !important;
   color-scheme: dark;
-  background-color: #222222 !important; /* Cambia il colore di sfondo come preferisci */
+  overflow: hidden; /* evita doppi scroll */
+  font-size: clamp(14px, 1.5vw, 18px);
+}
+
+* {
+  min-width: 0;
 }
 
 #root {
@@ -14,149 +20,88 @@ body, html {
   display: flex;
   flex-direction: column;
   background-color: inherit;
-  color-scheme: dark;
 }
 
 /* Contenitori principali */
 .main-container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .app-container {
-  display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start; /* Allinea il contenuto in alto */
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   text-align: center;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
-/* Bottoni generali */
-.buttons,
-.category-buttons,
-.filter-buttons {
+/* MENU STYLE */
+
+  /* LOGO STYLE */
+
+.logo-title-wrapper {
+  position: relative;
   display: flex;
-  gap: 5px;
-  flex-wrap: nowrap;
-  white-space: nowrap;
-  max-width: 100vw;
-  padding-bottom: 2px;
-  justify-content: center; /* Centra i bottoni */
+  align-items: center;
+  gap: 1rem;
+  z-index: 1000;
 }
 
-button {
-  background-color: #340000;
-  color: white !important; /* Assicura che il testo sia sempre bianco */
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem; /* Dimensione base del testo */
+.tool-title {
+  width: clamp(10rem, 30vw, 30rem);
+  position: fixed;
+  top: 7.5%;
+  left: 12%;
+  transform: translateY(-50%);
+  font-size: 4em;
+  color: rgb(200, 200, 200);
+  height: auto;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  filter: drop-shadow(0 0 5px #969696) drop-shadow(0 0 0.25rem #C50000) drop-shadow(0 0 0.75rem #C5000080);
+}
+
+/* MENU BUTTONS STYLE */
+.menu-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.menu-button-p {
+  font-size: 3rem;
+  color: rgb(200, 200, 200);
+  text-shadow: 0 0 10px #C50000, 0 0 20px #c5000080;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.menu-button-p.hovered {
+  transform: scale(1.5);
+  text-shadow: 0 0 15px #C50000, 0 0 30px #c5000080;
+}
+
+.wiki-button-img {
+  height: 200px;
+  width: 304px;
   cursor: pointer;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  min-width: 4vw; /* Impedisce ai bottoni di diventare troppo piccoli */
-  max-width: 200px; /* Impedisce ai bottoni di diventare troppo grandi */
-  word-wrap: normal;
-  white-space: nowrap; /* Impedisce che il testo vada a capo */
-  overflow: hidden; /* Evita che il testo venga troncato */
-  text-overflow: ellipsis; /* Mostra '...' se il testo è troppo lungo, ma non a capo */
+  transition: filter 0.3s ease, transform 0.3s ease;
+  filter: drop-shadow(0 0 10px #c5000080);
+  touch-action: manipulation;
 }
 
-/* Bottoni principali */
-.button-main {
-  padding: 6px 12px;
-  margin: 3px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #340000;
-  transition: background-color 0.3s;
-  color: white; /* Testo bianco per i bottoni principali */
+.wiki-button-img:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 10px #c5000080) drop-shadow(0 0 20px #c5000080);
 }
 
-.button-main.selected {
-  background-color: #C50000;
-  color: #ffffff;
-}
-
-.button-main:hover {
-  background-color: #890000;
-}
-
-.button-main.selected:hover {
-  background-color: #C50000; /* Impedisce la modifica del colore di sfondo */
-}
-
-
-
-/* Bottoni secondari */
-.button-secondary {
-  padding: 6px 12px;
-  margin: 3px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #2E0034;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  color: white; /* Testo bianco per i bottoni secondari */
-}
-
-.button-secondary.selected {
-  background-color: #AC00C3;
-  color: white;
-}
-
-.button-secondary:hover {
-  background-color: #790089;
-}
-
-.button-secondary.selected:hover {
-  background-color: #AC00C3; /* Impedisce la modifica del colore di sfondo */
-}
-
-/* Bottoni Filtri Incantesimi */
-/* Bottoni per il livello */
-.level-button {
-  padding: 0; 
-}
-
-/* Bottoni per le classi */
-/* Bottoni per le classi */
-.class-button {
-  /* Aggiungi altre personalizzazioni qui */
-}
-
-/* Bottoni per le scuole di magia */
-.school-button {
-  /* Aggiungi altre personalizzazioni qui */
-}
-/* Bottoni per il rituale */
-.ritual-button {
-  /* Aggiungi qui il tuo stile personalizzato */
-}
-
-
-
-
-.wiki-button {
-  position: absolute;
-  top: 50%; /* Posiziona il bottone al centro della pagina */
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centra esattamente il bottone */
-  padding: 20px 40px;
-  font-size: 1.5rem;
-  border-radius: 10px;
-  background-color: #E04F00;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.toggle-language:hover {
-  background-color: #890000;
+.wiki-button-img:active {
+  transform: scale(0.95);
+  filter: drop-shadow(0 0 10px #C50000);
 }
 
 /* Quando la Wiki è aperta, togli la centratura */
@@ -168,33 +113,492 @@ button {
   transform: none;
 }
 
-/* Lista degli oggetti e descrizioni */
-.items-list {
-  margin-top: 1vw;
-  font-size: 16px;
+/* TOP PANEL AND HEAD BAR */
+
+/* TOP PANEL STYLE*/
+
+.top-panel {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  transition: padding 0.3s ease, background 0.3s ease;
 }
 
+/* Pulsante "torna alla Home" visibile nella Wiki */
+.wiki-back-logo {
+  position: fixed;
+  top: 7.5%;
+  left: 2.5%;
+  transform: translateY(-50%);
+  justify-items: flex-start;
+  width: 7.5%;
+  height: 7.5%;
+  cursor: pointer;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 6px #AC00C3);
+}
+
+.wiki-back-logo:hover {
+  position: fixed;
+  transform: translateY(-50%) scale(1.2);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 10px #AC00C3);
+}
+
+
+/* Start Navbar Style */
+
+.navbar-mobile {
+  display: none; /* Di default non visibile */
+  background-color: #2a2a2a;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-mobile.active {
+  display: flex; /* Viene mostrata quando è attiva */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-mobile .search-container {
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.navbar-mobile .home-button {
+  background-color: #6D0000;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Layout della header-bar */
+.header-bar {
+  position: relative;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.08); /* sottile e discreto */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.header-center {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+/* Barra di ricerca (unificato) */
+.search-bar {
+  position: fixed;
+  flex: 1;
+  margin-bottom: 1vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.search-bar input {
+  position: fixed;
+  top: 7.5%;
+  left: 12.5%;
+  transform: translateY(-50%);
+  width: 25%;
+  padding: 8px 14px;
+  border: 2px solid #8b0000;
+  border-radius: 12px;
+  background-color: #1a1a1a;
+  color: #f9f9f9;
+  font-size: 1rem;
+  font-family: 'Georgia', serif;
+  outline: none;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: inset 0 0 6px rgba(255, 0, 0, 0.2), 0 0 6px rgba(255, 0, 0, 0.1);
+}
+
+.search-bar input::placeholder {
+  color: #bbb; /* Colore del testo placeholder */
+  font-style: italic;
+}
+
+/* Stile quando la search bar è in focus */
+.search-bar input:focus {
+  border-color: #C50000; /* Bordo rosso brillante */
+  box-shadow: inset 0 0 8px rgba(255, 77, 77, 0.4), 0 0 10px rgba(255, 77, 77, 0.6); /* Ombra interna ed esterna */
+}
+
+
+.search-bar input:focus {
+  color: #C50000; /* Colore dell'icona quando la barra è in focus */
+}
+
+/* Placeholder nella barra di ricerca */
+.search-bar input::placeholder {
+  color: #ccc;
+  font-style: italic;
+}
+
+
+/* Bottone bandierina */
+.toggle-language {
+  position: fixed;
+  top: 7.5%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  background: none;
+  border: none;
+  padding: none;
+  margin: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Icona bandiera con alone sottile */
+.flag-icon {
+  position: fixed;
+  top: 6%;
+  right: 5%;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover generico */
+.toggle-language:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Hover: aumenta l'alone e aggiungi effetto di wobble */
+.toggle-language:hover .flag-icon {
+  box-shadow: 0 0 8px #ff00000f; /* Bagliore rosso al passaggio */
+  animation: wobble 0.6s ease-in-out;
+}
+
+
+/* Tooltip stile fade-up */
+.tooltip-text {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 10px);
+  background: #222;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease 0.3s, transform 0.3s ease;
+  z-index: 10;
+}
+
+/* Mostra tooltip su hover */
+.toggle-language:hover .tooltip-text {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@keyframes wobble {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(-10deg); }
+  50%  { transform: rotate(10deg); }
+  75%  { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Bottone hamburger */
+
+.hamburger-div {
+  position: fixed;
+  z-index: 130000;
+}
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 130000;
+}
+
+/* Le barrette rosse */
+.hamburger div {
+  width: 100%;
+  height: 4px;
+  background-color: #c50000;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: 120000;
+}
+
+/* Animazioni quando attivo */
+.hamburger.active div:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* INIZIO BOTTONI */
+
+/* Bottoni principali */
+.button-main-scroll-container {
+  position: fixed;
+  top: 7.5%;
+  right: 11%;
+  transform: translateY(-50%);
+  z-index: 10; /* per stare sopra il resto se serve */
+  pointer-events: none; /* così non interferisce con altri elementi se necessario */
+}
+
+.button-main-wrapper {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  pointer-events: auto;
+}
+
+.button-main {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  max-width: 100%;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  justify-content: center !important;
+  font-size: 2vw;
+  font-variant: small-caps;
+  padding: 2px 5px;
+  margin: 4px;
+  border: 2px solid #800000;
+  border-radius: 12px;
+  background: linear-gradient(to bottom, #400000, #1a0000);
+  color: #f5f5f5;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.button-main:hover {
+  background: linear-gradient(to bottom, #750000, #2a0000);
+  border-color: #E00000;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+}
+
+.button-main.selected {
+  background: linear-gradient(to bottom, #c50000, #600000);
+  border-color: #E00000;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 0 0 8px rgba(255, 77, 77, 0.4);
+}
+
+.button-main.selected:hover {
+  background: linear-gradient(to bottom, #c50000, #600000);
+  transform: scale(1.02);
+}
+
+.button-main:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 4px rgba(255, 0, 0, 0.2);
+}
+
+/* Bottoni secondari */
+/* Bottoni secondari migliorati */
+.button-secondary {
+  display: flex;
+  justify-content: flex-start !important;
+  flex: 0 0 auto; /* Impedisce ai bottoni di comprimersi */
+  scroll-snap-align: start; /* Ogni bottone si "aggancia" all'inizio visibile */
+  font-size: 1rem;
+  padding: 4px 8px;
+  border: 2px solid #6D0000;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-align: center;
+}
+.filter-buttons {
+  display: flex;
+  justify-content: flex-start !important;
+  flex: 0 0 auto; /* Impedisce ai bottoni di comprimersi */
+  scroll-snap-align: start; /* Ogni bottone si "aggancia" all'inizio visibile */
+  font-size: 1rem;
+  padding: 4px 8px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-align: center;
+}
+.fb-layer-1 {
+  padding-top: 10px;
+}
+
+/* Hover più visibile */
+.button-secondary:hover {
+  background-color: #790089;
+  border-color: #C50000;
+  box-shadow: 0 0 10px #c5000080;
+}
+
+/* Stato selezionato */
+.button-secondary.selected {
+  background-color: #AC00C3;
+  color: #fff;
+  border-color: #ff00ff;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(172, 0, 195, 0.7);
+}
+
+/* Impedisce variazione su hover se già selezionato */
+.button-secondary.selected:hover {
+  background-color: #AC00C3;
+  border-color: #ff00ff;
+}
+
+.button-secondary:active {
+  transform: scale(0.97);
+}
+
+/* Bottoni per il livello */
+.level-button {
+  flex: 0 0 auto; /* Impedisce che si stringano */
+  min-width: 40px; /* O qualunque larghezza minima sia pratica */
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+/* Scorrimento orizzontale bottoni */
+
+.horizontal-scroll {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  max-width: 100%;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.horizontal-scroll button {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  height: 1px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.horizontal-scroll .button-secondary {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+/* FINE BOTTONI */
+
+
+
+/* INIZIO ITEMS E DESCRIZIONI */
+
+/* Lista degli oggetti e descrizioni */
 .items-list .item p {
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
 
+.items-list {
+  flex: 1;
+  max-width: 100%; /* Ridotto per più spazio alla descrizione */
+  overflow-y: auto;
+  padding-right: 20px;
+  height: calc(100vh - var(--top-panel-height));
+}
+
+/* Oggetti (items) */
 .item {
-  cursor: pointer;
-  margin: 1vw 0 1vw 0;
-  transition: color 0.3s ease;
-  color: #ffffff; /* Colore scuro per una visibilità migliore */
-}
-
-.item:hover {
-  color: #C50000;
-}
-
-/* Stile temporaneo al tocco (active) */
-/* Stile normale (ma con descrizione visibile) */
-.item.selected {
-  transform: none;
+  font-size: 1vw;
+  font-weight: 500;
+  background-color: #2a2a2a;
   color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* Hover per oggetti */
+.item:hover {
+  background-color: #333;
+  transform: translateX(4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Oggetto selezionato */
+
+.item.selected {
+  background-color: #3a1c1c;
+  border-color: #E00000;
+  box-shadow: 0 0 8px rgba(255, 68, 68, 0.7);
+  color: #C50000;
+  font-weight: bold;
 }
 
 .item.selected:hover {
@@ -205,201 +609,738 @@ button {
   color: #C50000;
 }
 
-.header-bar {
-  display: flex; /* Usa flexbox per allineare gli elementi orizzontalmente */
-  align-items: center; /* Centra verticalmente gli elementi */
-  justify-content: flex-start; /* Puoi usare center per centrare tutto o flex-start per allineare a sinistra */
-  gap: 10px; /* Distanza tra il bottone e la search bar */
+/* VOICE INFOS */
+
+.item-info {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 0.7vw;
+  color: #888;
 }
 
-.back-button {
-  margin-top: 0.3vw;
-  border-radius: 10px;
-}
-
-.back-button:hover {
-  background-color: #890000;
-}
-
-/* Ricerca */
-.search-bar {
-  margin: 10px 0;
-  text-align: center;
-}
-
-.search-bar input {
-  padding: 6px 10px;
-  font-size: 16px;
-  width: 300px;
-  border: 2px solid #ccc;
+.item-info-symbol {
+  display: inline-block;
+  background-color: #f0f0f0;
+  padding: 3px 6px;
   border-radius: 5px;
+  text-transform: uppercase;
 }
 
-.search-bar input:focus {
-  border-color: #890000;
-  outline: none;
+
+/* START DESCRIPTION STYLE */
+
+/* Descrizione dettagliata */
+.description-panel {
+  flex: 2;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  max-height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
 }
 
+/* Transizione descrizione */
+.description-panel.open {
+  max-height: 100vh;
+  transition: max-height 0.3s ease-in-out;
+}
+
+/* Effetto di fade-in per la descrizione */
+.description {
+  margin-top: -10px;
+  margin-bottom: 20px;
+  padding: 0 10px 5px 10px;
+  background: #1f1f1f;
+  border-left: 4px solid #E00000;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animazione fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .description p {
+  color: white;
   white-space: pre-line;
-  text-align: center;
-  max-width: 800px;    /* Limita la larghezza della descrizione */
-  margin: 0 auto 0;      /* Centra il contenitore orizzontalmente */
-  padding: 2vw 1rem;
-  line-height: 1;
-  align-content: center;
-  font-size: 16px;
-  color: #ffffff;
-  background-color: #2e003433;
+  margin: 0 auto 0;
+  max-width: 100%;
+}
+.description em {
+  font-size: 1vw;
 }
 
-.translate-button-container {
-  white-space: pre-line;
-  text-align: center;
-  max-width: 800px;    /* Limita la larghezza della descrizione */
-  margin: 0 auto 0;      /* Centra il contenitore orizzontalmente */
-  padding: 2vw 1rem;
-  line-height: 1;
-  align-content: center;
-  color: #ffffff;
-  background-color: #2e003433;
+
+.content-container {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  overflow: hidden; /* Evita scroll su tutto il contenitore */
 }
+
+/* Assicura che le due colonne occupino l'altezza piena del container e gestiscano il proprio overflow */
+.content-container .items-list,
+.content-container .description-panel {
+  height: calc(100vh - var(--top-panel-height));
+  overflow-y: auto;
+}
+
+/* Quando il pannello descrizione è visibile */
+.content-container.with-description .items-list {
+  width: 40%;
+  margin: 0;
+}
+
+.content-container.with-description .description-panel {
+  width: 60%;
+  display: block;
+}
+
+/* Quando il pannello descrizione è nascosto */
+.content-container.full-width {
+  justify-content: center; /* centra il contenuto visibile */
+  height: calc(100vh - var(--top-panel-height));
+}
+
+.content-container.full-width .items-list {
+  width: 60%; /* o come preferisci */
+  height: calc(100vh - var(--top-panel-height));
+}
+
+/* Questo nasconde il pannello */
+.content-container.full-width .description-panel {
+  display: none;
+}
+
+.term-highlight {
+  border-bottom: 2px solid #6D0000; /* Bordo rosso scuro */
+  font-variant: small-caps; /* Applica la regola delle smallcaps */
+  padding-bottom: 2px; /* Aggiungi un po' di spazio sotto il termine per un aspetto migliore */
+}
+
+/* Scrollbar personalizzata */
+.items-list::-webkit-scrollbar, .description-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.items-list::-webkit-scrollbar-thumb, .description-panel::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 4px;
+}
+
+.items-list::-webkit-scrollbar-track, .description-panel::-webkit-scrollbar-track {
+  background: #222;
+}
+
+
+/* Start Statblocks Style */
+
+.statblock-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: auto; 
+  font-size: 1rem;
+}
+
+.statblock-title {
+  background-color: #340000;
+  padding: 0.5rem;
+  border: 2px solid #6D0000;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  user-select: none;
+  font-variant: small-caps;
+  font-size: 2rem;
+}
+
+.statblock-title:hover {
+  background-color: #C50000;
+}
+
+.statblock-body {
+  max-width: 600px;
+  margin: 0 auto 0;
+}
+
+.statblock-body h1 {
+  color: #6D0000;
+  font-size: 1.8rem;
+}
+.col, .cols {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col1 {
+  display: inline-block;
+  width: 100%;
+  padding: 0 20px 0 40px;
+}
+
+.jaune {
+  background-color: #f1eee7;
+  padding: 10px 8px 5px 8px;
+  margin: 0 2px 0 2px;
+  border: 3px #bebdb8 solid;
+  border-radius: 15px;
+}
+.sansSerif {
+  font-family: "Open Sans", arial, sans-serif;
+}
+
+.red {
+  color: #6D0000;
+  font-size: 1rem;
+}
+
+.type-statblock {
+  color: #666666;
+  margin-bottom: 10px;
+}
+
+.car {
+  display: inline-block;
+  margin: 0 1px;
+  padding: 0px 2px;
+  font-size: 0.8rem;
+  color: #666666;
+  width: 8%;
+  max-width: 31px;
+  text-align: center;
+  vertical-align: bottom;
+}
+.car1, .car2 {
+  background-color: #e8e6da;
+}
+.car1, .car4 {
+  display: inline-block;
+  margin: 1px;
+  padding: 2px 4px;
+  width: 8%;
+  max-width: 31px;
+  text-align: left;
+  vertical-align: top;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+.car2, .car5 {
+  display: inline-block;
+  margin: 1px;
+  padding: 2px 4px;
+  width: 8%;
+  max-width: 31px;
+  text-align: center;
+  vertical-align: top;
+  font-weight: bold;
+}
+.car3 {
+  background-color: #dad1ca;
+}
+.car3, .car6 {
+  display: inline-block;
+  margin: 1px;
+  padding: 2px 4px;
+  width: 8%;
+  max-width: 31px;
+  text-align: center;
+  vertical-align: top;
+}
+.car1, .car4 {
+  display: inline-block;
+  margin: 1px;
+  padding: 2px 4px;
+  width: 8%;
+  max-width: 2.5rem;
+  text-align: left;
+  vertical-align: top;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+.car4, .car5 {
+  background-color: #dddad5;
+}
+.car6 {
+  background-color: #cecac9;
+  margin-bottom: 8px;
+}
+.rub {
+  color: #6D0000;
+  margin: 6px 0 4px 0;
+  border-bottom: 1px solid #6D0000;
+  font-size: 1.2rem;
+  font-variant: small-caps;
+}
+.silv {
+  border-bottom: 1px solid #6D0000;
+  font-size: 1rem;
+  font-variant: small-caps;
+}
+.silv, .silv p, .silv em, .silv strong {
+  color: #666666 !important;
+}
+
+
+/* End Statblocks Style */
+
+
+/* FOOTER STYLE */
+
+.app-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1a1a1a;
+  color: #ccc;
+  font-size: 0.85rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.1rem;
+  text-align: center;
+  border-top: 1px solid #333;
+  z-index: 1000;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 40px;
+  margin-left: 10px;
+  filter: brightness(0.9);
+}
+
+.footer-dev {
+  font-weight: bold;
+  color: #eee;
+}
+
+.footer-bottom p {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.app-footer.hidden {
+  transform: translateY(100%);
+}
+
+
 
 
 /* Media Queries per schermi più piccoli */
-@media {
-  .school-button,
-  .filter-buttons,
-  .sub-filter {
-   min-width: 6vw;
-   min-height: 2.5vw;
+
+
+
+
+
+
+
+/* Media Queries per schermi più piccoli */
+
+@media (min-width: 1440px) {
+  .button-main {
+    font-size: 1.8vw;
   }
-  .level-button {
-    min-width: 6vw;
+}
+@media (max-width: 1439px) and (min-width: 1024px) {
+
+  .item {
+    font-size: 1rem;
+  }
+
+  .search-bar input {
+    font-size: 0.95rem;
+
+  }
+
+  .wiki-back-logo {
+    left: 2.5%;
+    transform: translateY(-50%);
+  }
+  .button-main-scroll-container {
+    width: 50%;
+    top: 7.5%;
+    right: 10%;
+    transform: translateY(-50%);
+  }
+  .button-main-wrapper {
+    flex-direction: block;
+  }
+
+  .toggle-language {
+    top: 7%;
+    right: 3.5%;
+  }
+  .flag-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .button-main {
+    font-size: 1rem;
   }
   .items-list {
+    height: calc(100% - var(--top-panel-height));
+  }
+  .content-container {
+    height: 100%;
+    overflow: hidden; /* evita lo scrolling globale del container */
+    position: relative;
+    display: flex;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .statblock-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .statblock-title {
+    font-size: 1.8rem;
+    padding: 0.8rem;
+  }
+
+  .statblock-body {
+    padding: 15px;
+  }
+
+  .statblock-body h1 {
     font-size: 1.5rem;
   }
-  .items-list .item p {
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-  }
-}
 
-@media (max-width: 1024px) {
-  .app-container, .items-list, .item-description p {
-    font-size: 18px; /* Aumenta la dimensione del testo per schermi medio-piccoli */
-  }
-  button {
-    font-size: 0.9rem; /* Riduce leggermente la dimensione del testo */
-    padding: 5px 10px;
-  }
-  .level-button,
-  .class-button,
-  .school-button,
-  .filter-buttons,
-  .sub-filter {
-    font-size: 0.9rem; /* Riduce la dimensione del testo */
-    padding: 5px 10px; /* Riduce il padding */
-    margin-right: 0.5;
-    margin-left: 0.5;
-  }
-  .school-button {
-    font-size: 0.8rem;
-    margin-left: -3px;
-    margin-right: -3px;
-  }
-  .schools {
-    max-width: 98%;
-  }
-}
-
-@media (max-width: 768px) {
-  .app-container, .items-list, .item-description p {
-    font-size: 18px; /* Aumenta un po' la dimensione del testo per schermi più piccoli */
-  }
-  .level-button,
-  .class-button,
-  .school-button,
-  .filter-buttons,
-  .sub-filter {
-    font-size: 0.8rem; /* Riduce ulteriormente la dimensione del testo */
-    padding: 4px 8px; /* Riduce il padding */
-    margin-right: 0;
-    margin-left: 0;
-  }
-  .school-button {
-    
-    padding: 0 0 0 0;
-    margin-left: -2px;
-    margin-right: -2px;
-    font-size: 10px;
-    font-weight: 400;
-  }
-  .type-buttons {
-    font-size: 1.9vw;
+  .statblock-body .statblock-item {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .schools {
+  .statblock-body .statblock-item div {
+    flex: 1 1 100%;
+  }
+
+  .statblock-body .description {
+    font-size: 0.95rem;
+  }
+  .content-container {
+    height: calc(100vh - var(--top-panel-height));
+    display: flex;
+    flex-direction: column; /* oppure row, se vuoi tenere due colonne */
+  }
+
+  .content-container.with-description .items-list {
+    width: 100%;
+    height: auto; /* opzionale se overlay */
+  }
+
+  .content-container.with-description .description-panel {
+    width: 100% !important;
+    height: calc(100vh - var(--top-panel-height)) !important;
+    overflow-y: auto;
+    padding: 15px;
+    box-sizing: border-box;
+    display: block;
+  }
+
+  .description-panel {
+    flex: 1 1 auto;
+    max-height: 100%;
+    overflow-y: auto;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .description {
+    padding: 10px;
+    margin: 0 auto 15px auto;
     max-width: 100%;
-    display: flex;
-    flex-wrap: wrap; /* Permette di andare su più righe */
-    gap: 4px; /* Aggiungi uno spazio tra i bottoni */
+    border-left: 4px solid #E00000;
+    background: #1f1f1f;
+    border-radius: 6px;
   }
 
-  .school-button {
-    height: 5.5vw;
-    font-size: 2vw;
-    flex: 1 1 24%; /* Ogni bottone occuperà circa il 48% della larghezza */
-    text-align: center; /* Centra il testo nei bottoni */
-
+  .description p {
+    max-width: 100%;
+    white-space: pre-line;
+    color: white;
   }
 
-  .filter-buttons.rarity-buttons button {
-   font-size: 1.9vw;
- }
-
-  .filter-buttons.category-buttons {
+  .header-bar {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-   }
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1vw;
+    flex-wrap: nowrap;
+    padding-bottom: 50px;
+  }
+
+
+  .header-center {
+    display: none; /* Hide the buttons on mobile by default */
+  }
+  .button-main-scroll-container {
+    display: block;
+    top: 7.5%;
+    right: 30%;
+    transform: translateY(-50%);
+  }
+  .button-main-scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .button-main-wrapper {
+    flex-direction: block;
+    align-items: flex-start;
+  }
+
+  /* Modifica per la visibilità della barra dei filtri */
+
+  .top-panel {
+    position: sticky !important;
+    z-index: 1000;
+    background: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    transition: padding 0.3s ease, background 0.3s ease;
+  }
+
+  .items-list.overlay {
+    position: absolute !important;
+    left: 0;
+    width: 100% !important;   
+    max-width: 100%;
+    min-height: 100vh !important;
+    height: 100% !important;
+    background: #1e1e1e;  
+    z-index: 200;
+    overflow-y: auto;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.6);
+  }
   
-  .filter-buttons.category-buttons button {
-    flex: 1 1 16%; /* Ogni bottone occuperà circa il 48% della larghezza */
-    text-align: center; /* Centra il testo nei bottoni */
-    margin-bottom: 8px; /* Distanza tra le righe */
+  /* Il pulsante per mostrare la lista, posizionato in basso a sinistra */
+  .toggle-items-button {
+    position: fixed;
+    right: 2vw;
+    bottom: 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 10px;
+    z-index: 1000;
   }
+
+  .toggle-items-button span {
+    font-size: 2vw;
+    font-weight: bold;
+    color: #C50000;
+    text-shadow: 0 0 1vw #000000;
+    display: block;
+    min-height: 1.2em;
+  }
+  
+  .arrow {
+    width: 5vw;
+    height: 5vw;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    filter: drop-shadow(0 0 2px #C50000) drop-shadow(0 0 4px #C5000080);  }
+  
+  .rotate-open {
+    transform: rotateY(180deg);
+  }
+  
+  .rotate-close {
+    transform: rotateY(0deg);
+  }
+  
+  span {
+    margin-left: 8px;
+    font-size: 16px;
+    color: #333;
+  }
+
+  /* Pulsante "torna alla Home" visibile nella Wiki */
+.wiki-back-logo {
+  position: fixed;
+  top: 7.5%;
+  left: 5%;
+  transform: translateY(-50%);
 
 }
 
-@media (max-width: 480px) {
-  .app-container, .items-list, .item-description p {
-    font-size: 16px; /* Riduce la dimensione del testo per schermi molto piccoli */
+.wiki-back-logo:hover {
+  position: fixed;
+  transform: translateY(-50%) scale(1.2);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 10px #AC00C3);
+}
+
+.tool-title {
+  width: clamp(10rem, 30vw, 30rem);
+  position: fixed;
+  top: 7.5%;
+  left: 15%;
+  transform: translateY(-50%);
+  font-size: 4em;
+  color: rgb(200, 200, 200);
+  height: auto;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  filter: drop-shadow(0 0 5px #969696) drop-shadow(0 0 0.25rem #C50000) drop-shadow(0 0 0.75rem #C5000080);
+}
+
+    .search-bar,
+  .wiki-back-logo {
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
+
+  .toggle-language {
+    position: fixed;
+    top: 8%;
+    right: 15%;
+    transform: translateY(-50%);
+
+  }
+  .flag-icon {
+    height: auto;
+    width: 2.5rem;
+  }
+  .search-bar {
+    max-width: 75%;
+  }
+  .search-bar input {
+    width: 45%;
+    top: 7.5%;
+    left: 20%;
+    transform: translateY(-50%);
+  }
+
+  
+  .header-bar.menu-open .search-bar,
+  .header-bar.menu-open .wiki-back-logo {
+    visibility: hidden !important;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+  }
+
+  .hamburger-div {
+    top: 7.5%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: auto;
+    height: auto;
+  }
+
+  .hamburger {
+    width: 35px;
+    height: 25px;
+  }
+  
+  /* Stile normale dei bottoni */
+  .top-panel button,
+  .top-panel .search-bar input {
+    transition: all 0.3s ease;
+  }
+  .item {
+    padding: 6px 0 4px 10px;
+    height: fit-content;
+    font-size: 2.12vw;
+  }
+  .item-info {
+    font-size: 1vw;
+  }
+  .item-info-symbol {
+    font-size: 1vw;
+  }
+  
+}
+
+
+
+
+
+@media (min-width: 425px) and (max-width: 767px) {
+  
+  
   button {
     font-size: 0.7rem; /* Riduce ulteriormente la dimensione del testo */
     padding: 3px 6px;
   }
+
+
+  .button-main {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 2vw;
+    font-variant: small-caps;
+  }
   .level-button,
-  .class-button,
-  .school-button,
-  .filter-buttons,
-  .sub-filter {
-    font-size: 0.7rem; /* Ulteriore riduzione della dimensione del testo */
-    padding: 3px 6px; /* Ulteriore riduzione del padding */
-    margin-right: 0;
-    margin-left: 0;
-    font-weight: 175;
+  .button-secondary,
+  .filter-buttons {
+    font-size: 1.5vw;
+    }
+  .level-button {
+    display: flex;
+    justify-content: center !important;
   }
-  .school-button,
-  .filter-buttons,
-  .type-buttons {
-    font-size: 1.9vw;
+
+  .button-main-scroll-container {
+    display: flex;
+    top: 5%;
+    left: 15%;
+    transform: translateY(-50%);
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    scrollbar-width: none;
   }
-   .button-main {
-    font-size: 0.85rem;
-    min-width: 10vw;
-    min-height: 5vw;
+  
+  .button-main-scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .button-main-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    gap: 0px;
+    margin-top: 1.15vw;
+    margin-left: 8vw;
+    
   }
 
   .schools {
@@ -416,14 +1357,696 @@ button {
     text-align: center; /* Centra il testo nei bottoni */
     margin-bottom: 8px; /* Distanza tra le righe */
   }
-  .filter-buttons.category-buttons {
-    display: flex;
-    flex-wrap: wrap; /* Spazio tra i bottoni */
+
+  .tool-title {
+    width: clamp(10rem, 30vw, 30rem);
+    position: fixed;
+    top: 6%;
+    left: 20%;
+    transform: translateY(-50%);
+    font-size: 4em;
+    color: rgb(200, 200, 200);
+    height: auto;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    filter: drop-shadow(0 0 5px #969696) drop-shadow(0 0 0.25rem #C50000) drop-shadow(0 0 0.75rem #C5000080);
   }
   
-  .filter-buttons.category-buttons button {
-    flex: 1 1 24%; /* Ogni bottone occuperà circa il 48% della larghezza */
-    text-align: center; /* Centra il testo nei bottoni */
-    margin-bottom: 8px; /* Distanza tra le righe */
+  .top-panel {
+    padding-top: 1vw;
   }
+  .header-bar {
+    justify-content: space-between;
+    padding-bottom: 4%;
+  }
+  .search-bar {
+    flex: 1;
+    font-size: 0.75rem;
+    padding-bottom: 1vw;
+    margin-bottom: 5px;
+  }
+  .search-bar input {
+    left: 20%;
+    top: 6%;
+    transform: translateY(-50%);
+    max-height: 6%;
+    width: 45%;
+  }
+  .wiki-back-logo {
+    top: 6%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 10%;
+  }
+  .toggle-language {
+    right: 17.5%;
+    top: 5.5%;
+    transform: translateY(-50%);
+  }
+  .flag-icon {
+    width: 2.5rem;
+  }
+  .hamburger-div {
+    top: 6%;
+    right: 2.5%;
+    transform: translateY(-50%);
+    width: auto;
+    height: auto;
+  }
+
+  .hamburger {
+    width: 35px;
+    height: 25px;
+  }
+  .header-bar.menu-open .search-bar,
+  .header-bar.menu-open .wiki-back-logo {
+    visibility: hidden !important;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+  }
+  .item {
+    font-size: 2vh;
+  }
+  .item-info {
+    font-size: 0.95rem;
+  }
+  .tool-title {
+    font-size: 2rem;
+  }
+    /* Pannelli descrizione e lista adattati */
+  .items-list,
+  .description-panel {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.5rem;
+  }
+
+  .description-panel {
+    font-size: 0.75rem;
+  }
+  .description em {
+    font-size: 0.5rem;
+  }
+  .items-list.overlay {
+    position: absolute !important;
+    left: 0;
+    width: 100% !important;   
+    max-width: 100%;
+    height: 100%;
+    background: #1e1e1e;  
+    z-index: 200;
+    overflow-y: auto;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* La descrizione occupa il 100% della larghezza quando la lista è nascosta */
+  .description-panel {
+    width: 100% !important;
+  }
+  
+  /* Il pulsante per mostrare la lista, posizionato in basso a sinistra */
+  .toggle-items-button {
+    position: fixed;
+    right: 5%;
+    bottom: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  .toggle-items-button span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #C50000;
+    text-shadow: 0 0 1vw #000000;
+    display: block;
+    min-height: 1.2em;
+  }
+  
+  .arrow {
+    width: 35%;
+    height: auto;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    filter: drop-shadow(0 0 2px #C50000) drop-shadow(0 0 4px #C5000080);  }
+  
+  .rotate-open {
+    transform: rotateY(180deg);
+  }
+  
+  .rotate-close {
+    transform: rotateY(0deg);
+  }
+  
+  span {
+    margin-left: 8px;
+    font-size: 16px;
+    color: #333;
+  }
+  .item-info {
+    font-size: 1vw;
+  }
+  .item-info-symbol {
+    font-size: 1vw;
+  }
+    .search-bar,
+  .wiki-back-logo {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+}
+
+
+
+@media (min-width: 320px) and (max-width: 424px) {
+
+  .top-panel {
+    position: sticky !important;
+    background: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    transition: padding 0.3s ease, background 0.3s ease;
+  }
+
+  .header-bar.menu-open {
+    border-bottom: none;
+  }
+
+  .header-bar.menu-open .search-bar,
+  .header-bar.menu-open .wiki-back-logo {
+    visibility: hidden !important;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  
+  /* Stile normale dei bottoni */
+  .top-panel button,
+  .top-panel .search-bar input {
+    transition: all 0.3s ease;
+  }
+  .fb-layer-1 {
+    padding-top: 1%;
+  }
+  /* Header */
+  .header-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding-bottom: 4%;
+    z-index: 100;
+  }
+  .menu-open.header-bar {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08); /* sottile e discreto */
+
+  }
+
+  .wiki-back-logo {
+    width: auto;
+    height: 5%;
+    top: 4.5%;
+    left: 4%;
+    transform: translateY(-50%);
+  }
+
+  .search-bar {
+    flex: 1;
+    font-size: 0.75rem;
+  }
+  .search-bar input {
+    max-height: 8%;
+    width: 45%;
+    top: 4.5%;
+    left: 22.5%;
+    transform: translateY(-50%);
+  }
+  /*.search-bar::after {
+    left: 62.5vw;
+    top: 7.25vw;
+  }*/
+  .toggle-language {
+    right: 17.5%;
+    top: 5.25%;
+    transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+  }
+  .flag-icon {
+    width: 2.5rem;
+    height: auto;
+  }
+  .hamburger-div {
+    top: 4.5%;
+    right: 4%;
+    transform: translateY(-50%);
+    width: auto;
+    height: auto;
+  }
+
+  .hamburger {
+    width: 35px;
+    height: 25px;
+  }
+
+  .menu-open .hamburger {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu-open .wiki-back-logo,
+  .menu-open .search-bar {
+    display: none !important;
+  }
+
+  /* Scroll orizzontale dei bottoni principali */
+  .button-main-scroll-container {
+    position: fixed;
+    top: 4.25%;
+    left: 2%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    scrollbar-width: none;
+  }
+  
+  .button-main-scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .button-main-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: -0px;
+    padding-left: 0;
+    
+  }
+  
+  .button-main {
+    white-space: nowrap;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 2vw;
+  }
+  /* Pannelli descrizione e lista adattati */
+  .items-list,
+  .description-panel {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.5rem;
+  }
+
+  .description-panel {
+    font-size: 0.75rem;
+  }
+
+  .item {
+    padding: 6px 0 4px 10px;
+    height: fit-content;
+    font-size: 3.25vw;
+  }
+  .item-info {
+    font-size: 2vw;
+    gap: 0;
+  }
+  .description p {
+    font-size: 3.4vw;
+  }
+  .items-list.overlay {
+    position: absolute !important;
+    left: 0;
+    width: 100% !important;   
+    max-width: 100%;
+    height: 100%;
+    background: #1e1e1e;  
+    z-index: 200;
+    overflow-y: auto;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* La descrizione occupa il 100% della larghezza quando la lista è nascosta */
+  .description-panel {
+    width: 100% !important;
+  }
+  .content-container {
+    height: calc(100vh - var(--top-panel-height));
+    display: flex;
+    flex-direction: column; /* oppure row, se vuoi tenere due colonne */
+  }
+  
+   /* Il pulsante per mostrare la lista, posizionato in basso a sinistra */
+   .toggle-items-button {
+    position: fixed;
+    right: 2vw;
+    bottom: 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  .toggle-items-button span {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #C50000;
+    text-shadow: 0 0 1vw #000000;
+    display: block;
+    align-items: center;
+    min-height: 1.2em;
+  }
+  
+  .arrow {
+    width: 10vw;
+    height: 10vw;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    filter: drop-shadow(0 0 2px #C50000) drop-shadow(0 0 4px #C5000080);  }
+  
+  .rotate-open {
+    transform: rotateY(180deg);
+  }
+  
+  .rotate-close {
+    transform: rotateY(0deg);
+  }
+
+
+  .item-info {
+    font-size: 1vw;
+  }
+  .item-info-symbol {
+    font-size: 1vw;
+  }
+
+
+    .search-bar,
+  .wiki-back-logo {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .button-secondary {
+    font-size: 0.4rem;
+  }
+  .level-button {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .tool-title {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media (max-width: 550px) {
+  .statblock-container {
+    max-width: 100%;
+    padding: 0;
+  }
+  .col1 {
+    padding: 0;
+  }
+
+  .statblock-title {
+    font-size: 4.5vw;
+    padding: 0.4rem;
+    text-align: center;
+  }
+
+  .statblock-body {
+    max-width: 100%;
+    font-size: 0.5rem;
+  }
+  .type-statblock {
+    font-size: 2.5vw;
+  }
+  .red {
+    font-size: 3vw;
+    
+  }
+
+  .car, .car1, .car2, .car3, .car4, .car5, .car6 {
+    font-size: 0.5rem;
+    max-width: 1rem;
+    padding: 1px 2px;
+  }
+
+  .rub, .silv {
+    font-size: 0.6rem;
+  }
+
+  .description-panel {
+    padding: 12px;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 660px) {
+
+
+}
+
+@media (max-width: 319px) {
+  
+  .button-main-scroll-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    margin-top: -0.75vw;
+    width: 80vw;                /* cambia da max-width: 80vw */
+    justify-content: flex-start;
+    scrollbar-width: none;
+    padding: 0;
+    margin-left: -5vw;
+  }
+  
+  .button-main-scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .button-main-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    padding-left: 0;
+    
+  }
+  
+  .button-main {
+    white-space: nowrap;
+    border-radius: 5px;
+    font-size: 2.5vw;
+    font-variant: small-caps;
+  }
+  .button-secondary {
+    font-size: 2vw;
+  }
+  .fb-layer-1 {
+    padding-top: 0;
+  }
+  /* Il pulsante per mostrare la lista, posizionato in basso a sinistra */
+  .toggle-items-button {
+    position: fixed;
+    right: 2vw;
+    bottom: 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  .toggle-items-button span {
+    font-size: 3vw;
+    font-weight: bold;
+    color: #C50000;
+    text-shadow: 0 0 1vw #000000;
+    display: block;
+    min-height: 1.2em;
+  }
+  
+  .arrow {
+    width: 5vw;
+    height: 5vw;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    filter: drop-shadow(0 0 2px #C50000) drop-shadow(0 0 4px #C5000080);  }
+  
+  .rotate-open {
+    transform: rotateY(180deg);
+  }
+  
+  .rotate-close {
+    transform: rotateY(0deg);
+  }
+  
+  span {
+    margin-left: 8px;
+    font-size: 16px;
+    color: #333;
+  }
+  .item-info {
+    font-size: 1vw;
+  }
+  .item-info-symbol {
+    font-size: 1vw;
+  }
+.item {
+  font-size: 2vw;
+}
+.header-bar {
+  padding-bottom: 10vw;
+}
+.tool-title {
+  font-size: 1.5rem;
+}
+.header-bar {
+  padding-bottom: 45px;
+}
+.wiki-back-logo {
+  top: 0%;
+  left: 0%;
+  transform: translate(50%, 50%);
+  width: 35px;
+  height: auto;
+}
+.search-bar {
+  padding-bottom: 1.6vw;
+}
+.search-bar input {
+  max-height: 8%;
+  width: 50%;
+  top: -0.75%;
+  left: -2.5%;
+  transform: translate(50%, 50%);
+}
+/*.search-bar::after {
+  left: 62.5vw;
+  top: 7.25vw;
+}*/
+.toggle-language {
+  right: 20%;
+  top: 2.25%;
+  transform: translate(50%, 50%);
+  padding: 0;
+  margin: 0;
+}
+.flag-icon {
+  padding: 0;
+  margin: 0;
+  width: 15px;
+  height: auto;
+}
+.hamburger {
+  position: fixed;
+  top: -5%;
+  right: 7.5%;
+  transform: translate(50%, 50%);
+  z-index: 200;
+  background-color: transparent;
+  border: none;
+  font-size: 1.25rem;
+  color: white;
+}
+.menu-open .wiki-back-logo,
+.menu-open .search-bar {
+  display: none !important;
+}
+
+.items-list.overlay {
+  position: absolute !important;
+  left: 0;
+  width: 100% !important;   
+  max-width: 100%;
+  height: 100%;
+  background: #1e1e1e;  
+  z-index: 200;
+  overflow-y: auto;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.6);
+}
+
+/* La descrizione occupa il 100% della larghezza quando la lista è nascosta */
+.description-panel {
+  width: 100% !important;
+}
+.description p {
+  font-size: 2vw;
+}
+.description em {
+  font-size: 1.6vw;
+}
+
+  .search-bar,
+.wiki-back-logo {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.content-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* oppure row, se vuoi tenere due colonne */
+}
+
+.content-container.with-description .items-list {
+  width: 100%;
+  height: auto; /* opzionale se overlay */
+}
+
+.content-container.with-description .description-panel {
+  width: 100% !important;
+  height: 100% !important;
+  overflow-y: auto;
+  padding: 15px;
+  box-sizing: border-box;
+  display: block;
+}
+
+.description-panel {
+  flex: 1 1 auto;
+  max-height: 100%;
+  overflow-y: auto;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+}
+
+
+@media (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (hover: none) {
+  .tooltip-text {
+    display: none;
+  }
+}
+
+.horizontal-scroll > * {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
 }

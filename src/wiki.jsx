@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./App.css";
 import descriptions from "./descriptions";
 import spells from "./spells";
@@ -6,6 +6,9 @@ import rules from "./rules";
 import items from "./items";
 import feats from "./feats"; // Importa i talenti
 import { schoolTranslations, classTranslations, rangeTranslations, castingTimeTranslations, durationTranslations } from './spells';
+import ClosePane from "./assets/ClosePane.svg";
+
+
 
 function Wiki({ setShowWiki }) {
   const [category, setCategory] = useState("all");
@@ -18,10 +21,15 @@ function Wiki({ setShowWiki }) {
   const [selectedRitual, setSelectedRitual] = useState(false);
   const [itemTypeFilter, setItemTypeFilter] = useState("all"); // "all", "normal", "magic"
 
+  const [showItemsList, setShowItemsList] = useState(true); // Default: la lista è visibile
+ 
   // Stato per il filtro dei talenti (feats)
   const [selectedFeatCategory, setSelectedFeatCategory] = useState([]);
 
   // Stato per gestire gli elementi selezionati e le loro descrizioni.
+  const descriptionPanelRef = useRef(null);
+  const activeDescriptionRef = useRef(null);
+
   // Ogni item sarà un oggetto con { ...item, description, active }.
   const [selectedItems, setSelectedItems] = useState([]);
 
@@ -32,6 +40,8 @@ function Wiki({ setShowWiki }) {
   const [showAttunement, setShowAttunement] = useState(false);
   const [showCursed, setShowCursed] = useState(false);
   const [showSentient, setShowSentient] = useState(false);
+  const [showFiltersMobile, setShowFiltersMobile] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   // Funzione per filtrare gli item in base alla ricerca
   const filterItems = (items) => {
@@ -130,7 +140,7 @@ function Wiki({ setShowWiki }) {
     }
 
     {itemTypeFilter === "normal" && (
-      <div className="category-buttons">
+      <div className="filter-buttons">
         {["Armor", "Weapon", "Tools", "Gear"].map((subtype) => (
           <button
             key={subtype}
@@ -192,40 +202,50 @@ function Wiki({ setShowWiki }) {
   const replacePlaceholders = (description, spell) => {
     return description
       .replace(/{(castingtime|range|components|duration)}/g, (_, key) => {
-        // Recupera il valore corrispondente e restituisce la traduzione o il valore di default
         const value = spell[key.toLowerCase()] || `{${key}}`;
         return language === "it"
           ? (key === "castingtime" ? castingTimeTranslations[value] :
               key === "range" ? rangeTranslations[value] :
-              key === "components" ? value : // I componenti potrebbero non richiedere una traduzione
+              key === "components" ? value :
               key === "duration" ? durationTranslations[value] : value)
           : value;
       })
-      .replace(/{level}/g, spell.level ? `${spell.level}` : "{level}")
+      .replace(/{level}/g, () => {
+        if (spell.level === 0) {
+          return language === "it" ? "Trucchetto" : "Cantrip";
+        } else if (typeof spell.level === "number" && spell.level >= 1 && spell.level <= 9) {
+          return language === "it" ? `${spell.level}° livello` : `Level ${spell.level}`;
+        }
+        return "{level}";
+      })
       .replace(/{school}/g, spell.school
         ? (language === "it" ? schoolTranslations[spell.school] || spell.school : spell.school)
         : "{school}")
       .replace(/{classes}/g, spell.classes
         ? spell.classes
-            .map((cls) => (language === "it" ? classTranslations[cls] || cls : cls)) // Traduci le classi
-            .sort() // Ordina alfabeticamente
-            .join(", ") // Unisci in una stringa
+            .map((cls) => (language === "it" ? classTranslations[cls] || cls : cls))
+            .sort()
+            .join(", ")
         : "{classes}")
       .replace(/{source}/g, spell.source || "{source}")
       .replace(/{ritual}/g, spell.ritual ? "Sì" : "No")
-      .replace(/{term}/g, spell.term || "{term}")
+      .replace(/{term}/g, `<strong class="term-highlight">${spell.term || "{term}"}</strong>`)
       .replace(/{translation}/g, spell.translation || "{translation}");
   };
 
-  // Funzione per gestire il click/tap su un item
   const handleItemClick = (item, event) => {
-    // Se l'elemento è già selezionato, lo rimuoviamo (e quindi anche la descrizione)
-    if (selectedItems.some((i) => i.term === item.term)) {
+    const alreadySelected = selectedItems.some((i) => i.term === item.term);
+  
+    if (alreadySelected) {
+      // Deseleziona l'item (rimuove la descrizione)
       setSelectedItems((prevItems) =>
         prevItems.filter((i) => i.term !== item.term)
       );
+  
+      // NON chiudere l'overlay: lascialo visibile
       return;
     }
+  
     // Prepara la descrizione
     const description = descriptions[item.term.toLowerCase()];
     const descriptionText = description
@@ -237,25 +257,21 @@ function Wiki({ setShowWiki }) {
           it: "Nessuna descrizione disponibile",
           en: "No description available",
         };
-
-    // Aggiunge l'elemento selezionato con active: true (stile temporaneo)
+  
+    // Aggiungi l'item con descrizione e active: true
     setSelectedItems((prevItems) => [
       ...prevItems,
       { ...item, description: descriptionText, active: true },
     ]);
-
-    // Se il dispositivo è mobile (pointer: coarse), dopo 300ms impostiamo active a false
-    if (window.matchMedia("(pointer: coarse)").matches) {
-      setTimeout(() => {
-        setSelectedItems((prevItems) =>
-          prevItems.map((i) =>
-            i.term === item.term ? { ...i, active: false } : i
-          )
-        );
-      }, 300);
+  
+    // Chiudi l'overlay SOLO su mobile
+    if (isMobile) {
+      setShowItemsList(false);
     }
   };
-
+  
+  
+  // FUNZIONE PER CAMBIARE LINGUA
   const toggleLanguage = () => {
     setLanguage((prevLanguage) => (prevLanguage === "it" ? "en" : "it"));
   };
@@ -305,16 +321,183 @@ function Wiki({ setShowWiki }) {
     resetView();
   };
   
+  useEffect(() => {
+    // Delay to ensure content is rendered
+    setTimeout(() => {
+      document.querySelectorAll(".statblock-container").forEach((container) => {
+        const title = container.querySelector(".statblock-title");
+        const body = container.querySelector(".statblock-body");
+  
+        if (title && body) {
+          // Collapse by default
+          body.style.display = "none";
+          title.style.cursor = "pointer";
+  
+          // Toggle on click
+          title.onclick = () => {
+            const isVisible = body.style.display === "block";
+            body.style.display = isVisible ? "none" : "block";
+          };
+        }
+      });
+    }, 100); // Delay per sicurezza dopo il rendering
+  }, [selectedItems, language]);
 
-  return (
-    <div className="app-container">
-        <div className="header-bar">
-          <button
-            className="back-button"
-            onClick={() => setShowWiki(false)} // Torna alla home
-          >
-            Home
-          </button>
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);
+
+useEffect(() => {
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 1023);
+  };
+
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+
+const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+const toggleSidebar = () => {
+  setIsSidebarOpen(prevState => !prevState);
+};
+
+  
+  // TOP PANEL HEIGHT CALC
+
+  useEffect(() => {
+    const topPanel = document.querySelector('.top-panel');
+  
+    const updateTopPanelHeight = () => {
+      if (topPanel) {
+        document.documentElement.style.setProperty('--top-panel-height', `${topPanel.offsetHeight}px`);
+      }
+    };
+  
+    updateTopPanelHeight(); // Imposta al montaggio
+  
+    // Monitoriamo le modifiche del DOM, per aggiornare quando cambia qualcosa
+    const observer = new MutationObserver(() => {
+      updateTopPanelHeight();
+    });
+  
+    if (topPanel) {
+      observer.observe(topPanel, {
+        attributes: true, 
+        childList: true, 
+        subtree: true
+      });
+    }
+  
+    // Gestiamo il resize della finestra
+    const handleResize = () => {
+      updateTopPanelHeight();
+    };
+  
+    window.addEventListener('resize', handleResize);
+  
+    // Pulizia al momento del dismontaggio
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); // Array vuoto per farlo solo al montaggio
+  
+   // HELPER FUNC BUTTON CLICK SHOWS VOICES
+   const handleMobileButtonClick = (callback) => {
+    callback(); // esegue la funzione specifica del bottone
+    if (isMobile && !showItemsList) {
+      setShowItemsList(true);
+    }
+  };
+  
+   // FUNZIONE PER POSIZIONARE LA DESCRIPTION IN VISTA
+
+   useEffect(() => {
+    if (descriptionPanelRef.current && activeDescriptionRef.current) {
+      const panel = descriptionPanelRef.current;
+      const active = activeDescriptionRef.current;
+  
+      // Calcolo preciso del posizionamento relativo
+      panel.scrollTo({
+        top: Math.max(0, active.offsetTop - panel.offsetTop),
+        behavior: "smooth",
+      });
+    }
+  }, [selectedItems]);
+
+   // START FOOTER 
+
+   useEffect(() => {
+    const footer = document.querySelector(".app-footer");
+    const itemsList = document.querySelector(".items-list");
+    const descriptionPanel = document.querySelector(".description-panel");
+  
+    const isMobile = () => window.innerWidth <= 1023;
+  
+    const handleScroll = (e) => {
+      if (!isMobile()) return; // SOLO per mobile
+  
+      const target = e.target.closest(".items-list, .description-panel");
+      if (!target) return;
+  
+      const isAtBottom =
+        target.scrollTop + target.clientHeight >= target.scrollHeight - 20;
+  
+      if (isAtBottom) {
+        footer?.classList.remove("hidden");
+      } else {
+        footer?.classList.add("hidden");
+      }
+    };
+  
+    itemsList?.addEventListener("scroll", handleScroll);
+    descriptionPanel?.addEventListener("scroll", handleScroll);
+  
+    return () => {
+      itemsList?.removeEventListener("scroll", handleScroll);
+      descriptionPanel?.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  
+   // RESIZE OPZIONALE
+
+   useEffect(() => {
+    const footer = document.querySelector(".app-footer");
+  
+    const handleResize = () => {
+      if (window.innerWidth > 1023) {
+        footer?.classList.remove("hidden");
+      }
+    };
+  
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  
+
+   // END FOOTER
+
+// LOGIC ENDS
+
+
+
+
+
+
+// STRUCTURE START
+
+  
+
+return (
+  <div className="app-container">
+    {/* HEADER: Home + Cerca */}
+    <div className="top-panel">
+      <div className={`header-bar ${showFiltersMobile ? "menu-open" : ""}`}>
+          <img
+              src="src/assets/ToolLogo.png"
+              alt="Back to Home"
+              className="wiki-back-logo"
+              onClick={() => setShowWiki(false)}
+          />
         <div className="search-bar">
           <input
             type="text"
@@ -326,90 +509,102 @@ function Wiki({ setShowWiki }) {
             }}
           />
         </div>
-      </div>
+            
+              {/* TRANSLATE BUTTON */}
 
-      <div className="buttons">
-        <button
-          onClick={() => resetFiltersOnCategoryChange("all")}
-          className={`button-main ${category === "all" ? "selected" : ""}`}
-        >
-          Tutto
-        </button>
-        <button
-          onClick={() => resetFiltersOnCategoryChange("rules")}
-          className={`button-main ${category === "rules" ? "selected" : ""}`}
-        >
-          Regole
-        </button>
-        <button
-          onClick={() => resetFiltersOnCategoryChange("items")}
-          className={`button-main ${category === "items" ? "selected" : ""}`}
-        >
-          Oggetti
-        </button>
-        <button
-          onClick={() => resetFiltersOnCategoryChange("spells")}
-          className={`button-main ${category === "spells" ? "selected" : ""}`}
-        >
-          Incantesimi
-        </button>
-        <button
-          onClick={() => resetFiltersOnCategoryChange("feats")}
-          className={`button-main ${category === "feats" ? "selected" : ""}`}
-        >
-          Talenti
-        </button>
-      </div>
+                <button onClick={toggleLanguage} className="toggle-language">
+                  <img
+                      src={language === "it" ? "src/assets/UK.svg" : "src/assets/ITA.svg"}
+                  alt=""
+                  className="flag-icon"
+                />
+                <span className="tooltip-text">
+                  {language === "it" ? "Traduci in Inglese" : "Traduci in Italiano"}
+                </span>
+                </button>
 
-      {category === "items" && (
+
+                {/* Hamburger button inside header-bar */}
+                <div className="hamburger-div">
+                <button
+          className={`hamburger ${showFiltersMobile ? "active" : ""}`}
+          onClick={() => setShowFiltersMobile((prev) => !prev)}
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+        </div>
+
+{/* Categorie principali */}
+{(!isMobile || showFiltersMobile) && (
+  <div className="button-main-scroll-container">
+    <div className="button-main-wrapper">
+      {[{ key: "all", label: "Tutto" }, { key: "rules", label: "Regole" }, { key: "items", label: "Oggetti" }, { key: "spells", label: "Incantesimi" }, { key: "feats", label: "Talenti" }].map(({ key, label }) => (
+        <button
+          key={key}
+          onClick={() => handleMobileButtonClick(() => resetFiltersOnCategoryChange(key))}
+          className={`button-main ${category === key ? "selected" : ""}`}
+        >
+          {label}
+        </button>
+      ))}
+    </div>
+  </div>
+)}
+
+</div>
+
+
+      {/* FILTRI PRINCIPALI E SECONDARI */}
+      {(!isMobile || showFiltersMobile) && (
+        <>
+
+          {/* FINE HEADER BAR */}
+
+
+{/* ITEMS */}
+{category === "items" && (
   <>
-    <div className="filter-buttons">
-      <button
-        onClick={() => {
-          setItemTypeFilter("all");
-          setSelectedNormalItemTypes([]);
-        }}
-        className={`button-secondary ${itemTypeFilter === "all" ? "selected" : ""}`}
-      >
-        Tutti
-      </button>
-      <button
-        onClick={() => {
-          setItemTypeFilter("normal");
-          setSelectedNormalItemTypes([]);
-        }}
-        className={`button-secondary ${itemTypeFilter === "normal" ? "selected" : ""}`}
-      >
-        Normali
-      </button>
-      <button
-        onClick={() => {
-          setItemTypeFilter("magic");
-          setSelectedNormalItemTypes([]);
-        }}
-        className={`button-secondary ${itemTypeFilter === "magic" ? "selected" : ""}`}
-      >
-        Magici
-      </button>
+    {/* Tipo oggetto */}
+    <div className="filter-buttons fb-layer-1">
+      {[
+        { key: "all", label: "Tutti" },
+        { key: "normal", label: "Normali" },
+        { key: "magic", label: "Magici" },
+      ].map(({ key, label }) => (
+        <button
+          key={key}
+          onClick={() =>
+            handleMobileButtonClick(() => {
+              setItemTypeFilter(key);
+              setSelectedNormalItemTypes([]);
+            })
+          }
+          className={`button-secondary ${itemTypeFilter === key ? "selected" : ""}`}
+        >
+          {label}
+        </button>
+      ))}
     </div>
 
-    {/* Sottofiltro per gli oggetti normali */}
+    {/* Sottofiltri: Normal Items */}
     {itemTypeFilter === "normal" && (
-      <div className="filter-buttons type-buttons">
+      <div className="filter-buttons fb-layer-2 horizontal-scroll">
         {[
           { label: "Armature", type: "Armor" },
           { label: "Armi", type: "Weapon" },
           { label: "Eq. d'Avventura", type: "Adventuring Gear" },
           { label: "Arnesi da Artigiano", type: "Artisan's Tool" },
-          { label: "Altri Strumenti", type: "Other Tool" }
+          { label: "Altri Strumenti", type: "Other Tool" },
         ].map(({ label, type }) => (
           <button
             key={type}
             onClick={() =>
-              setSelectedNormalItemTypes((prev) =>
-                prev.includes(type)
-                  ? prev.filter((t) => t !== type)
-                  : [...prev, type]
+              handleMobileButtonClick(() =>
+                setSelectedNormalItemTypes((prev) =>
+                  prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type]
+                )
               )
             }
             className={`button-secondary ${selectedNormalItemTypes.includes(type) ? "selected" : ""}`}
@@ -420,244 +615,348 @@ function Wiki({ setShowWiki }) {
       </div>
     )}
 
-    {/* Sottofiltro per gli oggetti magici */}
+    {/* Sottofiltri: Magic Items */}
     {itemTypeFilter === "magic" && (
       <>
-        {/* Filtri per rarità */}
-        <div className="filter-buttons rarity-buttons">
-          {[
-            { label: "Comune", rarity: "Common" },
-            { label: "Non Comune", rarity: "Uncommon" },
-            { label: "Raro", rarity: "Rare" },
-            { label: "Molto Raro", rarity: "Very Rare" },
-            { label: "Leggendario", rarity: "Legendary" },
-            { label: "Artefatto", rarity: "Artifact" }
-          ].map(({ label, rarity }) => (
-            <button
-              key={rarity}
-              className={`button-secondary ${selectedRarities.includes(rarity) ? "selected" : ""}`}
-              onClick={() => {
-                setSelectedRarities((prev) =>
-                  prev.includes(rarity) ? prev.filter((r) => r !== rarity) : [...prev, rarity]
-                );
-              }}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-
-        {/* Filtri per categorie */}
-        <div className="filter-buttons category-buttons">
-          {[
-            { label: "Arma", category: "Weapon" },
-            { label: "Armatura", category: "Armor" },
-            { label: "Oggetto Meraviglioso", category: "Wondrous Item" },
-            { label: "Anello", category: "Ring" },
-            { label: "Bastone", category: "Staff" },
-            { label: "Verga", category: "Rod" },
-            { label: "Bacchetta", category: "Wand" },
-            { label: "Pozione", category: "Potion" },
-            { label: "Pergamena", category: "Scroll" },
-            { label: "Munizione", category: "Ammunition" }
-          ].map(({ label, category }) => (
-            <button
-              key={category}
-              className={`button-secondary ${selectedMagicItemCategories.includes(category) ? "selected" : ""}`}
-              onClick={() => {
-                setSelectedMagicItemCategories((prev) =>
-                  prev.includes(category) ? prev.filter((c) => c !== category) : [...prev, category]
-                );
-              }}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-
-        {/* Filtri per proprietà */}
-        <div className="filter-buttons">
-  <button
-    className={`button-secondary ${showAttunement ? "selected" : ""}`}
-    onClick={() => setShowAttunement((prev) => !prev)}
-  >
-    Sintonia
-  </button>
-  <button
-    className={`button-secondary ${showCursed ? "selected" : ""}`}
-    onClick={() => setShowCursed((prev) => !prev)}
-  >
-    Maledetti
-  </button>
-  <button
-    className={`button-secondary ${showSentient ? "selected" : ""}`}
-    onClick={() => setShowSentient((prev) => !prev)}
-  >
-    Senzienti
-  </button>
+<div className="filter-buttons fb-layer-2 horizontal-scroll">
+  {[
+    { key: "Common", label: "Comune" },
+    { key: "Uncommon", label: "Non comune" },
+    { key: "Rare", label: "Raro" },
+    { key: "Very Rare", label: "Molto raro" },
+    { key: "Legendary", label: "Leggendario" },
+    { key: "Artifact", label: "Artefatto" },
+  ].map(({ key, label }) => (
+    <button
+      key={key}
+      className={`button-secondary ${selectedRarities.includes(key) ? "selected" : ""}`}
+      onClick={() =>
+        handleMobileButtonClick(() =>
+          setSelectedRarities((prev) =>
+            prev.includes(key) ? prev.filter((r) => r !== key) : [...prev, key]
+          )
+        )
+      }
+    >
+      {label}
+    </button>
+  ))}
 </div>
 
-        // fine filtri ulteriori
-        
+
+        <div className="filter-buttons fb-layer-3 horizontal-scroll">
+  {[
+    { key: "Weapon", label: "Armi" },
+    { key: "Armor", label: "Armature" },
+    { key: "Wondrous Item", label: "Og. Meravigliosi" },
+    { key: "Ring", label: "Anelli" },
+    { key: "Staff", label: "Bastoni" },
+    { key: "Rod", label: "Verghe" },
+    { key: "Wand", label: "Bacchette" },
+    { key: "Potion", label: "Pozioni" },
+    { key: "Scroll", label: "Pergamene" },
+    { key: "Ammunition", label: "Munizioni" },
+  ].map(({ key, label }) => (
+    <button
+      key={key}
+      className={`button-secondary ${selectedMagicItemCategories.includes(key) ? "selected" : ""}`}
+      onClick={() =>
+        handleMobileButtonClick(() =>
+          setSelectedMagicItemCategories((prev) =>
+            prev.includes(key) ? prev.filter((c) => c !== key) : [...prev, key]
+          )
+        )
+      }
+    >
+      {label}
+    </button>
+  ))}
+</div>
+
+
+        <div className="filter-buttons fb-layer-4 horizontal-scroll">
+          <button
+            className={`button-secondary ${showAttunement ? "selected" : ""}`}
+            onClick={() =>
+              handleMobileButtonClick(() => setShowAttunement((prev) => !prev))
+            }
+          >
+            Sintonia
+          </button>
+          <button
+            className={`button-secondary ${showCursed ? "selected" : ""}`}
+            onClick={() =>
+              handleMobileButtonClick(() => setShowCursed((prev) => !prev))
+            }
+          >
+            Maledetti
+          </button>
+          <button
+            className={`button-secondary ${showSentient ? "selected" : ""}`}
+            onClick={() =>
+              handleMobileButtonClick(() => setShowSentient((prev) => !prev))
+            }
+          >
+            Senzienti
+          </button>
+        </div>
       </>
     )}
   </>
 )}
 
+{/* SPELLS */}
+{category === "spells" && (
+  <>
+    {/* Livelli e Rituale */}
+    <div className="filter-buttons fb-layer-1 horizontal-scroll">
+      {[...Array(10).keys()].map((level) => (
+        <button
+          key={level}
+          className={`button-secondary level-button ${selectedLevel.includes(level) ? "selected" : ""}`}
+          onClick={() =>
+            handleMobileButtonClick(() =>
+              setSelectedLevel((prev) =>
+                prev.includes(level)
+                  ? prev.filter((l) => l !== level)
+                  : [...prev, level]
+              )
+            )
+          }
+        >
+          {level}
+        </button>
+      ))}
 
-      {category === "spells" && (
-        <>
-          <div className="category-buttons levels">
-            {["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].map((level) => (
-              <button
-                key={level}
-                className={`button-secondary level-button ${
-                  selectedLevel.includes(Number(level))
-                    ? "selected level-selected"
-                    : ""
-                }`}
-                onClick={() => {
-                  setSelectedLevel((prev) =>
-                    prev.includes(Number(level))
-                      ? prev.filter((item) => item !== Number(level))
-                      : [...prev, Number(level)]
-                  );
-                }}
-              >
-                {level}
-              </button>
-            ))}
-          </div>
-
-          <div className="category-buttons classes">
-  {[
-    { label: "Druido", value: "Druid" },
-    { label: "Chierico", value: "Cleric" },
-    { label: "Stregone", value: "Sorcerer" },
-    { label: "Mago", value: "Wizard" },
-    { label: "Paladino", value: "Paladin" },
-    { label: "Ranger", value: "Ranger" },
-    { label: "Warlock", value: "Warlock" },
-  ].map(({ label, value }) => (
-    <button
-      key={value}
-      className={`button-secondary class-button ${
-        selectedClasses.includes(value) ? "selected class-selected" : ""
-      }`}
-      onClick={() => {
-        setSelectedClasses((prev) =>
-          prev.includes(value)
-            ? prev.filter((item) => item !== value)
-            : [...prev, value]
-        );
-      }}
-    >
-      {label}
-    </button>
-  ))}
-</div>
-
-<div className="category-buttons schools">
-  {[
-    { label: "Abiurazione", value: "Abjuration" },
-    { label: "Evocazione", value: "Conjuration" },
-    { label: "Divinazione", value: "Divination" },
-    { label: "Ammaliamento", value: "Enchantment" },
-    { label: "Invocazione", value: "Evocation" },
-    { label: "Illusione", value: "Illusion" },
-    { label: "Necromanzia", value: "Necromancy" },
-    { label: "Trasmutazione", value: "Transmutation" },
-  ].map(({ label, value }) => (
-    <button
-      key={value}
-      className={`button-secondary school-button ${
-        selectedSchools.includes(value) ? "selected school-selected" : ""
-      }`}
-      onClick={() => {
-        setSelectedSchools((prev) =>
-          prev.includes(value)
-            ? prev.filter((item) => item !== value)
-            : [...prev, value]
-        );
-      }}
-    >
-      {label}
-    </button>
-  ))}
-</div>
-
-          <div className="category-buttons ritual">
-            <button
-              className={`button-secondary ritual-button ${
-                selectedRitual ? "selected ritual-selected" : ""
-              }`}
-              onClick={() => setSelectedRitual((prev) => !prev)}
-            >
-              Rituale
-            </button>
-          </div>
-        </>
-      )}
-
-      {category === "feats" && (
-        <div className="category-buttons">
-          {["Epic Boon", "Fighting Style", "General", "Origin"].map((featCat) => (
-            <button
-              key={featCat}
-              className={`button-secondary ${
-                selectedFeatCategory.includes(featCat)
-                  ? "selected secondary-selected"
-                  : ""
-              }`}
-              onClick={() => {
-                setSelectedFeatCategory((prev) =>
-                  prev.includes(featCat)
-                    ? prev.filter((cat) => cat !== featCat)
-                    : [...prev, featCat]
-                );
-              }}
-            >
-              {featCat}
-            </button>
-          ))}
-        </div>
-      )}
-
-      <div className="items-list">
-        {getItems().map((item, index) => {
-          const selectedObj = selectedItems.find((i) => i.term === item.term);
-          return (
-            <div
-              key={index}
-              className={`item ${
-                selectedObj ? (selectedObj.active ? "active" : "selected") : ""
-              }`}
-            >
-              <p onClick={(e) => handleItemClick(item, e)}>
-                {item.term} ━ {item.translation}
-              </p>
-              {selectedObj && (
-                <div className="description">
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: selectedObj.description[language],
-                    }}
-                    
-                  />
-                    <div className="translate-button-container">
-                      <button onClick={toggleLanguage} className="toggle-language">
-                        {language === "it" ? "Inglese" : "Italiano"}
-                      </button>
-                    </div>
-                </div>
-                
-              )}
-            </div>
-          );
-        })}
+      <div className="ritual">
+        <button
+          className={`button-secondary ${selectedRitual ? "selected" : ""}`}
+          onClick={() =>
+            handleMobileButtonClick(() =>
+              setSelectedRitual((prev) => !prev)
+            )
+          }
+        >
+          Rituale
+        </button>
       </div>
     </div>
-  );
-}
 
+    {/* Classi */}
+    <div className="filter-buttons fb-layer-2 horizontal-scroll">
+      {[
+        { key: "Druid", label: "Druido" },
+        { key: "Cleric", label: "Chierico" },
+        { key: "Sorcerer", label: "Stregone" },
+        { key: "Wizard", label: "Mago" },
+        { key: "Paladin", label: "Paladino" },
+        { key: "Ranger", label: "Ranger" },
+        { key: "Warlock", label: "Warlock" },
+      ].map(({ key, label }) => (
+        <button
+          key={key}
+          className={`button-secondary ${selectedClasses.includes(key) ? "selected" : ""}`}
+          onClick={() =>
+            handleMobileButtonClick(() =>
+              setSelectedClasses((prev) =>
+                prev.includes(key)
+                  ? prev.filter((c) => c !== key)
+                  : [...prev, key]
+              )
+            )
+          }
+        >
+          {label}
+        </button>
+      ))}
+    </div>
+
+    {/* Scuole di magia */}
+    <div className="filter-buttons fb-layer-3 horizontal-scroll">
+      {[
+        { key: "Abjuration", label: "Abiurazione" },
+        { key: "Conjuration", label: "Evocazione" },
+        { key: "Divination", label: "Divinazione" },
+        { key: "Enchantment", label: "Ammaliamento" },
+        { key: "Evocation", label: "Invocazione" },
+        { key: "Illusion", label: "Illusione" },
+        { key: "Necromancy", label: "Necromanzia" },
+        { key: "Transmutation", label: "Trasmutazione" },
+      ].map(({ key, label }) => (
+        <button
+          key={key}
+          className={`button-secondary ${selectedSchools.includes(key) ? "selected" : ""}`}
+          onClick={() =>
+            handleMobileButtonClick(() =>
+              setSelectedSchools((prev) =>
+                prev.includes(key)
+                  ? prev.filter((s) => s !== key)
+                  : [...prev, key]
+              )
+            )
+          }
+        >
+          {label}
+        </button>
+      ))}
+    </div>
+  </>
+)}
+
+
+{/* FEATS */}
+{category === "feats" && (
+  <div className="filter-buttons fb-layer-1 horizontal-scroll">
+    {["Epic Boon", "Fighting Style", "General", "Origin"].map((featCat) => (
+      <button
+        key={featCat}
+        className={`button-secondary ${selectedFeatCategory.includes(featCat) ? "selected" : ""}`}
+        onClick={() =>
+          handleMobileButtonClick(() =>
+            setSelectedFeatCategory((prev) =>
+              prev.includes(featCat)
+                ? prev.filter((cat) => cat !== featCat)
+                : [...prev, featCat]
+            )
+          )
+        }
+      >
+        {featCat}
+      </button>
+    ))}
+  </div>
+)}
+
+      </>
+    )}
+    
+    </div> {/* CHIUSURA DIV TOP-PANEL */}
+
+   {/* LISTA OGGETTI + DESCRIZIONE */}
+   <div className={`content-container ${selectedItems.some((i) => i.active) ? "with-description" : "full-width"}`}>
+
+{isMobile ? (
+  <>
+    {/* Mobile: se showItemsList è true, mostra la lista overlay */}
+    {showItemsList && (
+      <div className="items-list overlay">
+        {getItems().map((item, index) => (
+          <div
+            key={index}
+            className={`item ${selectedItems.some((i) => i.term === item.term) ? "selected" : ""}`}
+            onClick={(e) => handleItemClick(item, e)}
+          >
+            <p>{language === "it" ? `${item.term} ━ ${item.translation}` : item.term}</p>
+
+            <div className="item-info">
+              {item.level && <span className="item-info-symbol">Lv {item.level}</span>}
+              {item.school && <span className="item-info-symbol">{item.school}</span>}
+              {item.classes && item.classes.length > 0 && (
+                <span className="item-info-symbol">{item.classes.join(", ")}</span>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    )}
+
+    {/* Mobile: quando la lista NON è visibile, mostra la descrizione a piena larghezza */}
+    <div
+      className="description-panel" ref={descriptionPanelRef}
+      onClick={() => {
+        if (showItemsList) setShowItemsList(false);
+      }}
+      style={{ width: "100%" }}
+    >
+      {selectedItems.some((i) => i.active) &&
+        selectedItems
+        .filter((item) => item.active)
+        .map((item, idx, arr) => (
+          <div
+            key={item.term}
+            className="description"
+            ref={idx === arr.length - 1 ? activeDescriptionRef : null} // scrolla all’ultima attiva
+          >
+            <p dangerouslySetInnerHTML={{ __html: item.description[language] }} />
+          </div>
+        ))}
+    </div>
+  </>
+) : (
+  <>
+
+    {/* Desktop: struttura in due colonne */}
+    <div className="items-list">
+      {getItems().map((item, index) => (
+        <div
+          key={index}
+          className={`item ${selectedItems.some((i) => i.term === item.term) ? "selected" : ""}`}
+          onClick={(e) => handleItemClick(item, e)}
+        >
+        <p>{language === "it" ? `${item.term} ━ ${item.translation}` : item.term}</p>
+        
+            {/* Simboli sotto il nome */}
+          <div className="item-info">
+            {item.level !== undefined && (
+              <span className="item-info-symbol">
+                {item.level === 0 ? "Cantrip" : `Lv ${item.level}`}
+              </span>
+              )}
+            {item.school && <span className="item-info-symbol">{item.school}</span>}
+            {item.classes && item.classes.length > 0 && (
+              <span className="item-info-symbol">{item.classes.join(", ")}</span>
+            )}
+          </div>
+
+
+        </div>
+      ))}
+    </div>
+
+    
+    {/* DESCRIPTION PANEL */}
+
+
+    {selectedItems.some((i) => i.active) && (
+      <div className="description-panel" ref={descriptionPanelRef}>
+        {selectedItems
+           .filter((item) => item.active)
+           .map((item, idx, arr) => (
+             <div
+               key={item.term}
+               className="description"
+               ref={idx === arr.length - 1 ? activeDescriptionRef : null} // scrolla all’ultima attiva
+             >
+               <p dangerouslySetInnerHTML={{ __html: item.description[language] }} />
+             </div>
+           ))}
+      </div>
+    )}
+  </>
+)}
+</div>
+
+{/* Mobile: pulsante per mostrare la lista se non è visibile */}
+{isMobile && (
+  <button
+    className={`toggle-items-button ${showItemsList ? "open" : "closed"}`}
+    onClick={() => setShowItemsList(!showItemsList)}
+  >
+        <span>{showItemsList ? "Chiudi Voci" : "Apri Voci"}</span>
+    <img
+      src="src/assets/OpenPane.svg"
+      alt="Toggle Items"
+      className={`arrow ${showItemsList ? "rotate-open" : "rotate-close"}`}
+    />
+  </button>
+)}
+
+
+
+  </div>
+);
+
+
+
+} // Saso non dimenticare che questa è la porcoddio di parentesi che chiude la funzione ShowWiki!
 export default Wiki;
