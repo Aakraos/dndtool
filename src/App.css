@@ -54,8 +54,8 @@ html, body {
 .tool-title {
   width: clamp(10rem, 30vw, 30rem);
   position: fixed;
-  top: 7.5%;
-  left: 12%;
+  top: 50px;
+  left: 150px;
   transform: translateY(-50%);
   font-size: 4em;
   color: rgb(200, 200, 200);
@@ -133,12 +133,11 @@ html, body {
 /* Pulsante "torna alla Home" visibile nella Wiki */
 .wiki-back-logo {
   position: fixed;
-  top: 7.5%;
-  left: 2.5%;
+  top: 50px;
+  left: 25px;
   transform: translateY(-50%);
   justify-items: flex-start;
-  width: 7.5%;
-  height: 7.5%;
+  width: 5rem;
   cursor: pointer;
   object-fit: contain;
   transition: transform 0.3s ease, filter 0.3s ease;
@@ -191,10 +190,8 @@ html, body {
 .header-bar {
   position: relative;
   width: 100%;
-  height: max-content;
   display: flex;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 100px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.08); /* sottile e discreto */
 }
 
@@ -214,7 +211,6 @@ html, body {
 .search-bar {
   position: fixed;
   flex: 1;
-  margin-bottom: 1vw;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -222,8 +218,8 @@ html, body {
 
 .search-bar input {
   position: fixed;
-  top: 7.5%;
-  left: 12.5%;
+  top: 50px;
+  left: 185px;
   transform: translateY(-50%);
   width: 25%;
   padding: 8px 14px;
@@ -266,8 +262,8 @@ html, body {
 /* Bottone bandierina */
 .toggle-language {
   position: fixed;
-  top: 7.5%;
-  right: 5%;
+  top: 50px;
+  right: 50px;
   transform: translateY(-50%);
   width: 2.5rem;
   height: 2.5rem;
@@ -351,7 +347,7 @@ html, body {
   z-index: 130000;
 }
 
-/* Le barrette rosse */
+
 .hamburger div {
   width: 100%;
   height: 4px;
@@ -378,7 +374,7 @@ html, body {
 /* Bottoni principali */
 .button-main-scroll-container {
   position: fixed;
-  top: 7.5%;
+  top: 50px;
   right: 11%;
   transform: translateY(-50%);
   z-index: 10; /* per stare sopra il resto se serve */
@@ -972,17 +968,19 @@ html, body {
 
   .search-bar input {
     font-size: 0.95rem;
-
+    top: 50px;
+    left: 150px;
   }
 
   .wiki-back-logo {
-    left: 2.5%;
+    top: 50px;
+    left: 25px;
     transform: translateY(-50%);
   }
   .button-main-scroll-container {
     width: 50%;
-    top: 7.5%;
-    right: 10%;
+    top: 50px;
+    right: 125px;
     transform: translateY(-50%);
   }
   .button-main-wrapper {
@@ -990,7 +988,7 @@ html, body {
   }
 
   .toggle-language {
-    top: 7%;
+    top: 50px;
     right: 3.5%;
   }
   .flag-icon {
@@ -1010,6 +1008,35 @@ html, body {
     display: flex;
     width: 100%;
     transition: all 0.3s ease;
+  }
+  .tool-title {
+
+  }
+  .header-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1vw;
+    flex-wrap: nowrap;
+    padding-bottom: 100px;
+  }
+  .top-panel {
+    position: sticky !important;
+    z-index: 1000;
+    background: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    transition: padding 0.3s ease, background 0.3s ease;
+  }
+  .description p {
+    font-size: 2vw;
+  }
+  .description em {
+    font-size: 1.5vw;
   }
 
 }
@@ -1089,6 +1116,11 @@ html, body {
     max-width: 100%;
     white-space: pre-line;
     color: white;
+    font-size: 2.5vw;
+  }
+
+  .description em {
+    font-size: 2vw;
   }
 
   .header-bar {
@@ -1098,7 +1130,7 @@ html, body {
     justify-content: flex-start;
     gap: 1vw;
     flex-wrap: nowrap;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
   }
 
 
@@ -1107,7 +1139,7 @@ html, body {
   }
   .button-main-scroll-container {
     display: block;
-    top: 7.5%;
+    top: 50px;
     right: 30%;
     transform: translateY(-50%);
   }
@@ -1197,8 +1229,8 @@ html, body {
   /* Pulsante "torna alla Home" visibile nella Wiki */
 .wiki-back-logo {
   position: fixed;
-  top: 7.5%;
-  left: 5%;
+  top: 50px;
+  left: 30px;
   transform: translateY(-50%);
 
 }
@@ -1213,8 +1245,8 @@ html, body {
 .tool-title {
   width: clamp(10rem, 30vw, 30rem);
   position: fixed;
-  top: 7.5%;
-  left: 15%;
+  top: 50px;
+  left: 150px;
   transform: translateY(-50%);
   font-size: 4em;
   color: rgb(200, 200, 200);
@@ -1230,8 +1262,8 @@ html, body {
 
   .toggle-language {
     position: fixed;
-    top: 8%;
-    right: 15%;
+    top: 52.5px;
+    right: 150px;
     transform: translateY(-50%);
 
   }
@@ -1244,8 +1276,8 @@ html, body {
   }
   .search-bar input {
     width: 45%;
-    top: 7.5%;
-    left: 20%;
+    top: 50px;
+    left: 150px;
     transform: translateY(-50%);
   }
 
@@ -1259,8 +1291,8 @@ html, body {
   }
 
   .hamburger-div {
-    top: 7.5%;
-    right: 5%;
+    top: 50px;
+    right: 50px;
     transform: translateY(-50%);
     width: auto;
     height: auto;
@@ -1321,7 +1353,7 @@ html, body {
 
   .button-main-scroll-container {
     display: flex;
-    top: 5%;
+    top: 30px;
     left: 15%;
     transform: translateY(-50%);
     flex-wrap: nowrap;
@@ -1361,8 +1393,8 @@ html, body {
   .tool-title {
     width: clamp(10rem, 30vw, 30rem);
     position: fixed;
-    top: 6%;
-    left: 20%;
+    top: 30px;
+    left: 100px;
     transform: translateY(-50%);
     font-size: 4em;
     color: rgb(200, 200, 200);
@@ -1376,7 +1408,7 @@ html, body {
   }
   .header-bar {
     justify-content: space-between;
-    padding-bottom: 4%;
+    padding-bottom: 60px;
   }
   .search-bar {
     flex: 1;
@@ -1385,29 +1417,29 @@ html, body {
     margin-bottom: 5px;
   }
   .search-bar input {
-    left: 20%;
-    top: 6%;
+    left: 150px;
+    top: 30px;
     transform: translateY(-50%);
     max-height: 6%;
     width: 45%;
   }
   .wiki-back-logo {
-    top: 6%;
-    left: 5%;
+    top: 30px;
+    left: 20px;
     transform: translateY(-50%);
     width: 10%;
   }
   .toggle-language {
-    right: 17.5%;
-    top: 5.5%;
+    right: 80px;
+    top: 30px;
     transform: translateY(-50%);
   }
   .flag-icon {
     width: 2.5rem;
   }
   .hamburger-div {
-    top: 6%;
-    right: 2.5%;
+    top: 30px;
+    right: 20px;
     transform: translateY(-50%);
     width: auto;
     height: auto;
@@ -1444,8 +1476,11 @@ html, body {
   .description-panel {
     font-size: 0.75rem;
   }
+  .description p {
+    font-size: 3.5vw;
+  }
   .description em {
-    font-size: 0.5rem;
+    font-size: 2.5vw;
   }
   .items-list.overlay {
     position: absolute !important;
@@ -1564,7 +1599,7 @@ html, body {
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    padding-bottom: 4%;
+    padding-bottom: 60px;
     z-index: 100;
   }
   .menu-open.header-bar {
@@ -1574,9 +1609,9 @@ html, body {
 
   .wiki-back-logo {
     width: auto;
-    height: 5%;
-    top: 4.5%;
-    left: 4%;
+    height: 30px;
+    top: 30px;
+    left: 20px;
     transform: translateY(-50%);
   }
 
@@ -1585,10 +1620,10 @@ html, body {
     font-size: 0.75rem;
   }
   .search-bar input {
-    max-height: 8%;
-    width: 45%;
-    top: 4.5%;
-    left: 22.5%;
+    max-height: 30px;
+    width: 40%;
+    top: 30px;
+    left: 80px;
     transform: translateY(-50%);
   }
   /*.search-bar::after {
@@ -1596,19 +1631,19 @@ html, body {
     top: 7.25vw;
   }*/
   .toggle-language {
-    right: 17.5%;
-    top: 5.25%;
+    right: 70px;
+    top: 37.5px;
     transform: translateY(-50%);
     padding: 0;
     margin: 0;
   }
   .flag-icon {
-    width: 2.5rem;
+    width: 2rem;
     height: auto;
   }
   .hamburger-div {
-    top: 4.5%;
-    right: 4%;
+    top: 30px;
+    right: 20px;
     transform: translateY(-50%);
     width: auto;
     height: auto;
@@ -1633,8 +1668,8 @@ html, body {
   /* Scroll orizzontale dei bottoni principali */
   .button-main-scroll-container {
     position: fixed;
-    top: 4.25%;
-    left: 2%;
+    top: 30px;
+    left: 15px;
     transform: translateY(-50%);
     display: flex;
     flex-wrap: nowrap;
@@ -1682,7 +1717,10 @@ html, body {
     gap: 0;
   }
   .description p {
-    font-size: 3.4vw;
+    font-size: 3.5vw;
+  }
+  .description em {
+    font-size: 2.5vw;
   }
   .items-list.overlay {
     position: absolute !important;
@@ -1699,7 +1737,9 @@ html, body {
   /* La descrizione occupa il 100% della larghezza quando la lista è nascosta */
   .description-panel {
     width: 100% !important;
+    font-size: 2vw;
   }
+
   .content-container {
     height: calc(100vh - var(--top-panel-height));
     display: flex;
@@ -1771,6 +1811,8 @@ html, body {
   }
   .tool-title {
     font-size: 1.5rem;
+    top: 30px;
+    left: 100px;
   }
 
 }
@@ -1828,12 +1870,12 @@ html, body {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: hidden;
-    margin-top: -0.75vw;
+    top: -0.75vw;
+    transform: translateY(-50%);
     width: 80vw;                /* cambia da max-width: 80vw */
     justify-content: flex-start;
     scrollbar-width: none;
     padding: 0;
-    margin-left: -5vw;
   }
   
   .button-main-scroll-container::-webkit-scrollbar {
@@ -1925,9 +1967,9 @@ html, body {
   padding-bottom: 45px;
 }
 .wiki-back-logo {
-  top: 0%;
-  left: 0%;
-  transform: translate(50%, 50%);
+  top: 25px;
+  left: 10px;
+  transform: translateY(-50%);
   width: 35px;
   height: auto;
 }
@@ -1935,39 +1977,40 @@ html, body {
   padding-bottom: 1.6vw;
 }
 .search-bar input {
-  max-height: 8%;
-  width: 50%;
-  top: -0.75%;
-  left: -2.5%;
-  transform: translate(50%, 50%);
+  height: 25px;
+  width: 40%;
+  top: 25px;
+  left: 65px;
+  transform: translateY(-50%);
 }
 /*.search-bar::after {
   left: 62.5vw;
   top: 7.25vw;
 }*/
 .toggle-language {
-  right: 20%;
-  top: 2.25%;
-  transform: translate(50%, 50%);
+  right: 75px;
+  top: 35px;
+  transform: translateY(-50%);
   padding: 0;
   margin: 0;
 }
 .flag-icon {
   padding: 0;
   margin: 0;
-  width: 15px;
+  width: 20px;
   height: auto;
 }
+.hamburger-div {
+  top: 25px;
+  right: 20px;
+  transform: translateY(-50%);
+  width: auto;
+  height: auto;
+}
+
 .hamburger {
-  position: fixed;
-  top: -5%;
-  right: 7.5%;
-  transform: translate(50%, 50%);
-  z-index: 200;
-  background-color: transparent;
-  border: none;
-  font-size: 1.25rem;
-  color: white;
+  width: 28px;
+  height: 20px;
 }
 .menu-open .wiki-back-logo,
 .menu-open .search-bar {
@@ -1994,7 +2037,7 @@ html, body {
   font-size: 2vw;
 }
 .description em {
-  font-size: 1.6vw;
+  font-size: 1.75vw;
 }
 
   .search-bar,
