@@ -20,12 +20,12 @@ export default function App() {
 {!showWiki && (
   <div className="logo-title-wrapper" onClick={handleLogoClick}>
     <img
-      src="src/assets/ToolLogo.png"
+      src="public/ToolLogo.png"
       alt="Tool Logo"
       className={`wiki-back-logo tool-logo ${showWiki ? 'wiki-mode' : 'home-mode'}`}
     />
     <img
-      src="src/assets/ToolTitle.png"
+      src="public/ToolTitle.png"
       alt="Title"
       className="tool-title"
     />
@@ -40,7 +40,7 @@ export default function App() {
             </div>
 
             <img
-              src="src/assets/WikiButton.png"
+              src="public/WikiButton.png"
               alt="Wiki Button"
               className="wiki-button-img"
               onClick={() => setShowWiki(true)}

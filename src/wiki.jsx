@@ -6,7 +6,7 @@ import rules from "./rules";
 import items from "./items";
 import feats from "./feats"; // Importa i talenti
 import { schoolTranslations, classTranslations, rangeTranslations, castingTimeTranslations, durationTranslations } from './spells';
-import ClosePane from "./assets/ClosePane.svg";
+import ClosePane from "/public/ClosePane.svg";
 
 
 
@@ -493,7 +493,7 @@ return (
     <div className="top-panel">
       <div className={`header-bar ${showFiltersMobile ? "menu-open" : ""}`}>
           <img
-              src="src/assets/ToolLogo.png"
+              src="public/ToolLogo.png"
               alt="Back to Home"
               className="wiki-back-logo"
               onClick={() => setShowWiki(false)}
@@ -514,7 +514,7 @@ return (
 
                 <button onClick={toggleLanguage} className="toggle-language">
                   <img
-                      src={language === "it" ? "src/assets/UK.svg" : "src/assets/ITA.svg"}
+                      src={language === "it" ? "public/UK.svg" : "public/ITA.svg"}
                   alt=""
                   className="flag-icon"
                 />
@@ -944,7 +944,7 @@ return (
   >
         <span>{showItemsList ? "Chiudi Voci" : "Apri Voci"}</span>
     <img
-      src="src/assets/OpenPane.svg"
+      src="public/OpenPane.svg"
       alt="Toggle Items"
       className={`arrow ${showItemsList ? "rotate-open" : "rotate-close"}`}
     />

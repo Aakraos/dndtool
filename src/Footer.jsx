@@ -1,4 +1,4 @@
-import logo from './assets/MyLogo.png'; // Assicurati che il path sia corretto
+import logo from '/public/MyLogo.png'; // Assicurati che il path sia corretto
 
 export default function Footer() {
   return (
