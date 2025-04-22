@@ -1,4 +1,4 @@
-import logo from '/public/MyLogo.png'; // Assicurati che il path sia corretto
+const logo = import.meta.env.BASE_URL + 'img/MyLogo.png';
 
 export default function Footer() {
   return (

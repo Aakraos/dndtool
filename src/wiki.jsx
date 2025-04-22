@@ -6,7 +6,7 @@ import rules from "./rules";
 import items from "./items";
 import feats from "./feats"; // Importa i talenti
 import { schoolTranslations, classTranslations, rangeTranslations, castingTimeTranslations, durationTranslations } from './spells';
-import ClosePane from "/public/ClosePane.svg";
+const toolLogo = import.meta.env.BASE_URL + 'img/ToolLogo.png';
 
 
 
@@ -493,7 +493,7 @@ return (
     <div className="top-panel">
       <div className={`header-bar ${showFiltersMobile ? "menu-open" : ""}`}>
           <img
-              src="public/ToolLogo.png"
+              src={toolLogo}
               alt="Back to Home"
               className="wiki-back-logo"
               onClick={() => setShowWiki(false)}

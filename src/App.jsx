@@ -3,6 +3,8 @@ import './App.css';
 import Wiki from "./wiki";
 import Footer from "./Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
+const toolLogo = import.meta.env.BASE_URL + 'img/ToolLogo.png';
+const toolTitle = import.meta.env.BASE_URL + 'img/ToolTitle.png';
 
 export default function App() {
   const [showWiki, setShowWiki] = useState(false);
@@ -20,7 +22,7 @@ export default function App() {
 {!showWiki && (
   <div className="logo-title-wrapper" onClick={handleLogoClick}>
     <img
-      src="public/ToolLogo.png"
+      src={toolLogo}
       alt="Tool Logo"
       className={`wiki-back-logo tool-logo ${showWiki ? 'wiki-mode' : 'home-mode'}`}
     />
@@ -40,7 +42,7 @@ export default function App() {
             </div>
 
             <img
-              src="public/WikiButton.png"
+              src={toolTitle}
               alt="Wiki Button"
               className="wiki-button-img"
               onClick={() => setShowWiki(true)}
