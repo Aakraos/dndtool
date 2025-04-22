@@ -6,7 +6,7 @@ import rules from "./rules";
 import items from "./items";
 import feats from "./feats"; // Importa i talenti
 import { schoolTranslations, classTranslations, rangeTranslations, castingTimeTranslations, durationTranslations } from './spells';
-const toolLogo = import.meta.env.BASE_URL + 'img/ToolLogo.png';
+
 
 
 
@@ -42,6 +42,11 @@ function Wiki({ setShowWiki }) {
   const [showSentient, setShowSentient] = useState(false);
   const [showFiltersMobile, setShowFiltersMobile] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const toolLogo = import.meta.env.BASE_URL + 'img/ToolLogo.png';
+  const ukFlag = import.meta.env.BASE_URL + 'img/UK.svg';
+  const itaFlag = import.meta.env.BASE_URL + 'img/ITA.svg';
+  const openPane = import.meta.env.BASE_URL + 'img/OpenPane.svg';
 
   // Funzione per filtrare gli item in base alla ricerca
   const filterItems = (items) => {
@@ -514,7 +519,7 @@ return (
 
                 <button onClick={toggleLanguage} className="toggle-language">
                   <img
-                      src={language === "it" ? "public/UK.svg" : "public/ITA.svg"}
+                      src={language === "it" ? ukFlag : itaFlag}
                   alt=""
                   className="flag-icon"
                 />
@@ -944,7 +949,7 @@ return (
   >
         <span>{showItemsList ? "Chiudi Voci" : "Apri Voci"}</span>
     <img
-      src="public/OpenPane.svg"
+      src={openPane}
       alt="Toggle Items"
       className={`arrow ${showItemsList ? "rotate-open" : "rotate-close"}`}
     />
