@@ -79,7 +79,7 @@ it: `
   <strong>Componenti:</strong> V, S, M (una sottile striscia di tessuto bianco)
   <strong>Durata:</strong> {duration}<br>
   Questo incantesimo rafforza il vigore e la determinazione degli alleati. L'incantatore sceglie fino a tre creature entro gittata. Il massimo dei punti ferita e i punti ferita attuali di ogni bersaglio aumentano di 5 per la durata dell'incantesimo.
-  <strong>Ai Livelli Superiori:</strong> Quando l'incantatore lancia questo incantesimo usando uno slot incantesimo di 3° livello o superiore, i punti ferita di un bersaglio aumentano di altri 5 punti per ogni slot di livello superiore al 2°.<br>
+  <em><strong>Ai Livelli Superiori.</em></strong> Quando l'incantatore lancia questo incantesimo usando uno slot incantesimo di 3° livello o superiore, i punti ferita di un bersaglio aumentano di altri 5 punti per ogni slot di livello superiore al 2°.<br>
   <em>Fonte: D&D 5e</em>
 `,
 en: `
@@ -165,7 +165,7 @@ it: `
   <strong>Componenti:</strong> V, S, M (un po’ di cibo)
   <strong>Durata:</strong> {duration}<br>
   Questo incantesimo ti permette di convincere una bestia che non vuoi arrecargli danno. Scegli una bestia a gittata che puoi vedere. Questa deve vederti e udirti. Se l’Intelligenza della bestia è 4 o più, l’incantesimo fallisce. Altrimenti, la bestia deve superare un tiro salvezza su Saggezza o restare affascinata da te per la durata dell’incantesimo. Se tu o uno dei tuoi compagni danneggiate il bersaglio, l’incantesimo ha termine.
-  <strong>Ai Livelli Superiori</strong> Quando lanci questo incantesimo usando uno slot incantesimo di 2° livello o più alto, puoi agire su di una bestia aggiuntiva per ogni livello dello slot sopra il 1°.<br>
+  <em><strong>Ai Livelli Superiori.</em></strong> Quando lanci questo incantesimo usando uno slot incantesimo di 2° livello o più alto, puoi agire su di una bestia aggiuntiva per ogni livello dello slot sopra il 1°.<br>
   <em>Fonte: D&D 5e</em>
 `,
 en: `
@@ -177,7 +177,7 @@ en: `
   <strong>Components:</strong> {components}
   <strong>Duration:</strong> {duration}<br>
   Target a Beast that you can see within range. The target must succeed on a Wisdom saving throw or have the Charmed condition for the duration. If you or one of your allies deals damage to the target, the spells ends.
-  <strong>Using a Higher-Level Spell Slot.</strong> You can target one additional Beast for each spell slot level above 1.<br>
+  <em><strong>Using a Higher-Level Spell Slot.</em></strong> You can target one additional Beast for each spell slot level above 1.<br>
   <em>Source: D&D 2024 Player's Handbook</em>
 `
 },
@@ -192,7 +192,7 @@ it: `
   <strong>Componenti:</strong> V, S, M (un po’ di cibo)
   <strong>Durata:</strong> {duration}<br>
   Tramite questo incantesimo, usi un animale per consegnare un messaggio. Scegli una bestia Minuscola a gittata e che puoi vedere, come uno scoiattolo, una ghiandaia o un pipistrello. Specifichi un luogo, che devi aver visitato in passato, e un destinatario che corrisponda a una descrizione generica, come “un uomo o una donna che vesta l’uniforme della guardia cittadina” o “un nano dai capelli rossi che indossa un cappello a punta”. Pronuncia anche un messaggio di massimo venticinque parole. La bestia bersaglio viaggia per la durata dell’incantesimo verso il luogo specificato,coprendo circa 75 chilometri in 24 ore per un messaggero volante, o 40 chilometri per gli altri animali. Quando il messaggero arriva a destinazione, consegna il messaggio alla creatura da te descritta, replicando il suono della tua voce. Il messaggero parla solo a una creatura corrispondente alla descrizione da te fornita. Se il messaggero non riesce a raggiungere la destinazione prima del termine dell’incantesimo, il messaggio è perduto, e la bestia ritorna verso il punto in cui hai lanciato l’incantesimo.
-  <strong>Ai Livelli Superiori</strong> Quando lanci questo incantesimo usando uno slot incantesimo di 3° livello o più alto, la durata dell’incantesimo aumenta di 48 ore per ogni livello dello slot sopra il 2°.<br>
+  <em><strong>Ai Livelli Superiori.</em></strong> Quando lanci questo incantesimo usando uno slot incantesimo di 3° livello o più alto, la durata dell’incantesimo aumenta di 48 ore per ogni livello dello slot sopra il 2°.<br>
   <em>Fonte: D&D 5e</em>
 `,
 en: `
@@ -205,7 +205,7 @@ en: `
   <strong>Duration:</strong> {duration}<br>
   A Tiny Beast of your choice that you can see within range must succeed on a Charisma saving throw, or it attempts to deliver a message for you (if the target's Challenge Rating isn't 0, it automatically succeeds). You specify a location you have visited and a recipient who matches a general description, such as "a person dressed in the uniform of the town guard" or "a red-haired dwarf wearing a pointed hat." You also communicate a message of up to twenty-five words. The Beast travels for the duration toward the specified location, covering about 25 miles per 24 hours or 50 miles if the Beast can fly.
   When the Beast arrives, it delivers your message to the creature that you described, mimicking your communication. If the Beast doesn't reach its destination before the spell ends, the message is lost, and the Beast returns to where you cast the spell.
-  <strong>Using a Higher-Level Spell Slot.</strong> The spell's duration increases by 48 hours for each spell slot level above 2.<br>
+  <em><strong>Using a Higher-Level Spell Slot.</em></strong> The spell's duration increases by 48 hours for each spell slot level above 2.<br>
   <em>Source: D&D 2024 Player's Handbook</em>
 `
 },
@@ -250,7 +250,7 @@ it: `
   <strong>Durata:</strong> {duration}<br>
   Questo incantesimo crea un servitore non morto. Scegli una pila di ossa o un cadavere di un umanoide Medio o Piccolo a gittata. Il tuo incantesimo imbeve il bersaglio di una nefanda parvenza di vita, rianimandolo come creatura non morta. Il bersaglio diventa uno scheletro se scegli le ossa o uno zombi se scegli un cadavere. Durante ciascun tuo turno, puoi usare un’azione bonus per comandare mentalmente qualsiasi creatura da te creata con questo incantesimo che si trovi entro 18 metri da te (se controlli più creature, puoi comandarle tutte o solo alcune di loro allo stesso momento, inviando lo stesso comando a tutte). Decidi quale azione la creatura svolgerà e dove si muoverà durante il suo prossimo turno, oppure inviale un comando generale, come quello di stare di guardia a una particolare stanza o corridoio. Se non invii alcun comando, la creatura si limita a difendersi dalle creature ostili. Una volta ricevuto un ordine, la creatura continuerà a svolgerlo fino al suo compimento.
   La creatura è sotto il tuo controllo per 24 ore, dopodiché smetterà di eseguire i comandi che le impartirai. Per mantenere il controllo sulla creatura per altre 24 ore, devi lanciare di nuovo questo incantesimo su di essa prima del termine dell’attuale periodo di 24 ore. Questo impiego dell’incantesimo riafferma il tuo controllo su di un massimo di quattro creature che hai animato con questo incantesimo, piuttosto che animarne una nuova.
-  <strong>Ai Livelli Superiori</strong> Quando lanci questo incantesimo usando uno slot incantesimo di 4° livello o più alto, animi o riaffermi il controllo su due creature non morte in più per ogni livello dello slot sopra il 3°. Ciascuna di queste creature deve provenire da un cadavere o pila di ossa differenti.<br>
+  <em><strong>Ai Livelli Superiori.</em></strong> Quando lanci questo incantesimo usando uno slot incantesimo di 4° livello o più alto, animi o riaffermi il controllo su due creature non morte in più per ogni livello dello slot sopra il 3°. Ciascuna di queste creature deve provenire da un cadavere o pila di ossa differenti.<br>
   <em>Fonte: D&D 5e</em>
 `,
 en: `
@@ -264,7 +264,7 @@ en: `
   Choose a pile of bones or a corpse of a Medium or Small Humanoid within range. The target becomes an Undead creature: a Skeleton if you chose bones or a Zombie if you chose a corpse.
   On each of your turns, you can take a Bonus Action to mentally command any creature you made with this spell if the creature is within 60 feet of you (if you control multiple creatures, you can command any of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move on its next turn, or you can issue a general command, such as to guard a chamber or corridor. If you issue no commands, the creature takes the Dodge action and moves only to avoid harm. Once given an order, the creature continues to follow it until its task is complete.
   The creature is under your control for 24 hours, after which it stops obeying any command you've given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature again before the current 24-hour period ends. This use of the spell reasserts your control over up to four creatures you have animated with this spell rather than animating a new creature.
-  <strong>Using a Higher-Level Spell Slot.</strong> You animate or reassert control over two additional Undead creatures for each spell slot level above 3. Each of the creatures must come from a different corpse or pile of bones.<br>
+  <em><strong>Using a Higher-Level Spell Slot.</em></strong> You animate or reassert control over two additional Undead creatures for each spell slot level above 3. Each of the creatures must come from a different corpse or pile of bones.<br>
   <em>Source: D&D 2024 Player's Handbook</em>
 `
 },
@@ -283,13 +283,13 @@ it: `
   Un oggetto animato è un costrutto con CA, punti ferita, attacchi, Forza e Destrezza in base alla sua taglia. Il suo punteggio di Costituzione è 10, e i suoi punteggi di Intelligenza e Saggezza sono 3, mentre il punteggio di Carisma è 1. Ha velocità 9 metri; se l’oggetto è privo di gambe o altre appendici che può usare per muoversi, ha invece velocità di volo 9 metri e può fluttuare. Se l’oggetto è ancorato a una superficie o un oggetto più grosso, come una catena attaccata al muro, la sua velocità è 0. Possiede vista cieca con un raggio di 9 metri ed è cieco oltre questa distanza. Quando l’oggetto animato scende a 0 punti ferita, ritorna alla sua normale forma di oggetto, e tutti i danni in eccesso vengono inflitti alla sua forma originale.
   Se comandi a un oggetto di attaccare, questo può effettuare un singolo attacco da mischia contro una creatura entro 1,5 metri da esso. Effettua un attacco di schianto con un bonus di attacco e danni contundenti determinati dalla sua taglia. Il GM potrebbe determinare che a seconda della sua forma, un oggetto potrebbe invece infliggere danni taglienti o perforanti.        
   <strong>Ai livelli sueriori</strong> Quando lanci questo incantesimo usando uno slot incantesimo di 6° livello o più alto, puoi animare due oggetti aggiuntivi per ogni livello dello slot sopra il 5°.<br>
-    <div class="statblock-container"><div class="col"><div class="col1"><div class="jaune"><div class="statblock-title">Oggetto Animato</div><div class="statblock-body"><div class="sansSerif"><div class="red"><div class="type-statblock">Costrutto Enorme o più piccolo, Senza Allineamento</div><strong>CA</strong> 15<br><strong>PF</strong> 10 (Media o più piccolo), 20 (Grande), 40 (Enorme)<br><strong>Velocità</strong> 9 metri
-    <div class="car"></div><div class="car"></div><div class="car">MOD</div><div class="car">SAVE</div><div class="car"></div><div class="car"></div><div class="car">MOD</div><div class="car">SAVE</div><div class="car"></div><div class="car"></div><div class="car">MOD</div><div class="car">SAVE</div><br>
-		<div class="car1">For</div><div class="car2">16</div><div class="car3">+3</div><div class="car3">+3</div><div class="car1">Des</div><div class="car2">10</div><div class="car3">+0</div><div class="car3">+0</div><div class="car1">Cos</div><div class="car2">10</div><div class="car3">+0</div><div class="car3">+0</div><br>
-		<div class="car4">Int</div><div class="car5">3</div><div class="car6">-4</div><div class="car6">-4</div><div class="car4">Sag</div><div class="car5">3</div><div class="car6">-4</div><div class="car6">-4</div><div class="car4">Car</div><div class="car5">1</div><div class="car6">-5</div><div class="car6">-5</div><br><strong>Immunità</strong> Velenosi, Psichici; Incantato, Esausto, Spaventato, Paralizzato, Avvelenato
-    <br><strong>Sensi</strong> Vista Cieca 9 metri, Percezione Passiva 6
-    <br><strong>Linguaggi</strong> Comprende i linguaggi che conosci
-    <br><strong>GS</strong> Nessuno (XP 0; BC corrisponde al tuo Bonus Competenza)</div><div class="rub">Azioni</div><div class="silv"><p><strong><em>Schianto</em></strong>. <em>Attacco per Colpire in Mischia</em>: il bonus corrisponde al tuo modificatore per gli incantesimi, gittata 1.5 metri <em>Danni</em>: 1d4 + 3 danni da Forza (Medo o più piccolo), 2d6 + 3 + il tuo Modificatore di Caratteristica da Incantatore (Grande), o 2d12 + 3 + il tuo Modificatore di Caratteristica da Incantatore (Enorme).</p></div></div></div></div></div><br>
+  <div class="statblock-container"><div class="col"><div class="col1"><div class="jaune"><div class="statblock-title">Oggetto Animato</div><div class="statblock-body"><div class="sansSerif"><div class="red"><div class="type-statblock">Costrutto Enorme o più piccolo, Senza Allineamento</div><strong>CA</strong> 15<br><strong>PF</strong> 10 (Media o più piccolo), 20 (Grande), 40 (Enorme)<br><strong>Velocità</strong> 9 metri
+  <div class="car"></div><div class="car"></div><div class="car">MOD</div><div class="car">SAVE</div><div class="car"></div><div class="car"></div><div class="car">MOD</div><div class="car">SAVE</div><div class="car"></div><div class="car"></div><div class="car">MOD</div><div class="car">SAVE</div><br>
+  <div class="car1">For</div><div class="car2">16</div><div class="car3">+3</div><div class="car3">+3</div><div class="car1">Des</div><div class="car2">10</div><div class="car3">+0</div><div class="car3">+0</div><div class="car1">Cos</div><div class="car2">10</div><div class="car3">+0</div><div class="car3">+0</div><br>
+  <div class="car4">Int</div><div class="car5">3</div><div class="car6">-4</div><div class="car6">-4</div><div class="car4">Sag</div><div class="car5">3</div><div class="car6">-4</div><div class="car6">-4</div><div class="car4">Car</div><div class="car5">1</div><div class="car6">-5</div><div class="car6">-5</div><br><strong>Immunità</strong> Velenosi, Psichici; Incantato, Esausto, Spaventato, Paralizzato, Avvelenato
+  <br><strong>Sensi</strong> Vista Cieca 9 metri, Percezione Passiva 6
+  <br><strong>Linguaggi</strong> Comprende i linguaggi che conosci
+  <br><strong>GS</strong> Nessuno (XP 0; BC corrisponde al tuo Bonus Competenza)</div><div class="rub">Azioni</div><div class="silv"><p><strong><em>Schianto</em></strong>. <em>Attacco per Colpire in Mischia</em>: il bonus corrisponde al tuo modificatore per gli incantesimi, gittata 1.5 metri <em>Danni</em>: 1d4 + 3 danni da Forza (Medo o più piccolo), 2d6 + 3 + il tuo Modificatore di Caratteristica da Incantatore (Grande), o 2d12 + 3 + il tuo Modificatore di Caratteristica da Incantatore (Enorme).</p></div></div></div></div></div><br>
   <em>Fonte: D&D 5e</em>
 `,
 en: `
@@ -303,14 +303,14 @@ en: `
   Objects animate at your command. Choose a number of nonmagical objects within range that aren't being worn or carried, aren't fixed to a surface, and aren't Gargantuan. The maximum number of objects is equal to your spellcasting ability modifier; for this number, a Medium or smaller target counts as one object, a Large target counts as two, and a Huge target counts as three.
   Each target animates, sprouts legs, and becomes a Construct that uses the Animated Object stat block; this creature is under your control until the spell ends or until it is reduced to 0 Hit Points. Each creature you make with this spell is an ally to you and your allies. In combat, it shares your Initiative count and takes its turn immediately after yours.
   Until the spell ends, you can take a Bonus Action to mentally command any creature you made with this spell if the creature is within 500 feet of you (if you control multiple creatures, you can command any of them at the same time, issuing the same command to each one). If you issue no commands, the creature takes the Dodge action and moves only to avoid harm. When the creature drops to 0 Hit Points, it reverts to its object form, and any remaining damage carries over to that form.
-  <strong>Using a Higher-Level Spell Slot.</strong> The creature's Slam damage increases by 1d4 (Medium or smaller), 1d6 (Large), or 1d12 (Huge) for each spell slot level above 5.<br>
-    <div class="statblock-container"><div class="col"><div class="col1"><div class="jaune"><div class="statblock-title">Animated Object</div><div class="statblock-body"><div class="sansSerif"><div class="red"><div class="type-statblock">Huge or Smaller Construct, Unaligned</div><strong>AC</strong> 15<br><strong>HP</strong> 10 (Medium or smaller), 20 (Large), 40 (Huge)<br><strong>Speed</strong> 30 ft.
-    <div class="car"></div><div class="car"></div><div class="car">MOD</div><div class="car">SAVE</div><div class="car"></div><div class="car"></div><div class="car">MOD</div><div class="car">SAVE</div><div class="car"></div><div class="car"></div><div class="car">MOD</div><div class="car">SAVE</div><br>
-		<div class="car1">Str</div><div class="car2">16</div><div class="car3">+3</div><div class="car3">+3</div><div class="car1">Dex</div><div class="car2">10</div><div class="car3">+0</div><div class="car3">+0</div><div class="car1">Con</div><div class="car2">10</div><div class="car3">+0</div><div class="car3">+0</div><br>
-		<div class="car4">Int</div><div class="car5">3</div><div class="car6">-4</div><div class="car6">-4</div><div class="car4">Wis</div><div class="car5">3</div><div class="car6">-4</div><div class="car6">-4</div><div class="car4">Cha</div><div class="car5">1</div><div class="car6">-5</div><div class="car6">-5</div><br><strong>Immunities</strong> Poison, Psychic; Charmed, Exhaustion, Frightened, Paralyzed, Poisoned
-    <br><strong>Senses</strong> Blindsight 30 ft., Passive Perception 6
-    <br><strong>Languages</strong> Understands the languages you know
-    <br><strong>CR</strong> None (XP 0; PB equals your Proficiency Bonus)</div><div class="rub">Actions</div><div class="silv"><p><strong><em>Slam</em></strong>. <em>Melee Attack Roll</em>: Bonus equals your spell attack modifier, reach 5 ft. <em>Hit</em>: Force damage equal to 1d4 + 3 (Medium or smaller), 2d6 + 3 + your spellcasting ability modifier (Large), or 2d12 + 3 + your spellcasting ability modifier (Huge).</p></div></div></div></div></div><br>
+  <em><strong>Using a Higher-Level Spell Slot.</em></strong> The creature's Slam damage increases by 1d4 (Medium or smaller), 1d6 (Large), or 1d12 (Huge) for each spell slot level above 5.<br>
+  <div class="statblock-container"><div class="col"><div class="col1"><div class="jaune"><div class="statblock-title">Animated Object</div><div class="statblock-body"><div class="sansSerif"><div class="red"><div class="type-statblock">Huge or Smaller Construct, Unaligned</div><strong>AC</strong> 15<br><strong>HP</strong> 10 (Medium or smaller), 20 (Large), 40 (Huge)<br><strong>Speed</strong> 30 ft.
+  <div class="car"></div><div class="car"></div><div class="car">MOD</div><div class="car">SAVE</div><div class="car"></div><div class="car"></div><div class="car">MOD</div><div class="car">SAVE</div><div class="car"></div><div class="car"></div><div class="car">MOD</div><div class="car">SAVE</div><br>
+	<div class="car1">Str</div><div class="car2">16</div><div class="car3">+3</div><div class="car3">+3</div><div class="car1">Dex</div><div class="car2">10</div><div class="car3">+0</div><div class="car3">+0</div><div class="car1">Con</div><div class="car2">10</div><div class="car3">+0</div><div class="car3">+0</div><br>
+	<div class="car4">Int</div><div class="car5">3</div><div class="car6">-4</div><div class="car6">-4</div><div class="car4">Wis</div><div class="car5">3</div><div class="car6">-4</div><div class="car6">-4</div><div class="car4">Cha</div><div class="car5">1</div><div class="car6">-5</div><div class="car6">-5</div><br><strong>Immunities</strong> Poison, Psychic; Charmed, Exhaustion, Frightened, Paralyzed, Poisoned
+  <br><strong>Senses</strong> Blindsight 30 ft., Passive Perception 6
+  <br><strong>Languages</strong> Understands the languages you know
+  <br><strong>CR</strong> None (XP 0; PB equals your Proficiency Bonus)</div><div class="rub">Actions</div><div class="silv"><p><strong><em>Slam</em></strong>. <em>Melee Attack Roll</em>: Bonus equals your spell attack modifier, reach 5 ft. <em>Hit</em>: Force damage equal to 1d4 + 3 (Medium or smaller), 2d6 + 3 + your spellcasting ability modifier (Large), or 2d12 + 3 + your spellcasting ability modifier (Huge).</p></div></div></div></div></div><br>
   <em>Source: D&D 2024 Player's Handbook</em>
 `
 },
@@ -508,7 +508,7 @@ it: `
   <strong>Componenti:</strong> {components}
   <strong>Durata:</strong> {duration}<br>
   Attingi alla tua forza vitale per guarire te stesso. Tira uno o due dei tuoi Dadi Vita non spesi e recuperi un ammontare di punti ferita pari al totale dei tiri più il tuo modificatore caratteristica da incantatore. Quei dadi vengono spesi.
-  <strong>Ai Livelli Superiori:</strong> Il numero di Dadi Vita non spesi che puoi tirare aumenta di uno per ogni livello dello slot incantesimo sopra il 2°.<br>
+  <em><strong>Ai Livelli Superiori.</em></strong> Il numero di Dadi Vita non spesi che puoi tirare aumenta di uno per ogni livello dello slot incantesimo sopra il 2°.<br>
   <em>Fonte: D&D 5e</em>
 `,
 en: `
@@ -520,7 +520,7 @@ en: `
   <strong>Components:</strong> {components}
   <strong>Duration:</strong> {duration}<br>
   You tap into your life force to heal yourself. Roll one or two of your unexpended Hit Point Dice, and regain a number of Hit Points equal to the roll's total plus your spellcasting ability modifier. Those dice are then expended.
-  <strong>Using a Higher-Level Spell Slot.</strong> The number of unexpended Hit Dice you can roll increases by one for each spell slot level above 2.<br>
+  <em><strong>Using a Higher-Level Spell Slot.</em></strong> The number of unexpended Hit Dice you can roll increases by one for each spell slot level above 2.<br>
   <em>Source: D&D 2024 Player's Handbook</em>
 `
 },
@@ -535,7 +535,7 @@ it: `
   <strong>Componenti:</strong> V, S, M (una coppa d'acqua)
   <strong>Durata:</strong> {duration}<br>
   Una forza magica protettiva circonda l'incantatore, manifestandosi come una patina di gelo spettrale che ricopre sia lui che il suo equipaggiamento. L'incantatore ottiene 5 punti ferita temporanei per la durata dell'incantesimo. Se una creatura colpisce l'incantatore con un attacco in mischia finché egli possiede questi punti ferita, essa subisce 5 danni da freddo.
-  <strong>Ai Livelli Superiori:</strong> Quando l'incantatore lancia questo incantesimo usando uno slot incantesimo di 2° livello o superiore, sia i punti ferita temporanei che i danni da freddo aumentano di 5 per ogni slot di livello superiore al 1°.<br>
+  <em><strong>Ai Livelli Superiori.</em></strong> Quando l'incantatore lancia questo incantesimo usando uno slot incantesimo di 2° livello o superiore, sia i punti ferita temporanei che i danni da freddo aumentano di 5 per ogni slot di livello superiore al 1°.<br>
   <em>Fonte: D&D 5e</em>
 `,
 en: `
@@ -547,7 +547,7 @@ en: `
   <strong>Components:</strong> V, S, M (a shard of blue glass)
   <strong>Duration:</strong> {duration}<br>
   Protective magical frost surrounds you. You gain 5 Temporary Hit Points. If a creature hits you with a melee attack roll before the spell ends, the creature takes 5 Cold damage. The spell ends early if you have no Temporary Hit Points.
-  <strong>Using a Higher-Level Spell Slot.</strong> The Temporary Hit Points and the Cold damage both increase by 5 for cach spell slot level above 1.<br>
+  <em><strong>Using a Higher-Level Spell Slot.</em></strong> The Temporary Hit Points and the Cold damage both increase by 5 for cach spell slot level above 1.<br>
   <em>Source: D&D 2024 Player's Handbook</em>
 `
 },
@@ -562,7 +562,7 @@ it: `
   <strong>Componenti:</strong> {components}
   <strong>Durata:</strong> {duration}<br>
   L'incantatore invoca il potere di Hadar la Fame Oscura. Dalla sua persona si protendono alcuni tentacoli di energia oscura che tempestano di colpi tutte le creature entro 3 metri da lui. Ogni creatura in quell'area deve effettuare un tiro salvezza su Forza. Se lo fallisce, subisce 2d6 danni necrotici e non può effettuare reazioni fino al suo turno successivo. Se lo supera, subisce soltanto la metà di quei danni, ma non subisce altri effetti.
-  <strong>Ai Livelli Superiori:</strong> Quando l'incantatore lancia questo incantesimo usando uno slot incantesimo di 2° livello o superiore, i danni aumentano di 1d6 per ogni slot superiore al 1°.<br>
+  <em><strong>Ai Livelli Superiori.</em></strong> Quando l'incantatore lancia questo incantesimo usando uno slot incantesimo di 2° livello o superiore, i danni aumentano di 1d6 per ogni slot superiore al 1°.<br>
   <em>Fonte: D&D 5e</em>
 `,
 en: `
@@ -574,7 +574,7 @@ en: `
   <strong>Components:</strong> {components}
   <strong>Duration:</strong> {duration}<br>
   Invoking Hadar, you cause tendrils to erupt from yourself. Each creature in a 10-foot Emanation originating from you makes a Strength saving throw. On a failed save, a target takes 2d6 Necrotic damage and can't take Reactions until the start of its next turn. On a successful save, a target takes half as much damage only.
-  <strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d6 for each spell slot level above 1.<br>
+  <em><strong>Using a Higher-Level Spell Slot.</em></strong> The damage increases by 1d6 for each spell slot level above 1.<br>
   <em>Source: D&D 2024 Player's Handbook</em>
 `
 },
@@ -731,7 +731,7 @@ it: `
   <strong>Componenti:</strong> V, S, M (un'agata del valore di almeno 1.000 mo, che l'incantesimo consuma)
   <strong>Durata:</strong> {duration}<br>
   Dopo avere trascorso il tempo di lancio a tracciare un percorso magico su una pietra preziosa, l'incantatore tocca una bestia o un vegetale di taglia Enorme o inferiore. Il bersaglio deve essere privo di un punteggio di Intelligenza o avere Intelligenza pari o inferiore a 3. Il bersaglio ottiene Intelligenza pari a 10 e la capacità di parlare un linguaggio noto all'incantatore. Se il bersaglio è un vegetale, ottiene la capacità di muovere i suoi rami, radici, liane, rampicanti e così via e sviluppa sensi simili a quelli degli umani. Il DM sceglie le statistiche appropriate al vegetale risvegliato, come per esempio nel caso di un cespuglio o di un albero risvegliato.
-La bestia o il vegetale risvegliato è affascinato dall'incantatore per 30 giorni o finché l'incantatore o i suoi compagni non lo danneggiano in qualche modo. Quando la condizione di affascinato termina, la creatura risvegliata sceglie se rimanere amichevole o meno nei confronti dell'incantatore, in base a come è stata trattata quando era affascinata.<br>
+  La bestia o il vegetale risvegliato è affascinato dall'incantatore per 30 giorni o finché l'incantatore o i suoi compagni non lo danneggiano in qualche modo. Quando la condizione di affascinato termina, la creatura risvegliata sceglie se rimanere amichevole o meno nei confronti dell'incantatore, in base a come è stata trattata quando era affascinata.<br>
   <em>Fonte: D&D 5e</em>
 `,
 en: `
@@ -743,7 +743,7 @@ en: `
   <strong>Components:</strong> V, S, M (an agate worth 1,000+ GP, which the spell consumes)
   <strong>Duration:</strong> {duration}<br>
   You spend the casting time tracing magical pathways within a precious gemstone, and then touch the target. The target must be either a Beast or Plant creature with an Intelligence of 3 or less or a natural plant that isn't a creature. The target gains an Intelligence of 10 and the ability to speak one language you know. If the target is a natural plant, it becomes a Plant creature and gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human's. The DM chooses statistics appropriate for the awakened Plant, such as the statistics for the Awakened Shrub or Awakened Tree in the Monster Manual.
-The awakened target has the Charmed condition for 30 days or until you or your allies deal damage to it. When that condition ends, the awakened creature chooses its attitude toward you.<br>
+  The awakened target has the Charmed condition for 30 days or until you or your allies deal damage to it. When that condition ends, the awakened creature chooses its attitude toward you.<br>
   <em>Source: D&D 2024 Player's Handbook</em>
 `
 },
@@ -758,7 +758,7 @@ it: `
   <strong>Componenti:</strong> V, S, M (una goccia di sangue)
   <strong>Durata:</strong> {duration}<br>
   L'incantatore sceglie fino a tre creature entro gittata e che egli sia in grado di vedere, che dovranno effettuare un tiro salvezza su Carisma. Se una creatura fallisce il suo tiro salvezza, ogni volta che effettua un tiro per colpire o un tiro salvezza prima che l'incantesimo termini deve tirare un d4 e sottrarre il numero ottenuto dal tiro per colpire o dal tiro salvezza.
-  <strong>Ai Livelli Superiori:</strong> Quando l'incantatore lancia questo incantesimo usando uno slot incantesimo di 2° livello o superiore, può bersagliare una creatura aggiuntiva per ogni slot di livello superiore al 1°.<br>
+  <em><strong>Ai Livelli Superiori.</em></strong> Quando l'incantatore lancia questo incantesimo usando uno slot incantesimo di 2° livello o superiore, può bersagliare una creatura aggiuntiva per ogni slot di livello superiore al 1°.<br>
   <em>Fonte: D&D 5e</em>
 `,
 en: `
@@ -770,7 +770,7 @@ en: `
   <strong>Components:</strong> V, S, M (a drop of blood)
   <strong>Duration:</strong> {duration}<br>
   Up to three creatures of your choice that you can see within range must each make a Charisma saving throw. Whenever a target that fails this save makes an attack roll or a saving throw before the spell ends, the target must subtract 1d4 from the attack roll or save.
-  <strong>Using a Higher-Level Spell Slot.</strong> You can target one additional creature for each spell slot level above 1.<br>
+  <em><strong>Using a Higher-Level Spell Slot.</em></strong> You can target one additional creature for each spell slot level above 1.<br>
   <em>Source: D&D 2024 Player's Handbook</em>
 `
 },
@@ -812,7 +812,7 @@ it: `
   L'incantatore tenta di inviare su un altro piano di esistenza una creatura che egli sia in grado di vedere e che si trovi entro gittata. Il bersaglio deve superare un tiro salvezza su Carisma o sarà esiliato.
   Se il bersaglio è originario del piano di esistenza in cui si trova, l'incantatore lo esilia su un semipiano innocuo. Mentre si trova laggiù, il bersaglio è incapacitato e rimane in quel luogo finché l'incantesimo non termina, nel qual caso ricompare nello spazio che aveva lasciato o nello spazio libero più vicino se quello spazio è occupato.
   Se il bersaglio è originario di un piano di esistenza diverso da quello in cui si trova l'incantatore, esso viene esiliato con una piccola implosione a malapena udibile e fa ritorno al suo piano natio. Se l'incantesimo termina prima che sia trascorso 1 minuto, il bersaglio ricompare nello spazio che aveva lasciato o nello spazio libero più vicino, se quello spazio è occupato. Altrimenti non fà ritorno.
-  <strong>Ai Livelli Superiori:</strong> Quando l'incantatore lancia questo incantesimo usando uno slot incantesimo di 5° livello o superiore, può bersagliare una creatura aggiuntiva per ogni slot di livello superiore al 4°.<br>
+  <em><strong>Ai Livelli Superiori.</strong></em> Quando l'incantatore lancia questo incantesimo usando uno slot incantesimo di 5° livello o superiore, può bersagliare una creatura aggiuntiva per ogni slot di livello superiore al 4°.<br>
   <em>Fonte: D&D 5e</em>
 `,
 en: `
@@ -825,7 +825,7 @@ en: `
   <strong>Duration:</strong> {duration}<br>
   One creature that you can see within range must succeed on a Charisma saving throw or be transported to a harmless demiplane for the duration. While there, the target has the Incapacitated condition. When the spell ends, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.
   If the target is an Aberration, a Celestial, an Elemental, a Fey, or a Fiend, the target doesn't return if the spell lasts for 1 minute. The target is instead transported to a random location on a plane (DM's choice) associated with its creature type.
-  <strong>Using a Higher-Level Spell Slot.</strong> You can target one additional creature for each spell slot level above 4.<br>
+  <em><strong>Using a Higher-Level Spell Slot.</strong></em> You can target one additional creature for each spell slot level above 4.<br>
   <em>Source: D&D 2024 Player's Handbook</em>
 `
 },
@@ -917,7 +917,7 @@ it: `
   Attacchi la mente di una creatura che puoi vedere entro la gittata. Il bersaglio effettua un tiro salvezza su Intelligenza.
   Se fallisce il tiro, il bersaglio subisce 10d12 danni Psichici e non può lanciare incantesimi o effettuare una azione Magica. Alla fine di ogni periodo di 30 giorni il bersaglio ripete il tiro salvezza, terminando l'effetto con un successo. L'effetto può anche essere interrotto dagli incantesimi Ristorazione Superiore, Cura o Desiderio.
   Se il tiro salvezza ha successo, il bersaglio subisce solo metà dei danni.<br>
-  <em>Fonte: D&D 2024 Traduzione Personale</em>
+  <em>Fonte: Traduzione Personale</em>
 `,
 en: `
   <strong><h3>{termTitle}</h3></strong>
@@ -949,7 +949,7 @@ it: `
 • Finché è maledetto, il bersaglio deve effettuare un tiro salvezza su Saggezza all'inizio di ogni suo turno. Se lo fallisce, spreca la sua azione di quel turno e non fa niente.
 • Finché il bersaglio è maledetto, gli attacchi e gli incantesimi dell'incantatore infliggono 1d8 danni necrotici extra al bersaglio.
   Un incantesimo rimuovi maledizione pone fine a questo effetto. A discrezione del DM, l'incantatore può scegliere un effetto alternativo per la maledizione, che però non dovrebbe risultare più potente di quelli descritti sopra. Il DM ha l'ultima parola su tali effetti della maledizione.
-  <strong>Ai Livelli Superiori:</strong> Se l'incantatore lancia questo incantesimo usando uno slot incantesimo di 4° livello o superiore, la durata diventa concentrazione, fino a 10 minuti. Se usa uno slot incantesimo di 5° livello o superiore, la durata diventa 8 ore. Se usa uno slot incantesimo di 7° livello o superiore, la durata è 24 ore. Se usa uno slot incantesimo di 9° livello o superiore, l'incantesimo dura finché non viene dissolto. L'uso di uno slot incantesimo di 5° livello o superiore conferisce una durata che non richiede concentrazione.<br>
+  <em><strong>Ai Livelli Superiori.</em></strong> Se l'incantatore lancia questo incantesimo usando uno slot incantesimo di 4° livello o superiore, la durata diventa concentrazione, fino a 10 minuti. Se usa uno slot incantesimo di 5° livello o superiore, la durata diventa 8 ore. Se usa uno slot incantesimo di 7° livello o superiore, la durata è 24 ore. Se usa uno slot incantesimo di 9° livello o superiore, l'incantesimo dura finché non viene dissolto. L'uso di uno slot incantesimo di 5° livello o superiore conferisce una durata che non richiede concentrazione.<br>
   <em>Fonte: D&D 5e</em>
 `,
 en: `
@@ -961,11 +961,11 @@ en: `
   <strong>Components:</strong> {components}
   <strong>Duration:</strong> {duration}<br>
   You touch a creature, which must succeed on a Wisdom saving throw or become cursed for the duration. Until the curse ends, the target suffers one of the following effects of your choice:
-• Choose one ability. The target has Disadvantage on ability checks and saving throws made with that ability.
-• The target has Disadvantage on attack rolls against you.
-• In combat, the target must succeed on a Wisdom saving throw at the start of each of its turns or be forced to take the Dodge action on that turn.
-• If you deal damage to the target with an attack roll or a spell, the target takes an extra 1d8 Necrotic damage.
-  <strong>Using a Higher-Level Spell Slot.</strong> If you cast this spell using a level 4 spell slot, you can maintain Concentration on it for up to 10 minutes. If you use a level 5+ spell slot, the spell doesn't require Concentration, and the duration becomes 8 hours (level 5-6 slot) or 24 hours (level 7-8 slot). If you use a level 9 spell slot, the spell lasts until dispelled.<br>
+  • Choose one ability. The target has Disadvantage on ability checks and saving throws made with that ability.
+  • The target has Disadvantage on attack rolls against you.
+  • In combat, the target must succeed on a Wisdom saving throw at the start of each of its turns or be forced to take the Dodge action on that turn.
+  • If you deal damage to the target with an attack roll or a spell, the target takes an extra 1d8 Necrotic damage.
+  <em><strong>Using a Higher-Level Spell Slot.</em></strong> If you cast this spell using a level 4 spell slot, you can maintain Concentration on it for up to 10 minutes. If you use a level 5+ spell slot, the spell doesn't require Concentration, and the duration becomes 8 hours (level 5-6 slot) or 24 hours (level 7-8 slot). If you use a level 9 spell slot, the spell lasts until dispelled.<br>
   <em>Source: D&D 2024 Player's Handbook</em>
 `
 },
@@ -986,7 +986,7 @@ it: `
   <strong>Mano Possente.</strong> La mano tenta di spingere una creatura situata entro 1,5 metri da essa in una direzione a scelta dell'incantatore. Quest'ultimo effettua una prova con la Forza della mano contrapposta alla prova di Forza (Atletica) del bersaglio. Se il bersaglio è di taglia Media o inferiore, l'incantatore dispone di vantaggio alla prova. Se ha successo, la mano spinge il bersaglio fino a una distanza di 1,5 metri più altri 1,5 metri per ogni punto del suo modificatore di caratteristica da incantatore. La mano si muove assieme al bersaglio in modo da rimanere a 1,5 metri da esso.
   <strong>Mano Stritolatrice.</strong> La mano tenta di afferrare una creatura di taglia Enorme o inferiore situata entro 1,5 metri da essa. L'incantatore usa il punteggio di Forza della mano per la prova di lotta. Se il bersaglio è di taglia Media o inferiore, l'incantatore dispone di vantaggio alla prova. Finché la mano afferra il bersaglio, l'incantatore può usare un'azione bonus per ordinare alla mano di stritolarlo. Quando lo fa, il bersaglio subisce danni contundenti pari a 2d6 + il modificatore di caratteristica da incantatore.
   <strong>Pugno Serrato.</strong> La mano colpisce una creatura o un oggetto situato entro 1,5 metri da essa. L'incantatore effettua un attacco in mischia con questo incantesimo per la mano usando le proprie statistiche di gioco. Se l'attacco colpisce, il bersaglio subisce 4d8 danni da forza.
-  <strong>Ai Livelli Superiori:</strong> Quando l'incantatore lancia questo incantesimo usando uno slot incantesimo di 6° livello o superiore, i danni dell'opzione della mano stritolatrice aumentano di 2d6 e quelli di pugno serrato aumentano di 2d8 per ogni slot di livello superiore al 5°.<br>
+  <em><strong>Ai Livelli Superiori.</em></strong> Quando l'incantatore lancia questo incantesimo usando uno slot incantesimo di 6° livello o superiore, i danni dell'opzione della mano stritolatrice aumentano di 2d6 e quelli di pugno serrato aumentano di 2d8 per ogni slot di livello superiore al 5°.<br>
   <em>Fonte: D&D 2024 Traduzione Personale</em>
 `,
 en: `
@@ -3386,12 +3386,8 @@ en: `
   <strong>Range:</strong> {range}
   <strong>Components:</strong> {components}
   <strong>Duration:</strong> {duration}<br>
-  Choose a point on the ground that you can see within range. For the duration, an intense tremor rips through the ground in a 100-foot-radius circle centered on that point. The ground there is Difficult Terrain.
-  When you cast this spell and at the end of each of your turns for the duration, each creature on the ground in the area makes a Dexterity saving throw. On a failed save, a creature has the Prone condition, and its Concentration is broken.
-  You can also cause the effects below.
-  <strong>Fissures.</strong> A total of 1d6 fissures open in the spell's area at the end of the turn you cast it. You choose the fissures' locations, which can't be under structures. Each fissure is 1d10 x 10 feet deep and 10 feet wide, and it extends from one edge of the spell's area to another edge. A creature in the same space as a fissure must succeed on a Dexterity saving throw or fall in. A creature that successfully saves moves with the fissure's edge as it opens.
-  <strong>Structures.</strong> The tremor deals 50 Bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the end of each of your turns until the spell ends. If a structure drops to 0 Hit Points, it collapses.
-  A creature within a distance from a collapsing structure equal to half the structure's height makes a Dexterity saving throw. On a failed save, the creature takes 12d6 Bludgeoning damage, has the Prone condition, and is buried in the rubble, requiring a DC 20 Strength (Athletics) check as an action to escape. On a successful save, the creature takes half as much damage only.<br>
+  Your hurl a beam of crackling energy. Make a ranged spell attack against one creature or object in range. On a hit, the target takes 1d10 Force damage.
+  <em><strong>Cantrip Upgrade.</em></strong> The spell creates two beams at level 5, three beams at level 11, and four beams at level 17. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.<br>
   <em>Source: D&D 2024 Player's Handbook</em>
 `
 },
