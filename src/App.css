@@ -801,6 +801,10 @@ html, body {
 .sansSerif {
   font-family: "Open Sans", arial, sans-serif;
 }
+.sansSerif p {
+  color: #1a1a1a !important;
+  font-size: 0.95rem !important;
+}
 
 .red {
   color: #6D0000;
@@ -896,6 +900,54 @@ html, body {
 
 /* End Statblocks Style */
 
+/* Start Table Style */
+
+.description table {
+  margin-top: 6px;
+  border-spacing: 0;
+  font-family: arial, sans-serif;
+  font-size: 1.1rem;
+}
+table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  unicode-bidi: isolate;
+  border-spacing: 2px;
+  border-color: gray;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+.description table th, .description table td {
+  min-width: 45px;
+  padding: 2px 4px 2px 4px;
+  text-align: left;
+}
+.description table th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: -internal-center;
+  unicode-bidi: isolate;
+}
+.description table tr:nth-child(even) {
+  background-color: #D6d0e0;
+}
 
 /* FOOTER STYLE */
 

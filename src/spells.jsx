@@ -955,7 +955,7 @@ const spells = [
   {
     key: "conjure_celestial",
     term: "Conjure Celestial",
-    translation: "Evoca Celestiale",
+    translation: "Evoca Celestiale (Congiura)",
     school: "Conjuration",
     level: 7,
     classes: ["Cleric"],
@@ -969,7 +969,7 @@ const spells = [
   {
     key: "conjure_elemental",
     term: "Conjure Elemental",
-    translation: "Evoca Elementale",
+    translation: "Evoca Elementale (Congiura)",
     school: "Conjuration",
     level: 5,
     classes: ["Druid", "Wizard"],
@@ -983,7 +983,7 @@ const spells = [
   {
     key: "conjure_fey",
     term: "Conjure Fey",
-    translation: "Evoca Folletto",
+    translation: "Evoca Folletto (Congiura)",
     school: "Conjuration",
     level: 6,
     classes: ["Druid"],
@@ -2250,7 +2250,7 @@ const spells = [
   {
     key: "gate",
     term: "Gate",
-    translation: "Cancello",
+    translation: "Portale",
     school: "Conjuration",
     level: 9,
     classes: ["Cleric", "Sorcerer", "Warlock", "Wizard"],
@@ -2474,7 +2474,7 @@ const spells = [
   {
     key: "gust_of_wind",
     term: "Gust of Wind",
-    translation: "Soffio di Vento",
+    translation: "Folata di Vento",
     school: "Evocation",
     level: 2,
     classes: ["Druid", "Ranger", "Sorcerer", "Wizard"],
@@ -2992,8 +2992,8 @@ const spells = [
     description: descriptions["light"] 
   },
   {
-    key: "lighting_arrow",
-    term: "Lighting Arrow",
+    key: "lightning_arrow",
+    term: "Lightning Arrow",
     translation: "Freccia Folgorante",
     school: "Transmutation",
     level: 3,
@@ -4606,7 +4606,7 @@ const spells = [
   {
     key: "starry_wisp",
     term: "Starry Wisp",
-    translation: "Scintilla Stellare",
+    translation: "Fuoco Fatuo Stellare?",
     school: "Evocation",
     level: 0,
     classes: ["Bard", "Druid"],
@@ -5568,6 +5568,7 @@ export const classTranslations = {
 };
 
 export const rangeTranslations = {
+  "1 mile": "1,5 km",
   "500 feet": "150 metri",
   "150 feet": "45 metri",
   "120 feet": "36 metri",
@@ -5585,6 +5586,11 @@ export const castingTimeTranslations = {
   "Action": "1 azione",
   "1 action": "1 azione",
   "1 bonus action": "1 azione bonus",
+  "Bonus Action, which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike": "1 Azione Bonus, che effettui immediatamente dopo aver colpito un bersaglio con un'Arma da Mischia o un Attacco Senz'Armi",
+  "Bonus Action, which you take immediately after hitting a creature with a Melee weapon or an Unarmed Strike": "1 Azione Bonus, che effettui immediatamente dopo aver colpito una creatura con un'Arma da Mischia o un Attacco Senz'Armi",
+  "Bonus Action, which you take immediately after hitting a creature with a weapon": "1 Azione Bonus, che effettui immediatamente dopo aver colpito una creatura con un'arma",
+  "Bonus Action, which you take immediately after hitting or missing a target with a ranged attack using a weapon": "1 Azione Bonus, che effettui immediatamente dopo aver colpito o mancato un bersaglio con un attacco con un'arma",
+  "Bonus Action, which you take immediately after hitting a creature with a ranged weapon": "1 Azione Bonus, che effettui immediatamente dopo aver colpito una creatura con un'arma a distanza",
   "1 reaction": "1 reazione",
   "1 round": "1 round",
   "1 minute": "1 minuto",
@@ -5609,12 +5615,14 @@ export const durationTranslations = {
   "10 days": "10 giorni",
   "30 days": "30 giorni",
   "Until dispelled": "Fino a dissoluzione",
+  "Until dispelled or triggered": "Finché non viene dissolto o innescato",
   "Permanent": "Permanente",
   "Concentration, up to 1 minute": "Concentrazione, fino a 1 minuto",
   "Concentration, up to 10 minutes": "Concentrazione, fino a 10 minuti",
   "Concentration, up to 1 hour": "Concentrazione, fino a 1 ora",
   "Concentration, up to 8 hours": "Concentrazione, fino a 8 ore",
-  "Concentration, up to 24 hours": "Concentrazione, fino a 24 ore"
+  "Concentration, up to 24 hours": "Concentrazione, fino a 24 ore",
+  "Concentration, up to 1 day": "Concentrazione, fino a 1 giorno"
 };
 
 export default spells;

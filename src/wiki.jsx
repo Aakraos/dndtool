@@ -234,7 +234,9 @@ function Wiki({ setShowWiki }) {
         : "{classes}")
       .replace(/{source}/g, spell.source || "{source}")
       .replace(/{ritual}/g, spell.ritual ? "Sì" : "No")
-      .replace(/{term}/g, `<strong class="term-highlight">${spell.term || "{term}"}</strong>`)
+      .replace(/{termTitle}/g, `<strong class="term-highlight">${spell.term || "{term}"}</strong>`)
+      .replace(/{translationTitle}/g, `<strong class="term-highlight">${spell.translation || "{translation}"}</strong>`)
+      .replace(/{term}/g, spell.term || "{term}")
       .replace(/{translation}/g, spell.translation || "{translation}");
   };
 
