@@ -1823,7 +1823,7 @@ en: `
   <em>Source: D&D 2024 Player's Handbook</em>
 `
 },
-"command": {
+"cone of cold": {
 it: `
   <strong><h3>{translationTitle}</h3></strong>
   <em>{term}</em>  
