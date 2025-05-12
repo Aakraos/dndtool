@@ -1528,7 +1528,7 @@ In un qualsiasi momento dopo che il clone è giunto a maturazione, se la creatur
   Each creature of your choice that you can see within range must succeed on a Wisdom saving throw or have the Charmed condition until the spell ends.
   For the duration, you can take a Bonus Action to designate a direction that is horizontal to you. Each Charmed target must use as much of its movement as possible to move in that direction on its next turn, taking the safest route. After moving in this way, a target repeats the save, ending the spell on itself on a success.<br>
   <em>Source: D&D 2024 Player's Handbook</em>
-`},command:{it:`
+`},"cone of cold":{it:`
   <strong><h3>{translationTitle}</h3></strong>
   <em>{term}</em>  
   <em>{school} di {level} ({classes})</em>
