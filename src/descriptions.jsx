@@ -2289,11 +2289,11 @@ it: `
   <em>{school} di {level} ({classes})</em>
   <strong>Tempo di Lancio:</strong> {castingtime}
   <strong>Gittata:</strong> {range}
-  <strong>Componenti:</strong> V, S, M (quattro o più frecce o quadrelli)
+  <strong>Componenti:</strong> V, S, M (una treccia ornamentale)
   <strong>Durata:</strong> {duration}<br>
-  L'incantatore colloca quattro munizioni non magiche (frecce o quadrelli) nel terreno entro gittata e le rende magiche al fine di proteggere l'area. Finché l'incantesimo non termina, ogni volta che una creatura diversa dall'incantatore giunge entro 9 metri dalle munizioni per la prima volta in un turno o vi termina il proprio turno. una delle munizioni sfreccia in volo per colpirla. La creatura deve superare un tiro salvezza su Destrezza altrimenti subirà 1d6 danni perforanti. La munizione viene distrutta. L'incantesimo termina quando non rimangono più munizioni. Quando l'incantatore lancia questo incantesimo, può designare un qualsiasi numero di creature a sua scelta che saranno ignorate dall'incantesimo.
+  L'incantatore colloca quattro munizioni non magiche (frecce o quadrelli) nel terreno entro gittata e le rende magiche al fine di proteggere l'area. Finché l'incantesimo non termina, ogni volta che una creatura diversa dall'incantatore giunge entro 9 metri dalle munizioni per la prima volta in un turno o vi termina il proprio turno. una delle munizioni sfreccia in volo per colpirla. La creatura deve superare un tiro salvezza su Destrezza altrimenti subirà 2d4 danni perforanti. La munizione viene distrutta. L'incantesimo termina quando non rimangono più munizioni. Quando l'incantatore lancia questo incantesimo, può designare un qualsiasi numero di creature a sua scelta che saranno ignorate dall'incantesimo.
   <em><strong>Ai Livelli Superiori.</strong></em> Quando l'incantatore lancia questo incantesimo usando uno slot incantesimo di 3° livello o superiore, l'ammontare di munizioni che può essere influenzato aumenta di due per ogni slot di livello superiore al 2°.<br>
-  <em>Fonte: D&D 5e</em>
+  <em>Fonte: Traduzione Personale</em>
 `,
 en: `
   <strong><h3>{termTitle}</h3></strong>
@@ -2301,7 +2301,7 @@ en: `
   <em>{level} {school} ({classes})</em>
   <strong>Casting Time:</strong> {castingtime}
   <strong>Range:</strong> {range}
-  <strong>Components:</strong> V, S, M (an ornamental braid)
+  <strong>Components:</strong> {components}
   <strong>Duration:</strong> {duration}<br>
   You touch up to four nonmagical Arrows or Bolts and plant them in the ground in your space. Until the spell ends, the ammunition can't be physically uprooted, and whenever a creature other than you enters a space within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a Dexterity saving throw or take 2d4 Piercing damage. The piece of ammunition is then destroyed. The spell ends when none of the ammunition remains planted in the ground.
   When you cast this spell, you can designate any creatures you choose, and the spell ignores them.
@@ -2327,7 +2327,7 @@ en: `
   <em>{level} {school} ({classes})</em>
   <strong>Casting Time:</strong> Reaction, which you take when you see a creature within 60 feet of yourself casting a spell with Verbal, Somatic, or Material components
   <strong>Range:</strong> {range}
-  <strong>Components:</strong> V, S, M (an ornamental braid)
+  <strong>Components:</strong> {components}
   <strong>Duration:</strong> {duration}<br>
   You attempt to interrupt a creature in the process of casting a spell. The creature must make a Constitution saving throw. On a failed save, the spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn't expended.<br>
   <em>Source: D&D 2024 Player's Handbook</em>
@@ -2351,7 +2351,7 @@ en: `
   <em>{level} {school} ({classes})</em>
   <strong>Casting Time:</strong> {castingtime}
   <strong>Range:</strong> {range}
-  <strong>Components:</strong> V, S, M (an ornamental braid)
+  <strong>Components:</strong> {components}
   <strong>Duration:</strong> {duration}<br>
   You create 45 pounds of food and 30 gallons of fresh water on the ground or in containers within range—both useful in fending off the hazards of malnutrition and dehydration. The food is bland but nourishing and looks like a food of your choice, and the water is clean. The food spoils after 24 hours if uneaten.<br>
   <em>Source: D&D 2024 Player's Handbook</em>
@@ -2378,7 +2378,7 @@ en: `
   <em>{level} {school} ({classes})</em>
   <strong>Casting Time:</strong> {castingtime}
   <strong>Range:</strong> {range}
-  <strong>Components:</strong> V, S, M (a mix of water and sand)
+  <strong>Components:</strong> {components}
   <strong>Duration:</strong> {duration}<br>
   You do one of the following:
   <strong>Create Water.</strong> You create up to 10 gallons of clean water within range in an open container. Alternatively, the water falls as rain in a 30-foot Cube within range, extinguishing exposed flames there.
