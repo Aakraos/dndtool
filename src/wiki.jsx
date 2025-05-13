@@ -854,12 +854,30 @@ return (
             onClick={(e) => handleItemClick(item, e)}
           >
             <p>{language === "it" ? `${item.term} ━ ${item.translation}` : item.term}</p>
-
+    
             <div className="item-info">
-              {item.level && <span className="item-info-symbol">Lv {item.level}</span>}
-              {item.school && <span className="item-info-symbol">{item.school}</span>}
+              {item.level !== undefined && (
+                <span className="item-info-symbol">
+                  {item.level === 0
+                    ? language === "it"
+                      ? "Trucchetto"
+                      : "Cantrip"
+                    : `Lv ${item.level}`}
+                </span>
+              )}
+    
+              {item.school && (
+                <span className="item-info-symbol">
+                  {language === "it" ? (schoolTranslations[item.school] || item.school) : item.school}
+                </span>
+              )}
+    
               {item.classes && item.classes.length > 0 && (
-                <span className="item-info-symbol">{item.classes.join(", ")}</span>
+                <span className="item-info-symbol">
+                  {item.classes
+                    .map((cls) => language === "it" ? (classTranslations[cls] || cls) : cls)
+                    .join(", ")}
+                </span>
               )}
             </div>
           </div>
@@ -903,17 +921,29 @@ return (
         <p>{language === "it" ? `${item.term} ━ ${item.translation}` : item.term}</p>
         
             {/* Simboli sotto il nome */}
-          <div className="item-info">
-            {item.level !== undefined && (
-              <span className="item-info-symbol">
-                {item.level === 0 ? "Cantrip" : `Lv ${item.level}`}
-              </span>
+            <div className="item-info">
+              {item.level !== undefined && (
+                <span className="item-info-symbol">
+                  {item.level === 0
+                    ? (language === "it" ? "Trucchetto" : "Cantrip")
+                    : `Lv ${item.level}`}
+                </span>
               )}
-            {item.school && <span className="item-info-symbol">{item.school}</span>}
-            {item.classes && item.classes.length > 0 && (
-              <span className="item-info-symbol">{item.classes.join(", ")}</span>
-            )}
-          </div>
+              
+              {item.school && (
+                <span className="item-info-symbol">
+                  {language === "it" ? (schoolTranslations[item.school] || item.school) : item.school}
+                </span>
+              )}
+            
+              {item.classes && item.classes.length > 0 && (
+                <span className="item-info-symbol">
+                  {item.classes
+                    .map(cls => language === "it" ? (classTranslations[cls] || cls) : cls)
+                    .join(", ")}
+                </span>
+              )}
+            </div>
 
 
         </div>

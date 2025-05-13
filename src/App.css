@@ -1139,12 +1139,22 @@ th {
 
   .content-container.with-description .description-panel {
     width: 100% !important;
-    height: calc(100vh - var(--top-panel-height)) !important;
+    height: calc(100vh - var(--top-panel-height));
     overflow-y: auto;
     padding: 15px;
     box-sizing: border-box;
     display: block;
   }
+
+  .content-container.full-width {
+  justify-content: center; /* centra il contenuto visibile */
+  height: calc(100vh - var(--top-panel-height));
+}
+
+.content-container.full-width .items-list {
+  width: 60%; /* o come preferisci */
+  height: calc(100vh - var(--top-panel-height));
+}
 
   .description-panel {
     flex: 1 1 auto;
@@ -1223,12 +1233,12 @@ th {
     left: 0;
     width: 100% !important;   
     max-width: 100%;
-    min-height: 100vh !important;
-    height: 100% !important;
+    height: 100%;
     background: #1e1e1e;  
     z-index: 200;
     overflow-y: auto;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.6);
+    margin-top: 0.75vw;
   }
   
   /* Il pulsante per mostrare la lista, posizionato in basso a sinistra */
