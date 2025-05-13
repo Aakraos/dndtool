@@ -5550,7 +5550,7 @@ export const schoolTranslations = {
   Conjuration: "Evocazione",
   Divination: "Divinazione",
   Enchantment: "Ammaliamento",
-  Evocation: "Evocazione",
+  Evocation: "Invocazione",
   Illusion: "Illusione",
   Necromancy: "Necromanzia",
   Transmutation: "Trasmutazione",
