@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="Wiki DnD con dati, incantesimi, abilità e altro - creato con React e Vite" />
+    <meta name="keywords" content="Dungeons and Dragons, DnD, wiki, incantesimi, abilità, spells, talenti, feats" />
+    <meta name="author" content="Saso" />
+
     <title>D&D Multitool</title>
 
     <meta property="og:title" content="D&D Multitool" />
@@ -11,7 +16,12 @@
     <meta property="og:image" content="https://github.com/Aakraos/dndtool/blob/main/public/img/ToolLogo.png?raw=true">
     <meta property="og:url" content="https://aakraos.github.io/dndtool/" />
     <meta property="og:type" content="website" />
-    <script type="module" crossorigin src="/dndtool/assets/index-Df28-cTj.js"></script>
+    <script>
+      if (sessionStorage.redirect === undefined && location.pathname !== "/dndtool/") {
+        sessionStorage.redirect = location.pathname;
+      }
+    </script>
+    <script type="module" crossorigin src="/dndtool/assets/index-DtWXAHkS.js"></script>
     <link rel="stylesheet" crossorigin href="/dndtool/assets/index-CrwYcRQk.css">
   </head>
   <body>
