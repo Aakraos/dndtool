@@ -1970,7 +1970,7 @@ en: `
   <em>Source: D&D 2024 Player's Handbook</em>
 `
 },
-"conjure celestial": {
+"conjure elemental": {
 it: `
   <strong><h3>{translationTitle}</h3></strong>
   <em>{term}</em>  
