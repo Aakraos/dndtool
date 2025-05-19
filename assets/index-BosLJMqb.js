@@ -1657,7 +1657,7 @@ In un qualsiasi momento dopo che il clone è giunto a maturazione, se la creatur
   Whenever the Cylinder moves into the space of a creature you can see and whenever a creature you can see enters the Cylinder or ends its turn there, you can bathe it in one of the lights. A creature can be affected by this spell only once per turn.
   <em><strong>Using a Higher-Level Spell Slot.</strong></em> The healing and damage increase by 1d12 for each spell slot level above 7.<br>
   <em>Source: D&D 2024 Player's Handbook</em>
-`},"conjure celestial":{it:`
+`},"conjure elemental":{it:`
   <strong><h3>{translationTitle}</h3></strong>
   <em>{term}</em>  
   <em>{school} di {level} ({classes})</em>
