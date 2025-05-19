@@ -6,6 +6,7 @@ import rules from "./rules";
 import items from "./items";
 import feats from "./feats"; // Importa i talenti
 import { schoolTranslations, classTranslations, rangeTranslations, castingTimeTranslations, durationTranslations } from './spells';
+import { Helmet } from "react-helmet";
 
 
 
@@ -495,6 +496,15 @@ const toggleSidebar = () => {
   
 
 return (
+    <>
+    <Helmet>
+      <title>D&D MultiTool</title>
+      <meta
+        name="description"
+        content="Consulta tutti gli incantesimi, oggetti e talenti di Dungeons & Dragons 2024 in italiano e inglese."
+      />
+    </Helmet>
+  
   <div className="app-container">
     {/* HEADER: Home + Cerca */}
     <div className="top-panel">
@@ -991,6 +1001,7 @@ return (
 
 
   </div>
+  </>
 );
 
 
