@@ -5585,7 +5585,7 @@ export const rangeTranslations = {
 export const castingTimeTranslations = {
   "Action": "1 azione",
   "1 action": "1 azione",
-  "1 bonus action": "1 azione bonus",
+  "Bonus action": "1 azione bonus",
   "Bonus Action, which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike": "1 Azione Bonus, che effettui immediatamente dopo aver colpito un bersaglio con un'Arma da Mischia o un Attacco Senz'Armi",
   "Bonus Action, which you take immediately after hitting a creature with a Melee weapon or an Unarmed Strike": "1 Azione Bonus, che effettui immediatamente dopo aver colpito una creatura con un'Arma da Mischia o un Attacco Senz'Armi",
   "Bonus Action, which you take immediately after hitting a creature with a weapon": "1 Azione Bonus, che effettui immediatamente dopo aver colpito una creatura con un'arma",
