@@ -5585,7 +5585,7 @@ export const rangeTranslations = {
 export const castingTimeTranslations = {
   "Action": "1 azione",
   "1 action": "1 azione",
-  "Bonus action": "1 azione bonus",
+  "Bonus Action": "1 azione bonus",
   "Bonus Action, which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike": "1 Azione Bonus, che effettui immediatamente dopo aver colpito un bersaglio con un'Arma da Mischia o un Attacco Senz'Armi",
   "Bonus Action, which you take immediately after hitting a creature with a Melee weapon or an Unarmed Strike": "1 Azione Bonus, che effettui immediatamente dopo aver colpito una creatura con un'Arma da Mischia o un Attacco Senz'Armi",
   "Bonus Action, which you take immediately after hitting a creature with a weapon": "1 Azione Bonus, che effettui immediatamente dopo aver colpito una creatura con un'arma",
@@ -5617,6 +5617,7 @@ export const durationTranslations = {
   "Until dispelled": "Fino a dissoluzione",
   "Until dispelled or triggered": "Finché non viene dissolto o innescato",
   "Permanent": "Permanente",
+  "Up to 1 minute": "Fino a 1 minuto",
   "Concentration, up to 1 minute": "Concentrazione, fino a 1 minuto",
   "Concentration, up to 10 minutes": "Concentrazione, fino a 10 minuti",
   "Concentration, up to 1 hour": "Concentrazione, fino a 1 ora",
